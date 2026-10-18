@@ -4,13 +4,14 @@
   "compatibility_date": "2026-08-07",
   "pages_build_output_dir": "docs/.vitepress/dist",
   "vars": {
-    "TRAFFIC_HISTORY_START": "2026-07-10"
+    "TRAFFIC_HISTORY_START": "2026-07-10",
+    "VITEPRESS_SITE_URL": "https://workbuddy.homes"
   },
   "d1_databases": [
     {
       "binding": "TRAFFIC_DB",
       "database_name": "workbuddy-traffic",
-      "database_id": "d5ab5e1a-850f-4a05-b0ff-0de1fbd452fb",
+      "database_id": "afc0bc60-a224-420a-902c-45d27bd0acde",
       "migrations_dir": "migrations"
     }
   ]
