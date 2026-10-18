@@ -20,6 +20,25 @@ const markdownOptions = {
 const learning = await prepareLearning(markdownOptions);
 
 const siteUrl = process.env.VITEPRESS_SITE_URL || "http://localhost:5173";
+const cloudflareAnalyticsHead = process.env.NODE_ENV === "production"
+  ? [["script", {
+      type: "module",
+      src: "https://static.cloudflareinsights.com/beacon.min.js",
+      "data-cf-beacon": JSON.stringify({ token: "26c2065f853b43e89b72fd6f3bdaf1fe" }),
+    }] as const]
+  : [];
+const googleAnalyticsHead = process.env.NODE_ENV === "production"
+  ? [
+      ["script", {
+        async: "",
+        src: "https://www.googletagmanager.com/gtag/js?id=G-C30GY1Y5F5",
+      }] as const,
+      ["script", {}, `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-C30GY1Y5F5');`] as const,
+    ]
+  : [];
 
 export default defineConfig({
     lang: "zh-CN",
@@ -52,6 +71,8 @@ export default defineConfig({
       ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
       ["meta", { name: "theme-color", content: "#D9FBE3" }],
       ["meta", { name: "author", content: "WorkBuddy Guide Contributors" }],
+      ...cloudflareAnalyticsHead,
+      ...googleAnalyticsHead,
       [
         "meta",
         {
