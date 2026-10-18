@@ -22,7 +22,18 @@ body{background:var(--vp-c-bg)}.VPNavBar .content-body,.VPNavBar .wrapper,.VPNav
 .VPDoc .vp-doc img,.learning-shell .learning-source img{box-shadow:none!important;border-radius:3px}.VPDoc .vp-doc img[data-wb-zoomable]:hover,.learning-shell .learning-source img[data-wb-zoomable]:hover{transform:none;box-shadow:none!important}.community-cases-page .case-co-create{box-shadow:none;border:1px solid var(--vp-c-divider);background:var(--vp-c-bg-soft)}.community-cases-page .case-co-create__copy>strong{background:var(--wb-acid);color:var(--wb-ink)}
 
 .VPNavBarTitle .title:has(.logo)::before{display:none}
-@media(max-width:959px){.VPNavBar .wrapper{padding-left:16px;padding-right:16px}.VPNavBar .container{width:100%;max-width:none}.VPNavBarTitle{flex:1 1 auto;min-width:0}.VPNavBar .content-body{display:flex!important;flex:0 0 104px!important;width:104px;justify-content:flex-end}.VPNavBarSearch{display:flex!important;flex:0 0 48px!important;width:48px}.VPNavBarMenu,.VPNavBarAppearance,.VPNavBarSocialLinks,.VPNavBarExtra{display:none!important}.VPNavBarHamburger{display:flex!important;flex:0 0 48px}}
+@media(max-width:959px){
+  .VPNavBar .wrapper{padding-left:16px;padding-right:16px}
+  .VPNavBar .container{width:100%;max-width:none}
+  .VPNavBar .container>.title{flex:1 1 auto;min-width:0;overflow:hidden}
+  .VPNavBarTitle{min-width:0}
+  .VPNavBarTitle .title>span{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .VPNavBar .content-body{display:flex!important;flex:0 0 88px!important;width:88px;gap:8px;justify-content:flex-end}
+  .VPNavBarSearch{display:flex!important;flex:0 0 40px!important;width:40px}
+  .VPNavBarSearch .DocSearch-Button,.VPNavBarSearch button{width:40px!important;min-width:40px!important;height:40px!important;padding:0!important}
+  .VPNavBarMenu,.VPNavBarAppearance,.VPNavBarSocialLinks,.VPNavBarExtra{display:none!important}
+  .VPNavBarHamburger{display:flex!important;flex:0 0 40px;width:40px;height:40px}
+}
 @media(max-width:359px){.VPNavBar .wrapper{padding-left:12px;padding-right:12px}.VPNavBarTitle .title{font-size:16px}}
 
 .Layout.bluebook-directory .site-footer,.Layout.bluebook-page .site-footer{box-sizing:border-box;width:100%;max-width:none;margin:0;padding-right:max(28px,calc((100vw - var(--vp-layout-max-width))/2));padding-left:max(28px,calc((100vw - var(--vp-layout-max-width))/2));position:relative;background:var(--vp-c-bg)}
