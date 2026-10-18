@@ -66,7 +66,7 @@ Contributions are welcome, including:
 - improvements to navigation, search, design, and accessibility;
 - English translations.
 
-Read the [Contribution Guide](./CONTRIBUTING_en.md) or open an [Issue](https://github.com/AlephAITech/WorkBuddyGuide/issues).
+Read the [Contribution Guide](./CONTRIBUTING_en.md) or open an [Issue](https://github.com/xj-bear/WorkBuddyGuide/issues).
 
 ## Deployment
 
