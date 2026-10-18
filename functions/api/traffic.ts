@@ -18,8 +18,7 @@ interface Env extends AnalyticsEnv {
 
 const PUBLIC_HOSTS = [
   "workbuddy-guide.pages.dev",
-  "workbuddy.homes",
-  "www.workbuddy.homes",
+  "workbuddy.5678.fun",
 ];
 
 function json(body: unknown, status = 200, cache = false): Response {

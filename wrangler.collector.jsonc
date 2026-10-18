@@ -4,7 +4,7 @@
   "main": "workers/traffic-collector.ts",
   "compatibility_date": "2026-08-07",
   "vars": {
-    "TRAFFIC_SYNC_URL": "https://workbuddy.homes/api/internal/traffic-sync"
+    "TRAFFIC_SYNC_URL": "https://workbuddy.5678.fun/api/internal/traffic-sync"
   },
   "triggers": {
     "crons": ["15 18 * * *"]

@@ -27,7 +27,7 @@
 在 Cloudflare Pages 的生产环境变量中设置：
 
 ```text
-VITEPRESS_SITE_URL=https://workbuddy.homes
+VITEPRESS_SITE_URL=https://workbuddy.5678.fun
 ```
 
 访问量接口还需要以下服务端变量或 Secret。它们只存在于 Cloudflare，不能使用
@@ -87,7 +87,8 @@ Cloudflare Token。
 
 ## 自定义域名
 
-正式自定义域名为 `https://workbuddy.homes`。如未来更换域名，需要同步更新
+正式自定义域名为 `https://workbuddy.5678.fun`。域名 DNS 由当前服务商托管，
+通过 CNAME `workbuddy.5678.fun` 指向 `workbuddy-guide-t5y.pages.dev`。如未来更换域名，需要同步更新
 `VITEPRESS_SITE_URL`、`docs/public/robots.txt`、README 在线阅读链接和各搜索引擎站点属性。
 
 `docs/public/_headers` 会为带内容指纹的 `/assets/*` 设置一年不可变缓存，
