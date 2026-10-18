@@ -12,7 +12,7 @@ import {
   type ZoomTransform,
 } from "./imageZoom";
 
-const imageSelector = ".VPDoc .vp-doc img";
+const imageSelector = ".VPDoc .vp-doc img, .learning-source img";
 const interactiveContainerSelector = 'a, button, [data-no-zoom]';
 const buttonRoleSelector = '[role="button"]';
 

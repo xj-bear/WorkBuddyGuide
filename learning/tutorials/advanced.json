@@ -1,0 +1,1280 @@
+{
+  "wb-lesson-14": {
+    "title": "获取可追溯的会议转写并整理行动项",
+    "pain": "录制链接不代表转写可读；责任人和日期一旦被纪要写错，会影响会后的工作。",
+    "goal": "将获准使用的转写保存成可复查输入，生成有原文依据的纪要；没有会议账号时用本地示例完成。",
+    "outcome": "output/meeting/source.txt、source-info.md、minutes.md；每项行动可回到转写依据。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "已选择 workbuddy-practice 工作空间。",
+      "真实会议需有读取和整理许可；没有许可就选本地示例。"
+    ],
+    "materials": [
+      {
+        "path": "input/meeting.txt",
+        "description": "虚构会议转写，供无连接器或会议权限时完成练习。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "choose-source",
+        "kind": "action",
+        "title": "选择真实会议或本地示例",
+        "purpose": "先确定可用来源，不把录制存在当作已有转写。",
+        "location": "WorkBuddy「专家·技能·连接器」→连接器；文件区 input/meeting.txt",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "真实路线找到腾讯会议连接器，阅读说明，在官方授权页完成授权，在任务「+」→连接器启用；记录会议号、日期、主题、主持人。",
+          "确认录制和转写已生成、账号可读，并明确允许保存范围与保留期限。本地保存不能证明模型处理全程离线。",
+          "没有能力或权限就选 input/meeting.txt，不上传未经允许的录音。"
+        ],
+        "expected": "你知道要读取哪场会议、是否可读，以及能保留哪些内容；示例路线也有完整输入。",
+        "recovery": "授权失败先看账号和权限提示；不绕过查看限制，改走示例即可完成。"
+      },
+      {
+        "id": "save-transcript",
+        "kind": "prompt",
+        "title": "先核对身份，再保存文本",
+        "purpose": "将两条路线统一到同一个本地底稿。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "填写下面指令的路线与资料；真实路线先核对助手返回的会议身份，正确后明确回复继续读取。",
+          "完成后打开 source-info.md，核对来源、获取状态和保留说明。"
+        ],
+        "expected": "source.txt 是实际取得的转写；source-info.md 能解释来源、权限、完整性和保留范围。",
+        "recovery": "只有录制没有转写时记录缺失并改用示例；不得根据标题编造全文。",
+        "prompts": [
+          {
+            "title": "保存转写底稿",
+            "text": "路线：[真实会议或本地示例]；会议信息：[会议号、日期、主题、主持人；示例填不适用]；保留期限：[组织要求或练习说明]。真实路线只查询该场已结束会议，先返回身份供我确认，等待确认后再读可用转写。无权限就停止此路线并说明原因。示例路线只读取 input/meeting.txt。将实际取得的原样文本保存 output/meeting/source.txt；将来源、获取时间、已返回的会议/录制标识、权限状态、完整性和保留期限保存 output/meeting/source-info.md。不要虚构标识，不转发或上传录制。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "路线二选一，会议信息使用可核对值。",
+              "保留期限填写实际要求，示例可写本次练习结束后按本人选择清理。"
+            ],
+            "preparation": [
+              "已授权连接器或确认示例文件可读。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "extract-actions",
+        "kind": "prompt",
+        "title": "生成带依据的纪要",
+        "purpose": "把决定、行动项与待确认问题分开。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "确认 source.txt 内容完整，再提交整理指令。",
+          "从文件区打开 output/meeting/minutes.md，而不只阅读聊天摘要。"
+        ],
+        "expected": "纪要有摘要、决定、行动项表与未决问题，责任人和日期都有来源位置。",
+        "recovery": "只有聊天答复没有文件时要求保存到指定路径；无法确认的责任人、日期必须待确认。",
+        "prompts": [
+          {
+            "title": "整理会议纪要",
+            "text": "只读取 output/meeting/source.txt，生成 output/meeting/minutes.md。先建立可引用行号。输出200字内摘要、明确决定、行动项表、未决问题；行动项字段为事项、责任人、截止日期、原文行号/时间戳。每项决定附原文短句与位置。未明确的信息写待确认，保留原文的否定、条件和数量，不能替会议分派人员。最后列3处最需人工复核的内容。不要改写 source.txt，不发送消息或创建在线任务。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "source.txt 已实际保存。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-evidence",
+        "kind": "verify",
+        "title": "回看责任人、日期和否定句",
+        "purpose": "修正容易引起执行偏差的归纳。",
+        "location": "WorkBuddy source.txt 与 minutes.md 文件预览",
+        "actions": [
+          "各选一处责任人、日期、条件或否定句，与原文并排核对；真实机器转写存疑处在获准播放器回听。",
+          "将错误原句、行号和正确表述发回当前任务，修订 minutes.md 后重新打开。无法回听的疑点保留待确认。"
+        ],
+        "expected": "至少3项已回溯，未把考虑事项升级成决定，引用位置仍有效。",
+        "recovery": "引用位置不对时按当前 source.txt 重新标注；原文不清楚时提出核查问题，不凭经验补齐。"
+      }
+    ],
+    "checks": [
+      "三个文件可打开，来源与权限状态明确。",
+      "责任人、日期和数字均有原文依据，缺失项明确待确认。",
+      "至少核对3处，没有向他人分享会议材料。"
+    ]
+  },
+  "wb-lesson-15": {
+    "title": "建立第一个定时任务：从本地周记生成摘要",
+    "pain": "只写“每周总结”容易读错目录、混淆日期，保存了配置也不能证明实际执行成功。",
+    "goal": "手动跑通周记摘要，再在自动化页面配置同一任务，并检查一次执行记录。",
+    "outcome": "output/automation/weekly-digest.md 和一项已检查执行记录的自动化；练习结束暂停。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "已选择 workbuddy-practice，能读取周记。",
+      "当前版本有自动化入口；若没有，手动摘要可先完成，定时验证要明确待完成。"
+    ],
+    "materials": [
+      {
+        "path": "input/weekly-notes.md",
+        "description": "带日期的练习周记，本课唯一内容来源。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "manual-digest",
+        "kind": "prompt",
+        "title": "先手动验证输入与摘要",
+        "purpose": "先检查内容，后检查调度。",
+        "location": "WorkBuddy 新建任务→workbuddy-practice→对话输入框",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "打开周记确认日期，用实际日期替换指令。",
+          "生成后打开 weekly-digest.md，抽查完成事项和阻塞问题。"
+        ],
+        "expected": "摘要按明确日期筛选，成果与计划分开，并有原始日期依据。",
+        "recovery": "无记录就保留无记录说明；读取失败先核对工作空间，不换用未知同名文件。",
+        "prompts": [
+          {
+            "title": "本地周记摘要",
+            "text": "只读取 input/weekly-notes.md，整理 [开始日期] 至 [结束日期]（含首尾日期），保存 output/automation/weekly-digest.md。分完成事项、进行中、风险阻塞、下周计划；每项附原始日期/小节，计划不得写成成果。无记录则保存说明，不编造。只覆盖该摘要文件，不改输入、不联网、不发送消息。结束返回实际路径、纳入记录数和问题。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "两处日期改成周记中实际的一周起止日期，格式 YYYY-MM-DD。"
+            ],
+            "preparation": [
+              "已打开周记并核对时间范围。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "configure-schedule",
+        "kind": "action",
+        "title": "逐项填写自动化配置",
+        "purpose": "让自动运行沿用试跑通过的规则和目录。",
+        "location": "WorkBuddy「自动化」→「添加自动化」",
+        "actions": [
+          "名称填“练习-本地周记摘要”；工作空间选 workbuddy-practice；提示词粘贴刚才已替换日期并验证的完整指令。",
+          "时间设每周五17:00，时区 Asia/Shanghai；无单独时区字段时核对设备时区和下次执行时间。模型沿用手动配置，不额外添加技能。",
+          "先关闭可选小程序推送；保存后复查名称、目录、指令和下次触发时间。"
+        ],
+        "expected": "列表中能打开这项任务，下一次执行时间符合北京时间。",
+        "recovery": "没有入口时不能把聊天中的“已安排”当配置成功；保留手动摘要和指令，并注明版本未支持。固定练习日期不会自动变成本周。"
+      },
+      {
+        "id": "inspect-run",
+        "kind": "verify",
+        "title": "运行一次，检查记录与文件",
+        "purpose": "验证调度真实运行及输出位置。",
+        "location": "WorkBuddy 自动化任务详情→手动运行/执行记录",
+        "actions": [
+          "有手动运行按钮就点击一次；否则临时设几分钟后的明确时间，核对后保持客户端在线等待一次。",
+          "打开本次记录核对开始时间、目录、成功/错误状态和输出；再打开 weekly-digest.md 检查日期与事项。",
+          "失败时读错误详情，修复路径或权限后再重跑一次。"
+        ],
+        "expected": "有一条真实执行记录与本次输出对应，能说明成功或失败原因。",
+        "recovery": "没记录先查启用状态和触发时间；有记录无文件查工作空间。手机未收到通知不能单独证明任务未运行。"
+      },
+      {
+        "id": "pause-practice",
+        "kind": "action",
+        "title": "暂停固定练习日期的任务",
+        "purpose": "避免练习材料持续重复运行。",
+        "location": "WorkBuddy 自动化→练习-本地周记摘要→启停控制",
+        "actions": [
+          "检查一次执行后暂停任务，回列表确认状态。",
+          "改成真实业务前先更新输入和日期规则，手动试跑后再保存；需要推送时另外检查同步范围并实测手机结果。"
+        ],
+        "expected": "配置与历史记录保留，任务已暂停，知道重启前应更新日期。",
+        "recovery": "退出聊天不能当作暂停；重新打开详情核对开关状态，不承诺电脑离线仍会运行。"
+      }
+    ],
+    "checks": [
+      "摘要已人工抽查，实际文件存在。",
+      "配置的名称、空间、指令、时间、时区均核对。",
+      "查看过一次执行记录，练习任务已暂停。"
+    ]
+  },
+  "wb-lesson-16": {
+    "title": "把官方资料整理成有来源的能力简报",
+    "pain": "来源清单只有链接或帮助页时，容易被误写成今天新发布的新闻；发布日期与资料整理日期也常被混淆。",
+    "goal": "先使用随包的三条官方帮助页教学摘要整理能力简报，保留来源、资料时点与限制；联网时再额外核验原始页。",
+    "outcome": "output/brief/ai-brief.md 与 output/brief/review.md；至少覆盖可用的三条资料，不冒充当日新闻。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "已阅读 brief-sources.md：它包含2026-10-17整理的离线教学摘要，三页发布日期未知；整理日期不是发布日期。",
+      "联网时只访问公开官方来源；不可联网时使用随包材料。"
+    ],
+    "materials": [
+      {
+        "path": "input/brief-sources.md",
+        "description": "三篇官方帮助页的标题、URL、离线教学摘要与来源编号 S1–S3；主线无需联网，不是当天新闻。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "set-scope",
+        "kind": "action",
+        "title": "确定资料范围与核验路线",
+        "purpose": "先确认这是资料型简报，再选择是否联网复核。",
+        "location": "WorkBuddy 文件区 input/brief-sources.md；当前任务",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "打开 input/brief-sources.md，找到 S1–S3、来源标题、URL、教学摘要与资料整理日期2026-10-17；注意三页发布日期均未知。",
+          "主线选择“提供材料”，主题填“WorkBuddy任务、技能与知识库引用的基本用法”；能联网可选“额外在线核验”，只检查对应官方页面是否仍支持这些说明。"
+        ],
+        "expected": "你明确采用哪条路线，知道本课写的是有来源的能力资料简报，不把整理日期当新功能发布时间。",
+        "recovery": "没有网络仍使用给定摘要；来源发布日期未知可以保留事实摘要并标未知，不必删掉全部正文，也不能补造日期。"
+      },
+      {
+        "id": "build-brief",
+        "kind": "prompt",
+        "title": "整理三条能力摘要，标清资料时点",
+        "purpose": "把已提供的证据组织成能直接阅读的资料简报。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "替换路线与主题后提交；联网核验仅访问文件列出的官方链接。",
+          "打开 ai-brief.md，检查 S1–S3 的标题、能力摘要和来源，确认未知发布日期与未实时核验说明保留。"
+        ],
+        "expected": "三条可用材料形成简报，每条有编号、标题、能力摘要、URL与限制，资料整理日期和页面发布日期明确区分。",
+        "recovery": "官方页不能打开时继续用给定摘要并标未在线复核；摘要证据足够的内容可以保留，不能把未知发布日期写成今日。",
+        "prompts": [
+          {
+            "title": "官方资料能力简报",
+            "text": "主题：[主题]；路线：[提供材料或额外在线核验]。先读 input/brief-sources.md 的 S1–S3 官方帮助页教学摘要。主线仅用给定材料；额外在线核验路线才访问列出的官方原始页，记录实际读取时间。保存 output/brief/ai-brief.md：标题写能力资料简报，说明资料整理日期2026-10-17不是页面发布日期、不是新闻；三页发布日期均未知，未取得新证据前保留未知。每条写来源编号、标题、80字内能力摘要、URL、适用条件、资料时点和是否在线复核。保留有证据的摘要，不因缺发布日期剔除；没有正文依据的推断列待核验。最多5条，不编更新事件，末尾列来源与失败项。不发送、不订阅、不创建自动化。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "主题填写“WorkBuddy任务、技能与知识库引用的基本用法”或文件确实支持的主题。",
+              "路线二选一；无网络选提供材料。"
+            ],
+            "preparation": [
+              "已阅读 S1–S3 摘要、来源URL与资料日期说明。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "human-review",
+        "kind": "verify",
+        "title": "逐条打开来源核对",
+        "purpose": "让流畅摘要接受原始证据检查。",
+        "location": "WorkBuddy ai-brief.md；系统浏览器原始页或 brief-sources.md",
+        "actions": [
+          "主线逐条与 brief-sources.md 的 S1–S3 摘要核对标题、能力、适用条件与来源URL；额外联网时打开对应原始页，检查表述是否仍成立。",
+          "检查三条是否重复、是否将引用ima内容写成自动同步本机或自动写回；页面无发布日期就继续写未知，整理日期不得写成发布日。",
+          "把差异交给 WorkBuddy 修订 ai-brief.md，并将每条通过/待核验、对照位置、是否在线复核保存 output/brief/review.md。"
+        ],
+        "expected": "每条能力有来源和核对记录；离线审核可以完成，未在线验证和未知发布日期如实保留。",
+        "recovery": "官方页与摘录冲突时注明更新并以可确认原文为据；仍无法判断时保留差异，不擅选版本。"
+      },
+      {
+        "id": "optional-schedule",
+        "kind": "reading",
+        "title": "需要持续核验时再考虑定时",
+        "purpose": "使复用有明确前提与检查入口。",
+        "location": "WorkBuddy「自动化」→「添加自动化」",
+        "actions": [
+          "本次资料简报已完成，不必设置调度。若需要持续检查官方说明，在自动化页添加“能力资料核验-待审”，选择同一工作空间，设每周五08:00、Asia/Shanghai。",
+          "复用已审来源清单和指令，改成运行时记录查询时间、比较页面可核实内容与上次记录，输出 output/brief/YYYY-MM-DD-ai-brief.md；无变化就明确无可确认变化，禁止写成每日新发布。",
+          "先不开对外发送，检查一次实际执行记录和文件再保留调度；若未来另做新闻简报，必须另选有事件时间的一手新闻来源并先手动验证。"
+        ],
+        "expected": "主要成果是已审简报；可选自动化仍有固定来源、失败说明和审核入口。",
+        "recovery": "网络或调度不可用时保留本次资料型简报，待恢复后再核验；不需要付费资讯技能。"
+      }
+    ],
+    "checks": [
+      "S1–S3 可用摘要均有来源，未把资料整理日期或未知发布日期写成今日新闻。",
+      "ai-brief.md 和逐条 review.md 已打开核对，离线/在线状态准确。",
+      "若启用可选定时，已检查一次记录；对外发布另行审核。"
+    ]
+  },
+  "wb-lesson-17": {
+    "title": "限定飞书知识库和日期，生成可核对的周报",
+    "pain": "要求“读整个知识库”容易混入其他年份和项目，成果也失去来源。",
+    "goal": "先选实际可读的库与日期，确认候选文档，再生成有依据的本地周报；无飞书权限时用本地周记完成。",
+    "outcome": "output/feishu/source-list.md、weekly-report.md；发送是单独可选动作。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "真实路线有目标知识库读取许可与有效授权。",
+      "无权限可选 input/weekly-notes.md，不必创建应用或群聊。"
+    ],
+    "materials": [
+      {
+        "path": "input/weekly-notes.md",
+        "description": "带日期的本地替代输入，输出结构与飞书路线相同。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "select-kb",
+        "kind": "action",
+        "title": "选择实际资源与一周日期",
+        "purpose": "避免照抄案例库名和含糊时间。",
+        "location": "WorkBuddy「专家·技能·连接器」→飞书；任务「+」→连接器",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "真实路线按当前页面授权并启用飞书，在飞书中实际打开目标库，复制链接/标识，选开始和结束日期。",
+          "本地路线打开 weekly-notes.md，按文中的日期选范围；下一步明确提交路线、资源和日期。"
+        ],
+        "expected": "允许读取的唯一范围清楚，无需枚举企业空间。",
+        "recovery": "授权成功不代表目标库可读；原系统打不开时先核对账号权限，不能解决就用本地路线。"
+      },
+      {
+        "id": "preview-sources",
+        "kind": "prompt",
+        "title": "先列候选文档，等待确认",
+        "purpose": "在总结前让资料选择可审查。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "替换路线、资源与日期，暂不让助手写周报。",
+          "打开 source-list.md，核对标题、发生日期依据、链接与排除理由，只批准项目相关材料。"
+        ],
+        "expected": "清单列实际读到的文档或小节，缺失与未读明确可见。",
+        "recovery": "无更新时间时查正文日期依据；没日期的条目留待确认，不能用检索排序推断属于本周。",
+        "prompts": [
+          {
+            "title": "周报资料清单",
+            "text": "路线：[飞书知识库或本地周记]；唯一允许资源：[真实知识库链接/标识，或 input/weekly-notes.md]；范围：[开始日期] 至 [结束日期]，含首尾日期。只读该资源，列候选文档/小节：标题、实际发生日期依据、链接或本地位置、是否在范围内、建议纳入理由。读不到的资源另列，不声称已读取。保存 output/feishu/source-list.md，等待我确认纳入项再写周报。不要创建云文档、群卡片或发送消息。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "路线二选一。",
+              "资源填写当前实际允许读取的链接或本地路径。",
+              "日期使用明确 YYYY-MM-DD 范围。"
+            ],
+            "preparation": [
+              "已验证资源可读并确定日期。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "write-report",
+        "kind": "prompt",
+        "title": "只用批准材料写周报",
+        "purpose": "区分成果、进行中事项和计划。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "将批准标题/序号与排除项写入指令。",
+          "打开 weekly-report.md，检查顶部时间范围和每项来源，而不只看聊天摘要。"
+        ],
+        "expected": "周报有主线、完成、经验与未完成风险，缺少资料的部分不会假装全面。",
+        "recovery": "材料不足时标明缺失，可留空或待补充；不能用常识补出本周成果。",
+        "prompts": [
+          {
+            "title": "生成已选范围周报",
+            "text": "已审核 output/feishu/source-list.md。批准纳入：[标题或序号]；排除：[无则写无]。只基于批准且实际可读的资料，生成 output/feishu/weekly-report.md。标题带清单日期范围，分本周主线任务、完成事项、可复用经验，另列未完成与风险。每项附具体链接/小节，明确已完成、进行中和计划，不把计划写成果。缺失写待确认，末尾写覆盖范围和未读资料。只保存本地，不创建云文档或发送消息。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "从 source-list.md 逐项填写批准与排除项，不留占位符。"
+            ],
+            "preparation": [
+              "已人工审核清单，至少有一项正文可读。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "review-report",
+        "kind": "verify",
+        "title": "抽查后停在待发布状态",
+        "purpose": "交付可审阅周报，将发送留给明确授权。",
+        "location": "WorkBuddy 周报、来源清单；飞书原文或本地周记",
+        "actions": [
+          "各抽查一条完成事项、经验与风险，核对日期、归属和状态；把差异交给 WorkBuddy 修订同一文件并复开。",
+          "以后要共享时，先脱敏，另开明确发送任务，核对群/文档、身份和正文预览；本课无需发送，也不自动邀请机器人。"
+        ],
+        "expected": "报告已经审阅，能追溯来源，没有未经检查写入或发送。",
+        "recovery": "证据不足的成果删除或标待确认；共享权限不清楚时保留本地周报即可。"
+      }
+    ],
+    "checks": [
+      "资源与日期明确，替代路线标注本地来源。",
+      "候选材料由人批准，周报至少抽查3处。",
+      "实际文件已保存，不要求群发送。"
+    ]
+  },
+  "wb-lesson-18": {
+    "title": "把三条 ima 收藏整理成可追溯的知识卡片",
+    "pain": "收藏没有来源和适用条件时，摘要很难重用；读取全库还会扩大材料范围。",
+    "goal": "只选择三条获准内容，保存可复查笔记，再生成分类、依据和问题明确的卡片。",
+    "outcome": "input/ima-selected-notes.md、output/knowledge/normalized-notes.md、knowledge-cards.md 与 review.md；原始导出保留，不依赖写回能力。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "有 ima 时仅选可授权内容；没有账号直接用练习导出示例。",
+      "ima 引用、桌面本地文件和写回是不同能力，以当前界面说明为准，不能承诺数据全程离线。"
+    ],
+    "materials": [
+      {
+        "path": "input/ima-exported-notes.md",
+        "description": "三条带来源日期的虚构收藏笔记，无 ima 时使用。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "select-notes",
+        "kind": "action",
+        "title": "在小程序选择三条，或使用本地导出",
+        "purpose": "使用有官方依据的入口，不混用桌面连接器位置。",
+        "location": "WorkBuddy 小程序新对话输入栏左侧「+」→「ima知识库」；桌面文件区",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "已有 ima：在小程序同意授权后选择知识库、勾选本次3条文件并添加到当前新对话；先看内容格式是否能读取，不选择整个库。",
+          "要在桌面继续加工，用 ima 当前可用的复制/导出方式保存标题、来源、日期与可读内容到 input/ima-selected-notes.md；小程序引用不等于桌面目录已经有文件。",
+          "没有 ima 或无法读取时，把 input/ima-exported-notes.md 复制为 input/ima-selected-notes.md，首行注明练习导出示例。"
+        ],
+        "expected": "桌面工作空间中有3条可读笔记及来源，选取范围明确。",
+        "recovery": "只读到视频/卡片链接而无正文时换可读文本，或选本地示例；不根据链接标题推测全文。"
+      },
+      {
+        "id": "normalize-notes",
+        "kind": "prompt",
+        "title": "检查底稿的来源与完整性",
+        "purpose": "后续卡片只能使用实际取得的内容。",
+        "location": "WorkBuddy 桌面当前任务对话输入框",
+        "actions": [
+          "确认选中练习工作空间，提交底稿检查指令。",
+          "打开 output/knowledge/normalized-notes.md，检查3条标题、来源、日期和正文/片段标记；input/ima-selected-notes.md 原稿保持不变。"
+        ],
+        "expected": "规范底稿另存 output/knowledge/normalized-notes.md，缺失字段明确，原导出不变。",
+        "recovery": "条目不足时回原系统复制可读内容或补用示例；不自动扩大到全库。",
+        "prompts": [
+          {
+            "title": "检查三条导出笔记",
+            "text": "只读 input/ima-selected-notes.md，应含我选定的3条笔记。逐条核对标题、日期、来源链接/说明、正文/片段和完整性标记；保留实际文本，不加外部事实。将规范化结果另存 output/knowledge/normalized-notes.md，缺字段写未提供，不覆盖输入。若输入不存在立即报告并等待我手动复制/导出，不声称小程序引用已同步桌面。结束报告条数、缺项和实际输出路径。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "已在桌面保存 selected-notes，或从随包导出示例复制。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "make-cards",
+        "kind": "prompt",
+        "title": "用观点、依据和问题组织卡片",
+        "purpose": "让内容可检索、可验证，而不是泛泛汇总。",
+        "location": "WorkBuddy 当前桌面任务对话输入框",
+        "actions": [
+          "提交卡片指令，生成后打开 knowledge-cards.md。",
+          "核对自然分类覆盖3条笔记，矛盾观点不被强行合并。"
+        ],
+        "expected": "每卡有主题、观点、来源、适用条件与问题，并说明互补/冲突关系。",
+        "recovery": "材料少时允许仅2类，未覆盖主题写材料空白，不凭常识补领域结论。",
+        "prompts": [
+          {
+            "title": "生成三张知识卡片",
+            "text": "只用 output/knowledge/normalized-notes.md，保存 output/knowledge/knowledge-cards.md。按实际内容分2至3类，每条笔记一张卡：主题标签、100字内核心观点、来源与日期、适用条件、原文短句位置、一个待核实问题。末尾写3条内容互补/冲突关系和材料空白。无依据就写现有材料无法判断，不补编外部事实，不自动写回 ima 或新增在线笔记。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "output/knowledge/normalized-notes.md 已核对，片段已明确标记。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-retain",
+        "kind": "verify",
+        "title": "核对卡片，按实际能力选择回存",
+        "purpose": "本地成果完整可用，写回是可选扩展。",
+        "location": "WorkBuddy knowledge-cards.md、normalized-notes.md 与原始导出；可选 ima 客户端",
+        "actions": [
+          "逐卡核对一条原文依据，检查作者观点是否被升级成事实；修订后将核对结果保存 output/knowledge/review.md。",
+          "本地文件已可复用。要回存时先确认当前界面/连接器明确支持写入、目标库和权限；不支持就在 ima 手动新建笔记复制已审内容，再搜索标题核实。"
+        ],
+        "expected": "三张卡可追溯；是否回存有实际可见结果，不依赖一键写回承诺。",
+        "recovery": "无写入能力或搜索不到结果时保留本地文件，记录仅本地保存；不要重复创建同名笔记。"
+      }
+    ],
+    "checks": [
+      "选取范围仅3条，来源与片段完整性明确。",
+      "每卡有依据和待核实问题，已逐卡审核。",
+      "本地成果可打开，回存状态如实记录。"
+    ]
+  },
+  "wb-lesson-19": {
+    "title": "接入飞书并生成一条待发送通知",
+    "pain": "授权后直接要求“发给群里”，容易混淆群对象与发送身份，甚至把凭证误贴到聊天。",
+    "goal": "按当前连接器页面授权，生成对象、身份与正文明确的通知预览；无连接条件时完成同样可审阅的本地草稿。",
+    "outcome": "output/feishu/notice-draft.md，含目标、身份、正文和检查表；本课不发送消息。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "真实路线使用获准接入的账号并遵守管理员授权要求。",
+      "只起草通知，无需扩大外部群权限或邀请机器人。"
+    ],
+    "materials": [
+      {
+        "path": "input/meeting.txt",
+        "description": "用虚构会议中明确的行动项起草，避免凭空填写人员与时间。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "authorize-connector",
+        "kind": "action",
+        "title": "在专用界面授权并核对范围",
+        "purpose": "先知道工具可访问什么，再用于任务。",
+        "location": "WorkBuddy「专家·技能·连接器」→连接器→飞书；任务「+」→连接器",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "打开飞书详情核对来源、权限与当前账号，按官方页面完成登录/授权，必要时等待管理员审批。凭证只填专用配置栏，不放进聊天、截图或练习文件。",
+          "返回后在任务「+」中启用飞书，查看实际支持能力；本课只做读取与预览，不授权自动发群。",
+          "无连接器或不能授权时选本地草稿路线，目标写待在飞书中人工选择。"
+        ],
+        "expected": "账号、启用状态和能力范围已明确，或清楚选定本地路线。",
+        "recovery": "企业策略拦截时保留错误原因并找管理员；不向聊天中的诊断请求提供 Secret 或令牌，不为练习扩大权限。"
+      },
+      {
+        "id": "select-recipient",
+        "kind": "action",
+        "title": "人工核对目标群和发送身份",
+        "purpose": "避免同名群与身份误用。",
+        "location": "飞书客户端目标群资料页；WorkBuddy 当前任务",
+        "actions": [
+          "有飞书时打开允许使用的测试群，核对全名、组织、成员范围和是否外部群；根据连接器说明核实可用的本人/机器人身份。",
+          "将可核对群标识用于草稿，不粘贴成员隐私清单；不明确的身份和群范围写待确认，无权限不继续查别的群。"
+        ],
+        "expected": "目标与身份已核对或显式待确认，不会把搜索首个同名群当收件人。",
+        "recovery": "同名群回飞书看组织与成员，不让助手自动任选；外部群配置缺失不影响本课起草。"
+      },
+      {
+        "id": "draft-notice",
+        "kind": "prompt",
+        "title": "仅生成本地通知预览",
+        "purpose": "把内容审核和发送授权分开。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "替换实际目标与身份后提交，留意执行中没有消息发送动作。",
+          "打开 notice-draft.md，对照会议原文检查事项、人员与时间。"
+        ],
+        "expected": "文件写明待发送，有对象、身份、正文和依据，缺失字段可见。",
+        "recovery": "助手要求发送确认时取消并强调只写草稿；原文没日期时不能自动填明天。",
+        "prompts": [
+          {
+            "title": "待发送通知草稿",
+            "text": "只起草，禁止调用消息发送、邀请入群、创建应用工具。读取 input/meeting.txt，选其中一项明确行动，起草180字以内跟进通知。目标：[已核对群名与标识，或待在飞书中人工选择]；预计发送身份：[已核对本人/机器人，或待确认]。保存 output/feishu/notice-draft.md，标明待发送草稿，包含目标、身份、原文位置、正文、缺少信息、人工发送前检查表。原文没有的日期、人员、链接不可补造。连接器可用也不发送；本地路线同样保存此文件。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "目标与身份填真实状态，无法核对就明确待确认。"
+            ],
+            "preparation": [
+              "meeting.txt 可读；如填真实群，已在飞书核对。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-preview",
+        "kind": "verify",
+        "title": "对照原文修订，保留待发送状态",
+        "purpose": "交付具体可审查草稿，不把预览写成发送成功。",
+        "location": "WorkBuddy notice-draft.md 与 input/meeting.txt",
+        "actions": [
+          "逐项核对事项、责任人和日期，删掉目标群无关内容；把差异发给 WorkBuddy 更新后复开文件。",
+          "按检查表核对群、身份、日期、链接和敏感信息。以后要发送时另行给出明确授权与最终正文，本课在草稿通过时完成。"
+        ],
+        "expected": "草稿准确可复制，未真实发送，所有待确认信息清楚。",
+        "recovery": "连接器没有草稿能力也可用本地文件预览；不能把草稿存在当作消息已经送达。"
+      }
+    ],
+    "checks": [
+      "凭证只经专用授权页处理，未进聊天或输出。",
+      "目标、身份、正文与原文依据可核对。",
+      "notice-draft.md 已审核，未执行发送。"
+    ]
+  },
+  "wb-lesson-20": {
+    "title": "从手机派受控任务，确认它在哪里运行",
+    "pain": "手机能打开 WorkBuddy，不代表云端能读取电脑路径；模式不清时容易得到不存在的文件结果。",
+    "goal": "通过小程序或微信助理做一次最小测试，核对实际状态与产物；本机链接缺失时在桌面完成并记录限制。",
+    "outcome": "output/remote/phone-check.md，明确记录远程本机、云端纯文本或桌面回退路线。",
+    "prerequisites": [
+      "桌面保存或回退测试时，新建任务选择 默认执行模式，并将工作空间选为解压后的 workbuddy-practice。",
+      "桌面已登录并选择 workbuddy-practice。",
+      "手机从官方入口进入；本机模式要求目标电脑在线且已连接。"
+    ],
+    "materials": [
+      {
+        "path": "input/facts.md",
+        "description": "无敏感练习事实，用于首次本机文件可见性测试。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "check-mode",
+        "kind": "action",
+        "title": "先核对模式与设备",
+        "purpose": "确认执行环境再决定提供哪类输入。",
+        "location": "WorkBuddy 官方小程序模式/设备处；桌面「助理」齿轮→助理设置",
+        "actions": [
+          "小程序先看本机/云端模式；本机确认目标电脑名称和在线状态。云端是隔离环境，不能凭电脑路径读取 facts.md。",
+          "微信助理路线按桌面“微信助理集成→配置”扫码，看到已绑定后测试；当前版本无此入口就用官方小程序。",
+          "本机未连接时可做云端纯文本测试，或直接桌面回退；不要上传真实目录碰运气。"
+        ],
+        "expected": "知道本次任务在哪里执行、是否能访问本地练习目录。",
+        "recovery": "二维码过期就重开官方配置页；设备离线先恢复桌面客户端和网络，手机能聊天不等于目录已连通。"
+      },
+      {
+        "id": "send-test",
+        "kind": "prompt",
+        "title": "只发一个最小测试",
+        "purpose": "验证链路与输入可见性，不承担外部操作。",
+        "location": "手机小程序任务输入框或已绑定微信助理；回退为桌面输入框",
+        "actions": [
+          "本机选练习空间用第一条指令；云端用第二条纯文本指令，不填本地路径。",
+          "一次只提交一个任务，保存任务入口/标识，等实际完成或失败状态再查内容。"
+        ],
+        "expected": "本机生成文件与路径；云端返回消息内事实并明确未读取本地文件。",
+        "recovery": "排队或目录不可见时先核对模式和设备，别连续提交；保留失败信息再转桌面。",
+        "prompts": [
+          {
+            "title": "本机文件测试",
+            "text": "受控本机测试：只在我已选的 workbuddy-practice 工作空间读取 input/facts.md。先确认存在，再列3条文件中的事实，保存 output/remote/phone-check.md，写实际执行环境、读取路径、状态和完成时间。不改输入、不访问其他目录、不联网、不发消息。文件不可见就返回本机目录不可见，不虚构事实或成功路径。",
+            "destination": "手机本机任务或微信助理输入框；连接失败时粘贴至桌面 WorkBuddy",
+            "replacements": [],
+            "preparation": [
+              "手机本机模式已选对在线电脑与练习空间。"
+            ]
+          },
+          {
+            "title": "云端纯文本测试",
+            "text": "云端纯文本测试。材料只有3句：项目名为青禾协作试点；目标是统一记录每周进展；最终报告需要人工审核。请在当前任务结果中列出这3条事实，注明输入来自本条消息、未读取本地电脑文件，并返回完成状态。不访问网络或发送消息，不声称能访问 workbuddy-practice。输出保留在本任务结果中；我会在桌面将结果保存为 output/remote/phone-check.md。",
+            "destination": "手机 WorkBuddy 小程序云端任务输入框",
+            "replacements": [],
+            "preparation": [
+              "已确认云端模式；此指令无需本机目录或附件。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-result",
+        "kind": "verify",
+        "title": "手机看状态，桌面核对文件",
+        "purpose": "把聊天结果和实际落盘分开检查。",
+        "location": "手机任务详情；桌面 WorkBuddy output/remote 目录",
+        "actions": [
+          "回桌面检查或保存记录时，打开 默认执行模式任务，确认选中的工作空间是 workbuddy-practice；手机云端模式无需假装连接此目录。",
+          "本机路线先打开手机任务详情，再在桌面打开 phone-check.md，对照 facts.md 核对3条。",
+          "云端路线核对只用了消息中的3句；把返回结果复制给桌面 WorkBuddy，要求原样保存 phone-check.md，并注明云端纯文本测试、未验证本机连接。",
+          "远程失败时在桌面重跑本机测试，生成同名记录，注明桌面回退并保留远程失败原因。"
+        ],
+        "expected": "有真实可打开记录，明确区分远程成功、云端测试和桌面回退。",
+        "recovery": "手机完成却没文件时先看云端/本机和空间是否不同；找到实际文件前不能称本机写入成功。"
+      },
+      {
+        "id": "record-boundary",
+        "kind": "action",
+        "title": "记录下次派活条件",
+        "purpose": "把本次结果变成下次可用的边界。",
+        "location": "WorkBuddy 桌面当前任务→phone-check.md",
+        "actions": [
+          "要求在记录末尾补实际模式、设备或无设备、可提供的输入类型，不记录二维码或凭证。",
+          "检查写明：本地任务先查电脑与目录；云端任务显式提供文本/附件；对外发布与修改操作另行授权。"
+        ],
+        "expected": "测试结果和下次前提均明确，没有把未连接状态写成远程配置完成。",
+        "recovery": "真实环境无法确认时标待确认，先保留桌面可验证成果，待官方界面能确认后再试。"
+      }
+    ],
+    "checks": [
+      "能解释两种模式对本地文件可见性的区别。",
+      "看过任务实际状态，核对3条事实。",
+      "phone-check.md 存在，路线和未验证项明确。"
+    ]
+  },
+  "wb-lesson-21": {
+    "title": "让同一份摘要安全重跑：检查、跳过、保留状态",
+    "pain": "失败后直接重跑可能重复追加；只有成功一句话，也无法判断该恢复哪一步。",
+    "goal": "串行运行两次同一周记摘要：首次生成正文与状态，第二次检测输入和规则未变并跳过正文。",
+    "outcome": "output/reliable/weekly-digest.md 与 run-state.json；相同输入重跑后为 skipped 且正文无重复。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "能读取周记与 JSON 文件。",
+      "仅做串行本地演练，不声称解决并发或生产故障。"
+    ],
+    "materials": [
+      {
+        "path": "input/weekly-notes.md",
+        "description": "只读稳定输入，比较两次运行是否相同。"
+      },
+      {
+        "path": "input/automation/task-spec.md",
+        "description": "定义输入、固定输出、规则 v1 与失败/重复处理。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "read-contract",
+        "kind": "reading",
+        "title": "把可靠性名词落到这项小任务",
+        "purpose": "用可观察行为理解门禁、幂等与恢复。",
+        "location": "WorkBuddy 文件区 input/automation/task-spec.md",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "读出输入、输出、版本和失败动作：门禁是文件可读且有记录；幂等是同内容同规则不重复写正文。",
+          "阅读状态示例，不需复制成 Prompt：completed 是正文已保存，skipped 是输入/规则未变且正文存在，blocked 是输入/写入异常待处理。",
+          "路径错误先修配置，不无限重试；临时工具错误最多重试一次，不反复生成不同版本碰碰运气。"
+        ],
+        "expected": "能预测首次、相同输入重跑和输入缺失时的状态与产物。",
+        "recovery": "说明与实际路径不一致时先列差异，再调整明确输入，不跳过检查。"
+      },
+      {
+        "id": "first-run",
+        "kind": "prompt",
+        "title": "首次运行并保存可核查状态",
+        "purpose": "让做过的判断有文件证据。",
+        "location": "WorkBuddy 新任务→workbuddy-practice→输入框",
+        "actions": [
+          "若已存在旧结果先读状态，不删除记录伪装首次。",
+          "运行后打开摘要和状态，核对 hash、版本、路径与实际文件。"
+        ],
+        "expected": "有效首次运行有正文，状态只有保存成功后为 completed。",
+        "recovery": "工具无法计算 hash 时明确停止，不伪造值；旧状态完成但正文丢失时必须重建，不能跳过。",
+        "prompts": [
+          {
+            "title": "可重跑的本地摘要",
+            "text": "执行 input/automation/task-spec.md 本地摘要练习，具体契约：只读 input/weekly-notes.md，规则 v1，正文 output/reliable/weekly-digest.md，状态 output/reliable/run-state.json。先检查输入可读且有有效记录，计算输入字节 SHA-256。仅旧状态 input_hash、rule_version 相同且输出存在可读时，正文原样不写，状态更新 skipped 并说明原因。否则按日期列完成、进行中、风险、下一步，保留依据；先保存正文，成功后标 completed。状态含 input_path、input_hash、rule_version、output_path、status、updated_at、last_error。失败不得标完成或覆盖已有有效正文；能写状态时记 blocked 与具体错误，对话给恢复动作。临时工具错误最多重试一次，输入/权限问题不重试。禁止新增编号副本、重复追加、联网、发消息。结束报状态、路径、条目数。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "两份输入可读。",
+              "已关闭同任务定时触发，确保串行测试。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "repeat-run",
+        "kind": "action",
+        "title": "原样重跑并比较正文",
+        "purpose": "用实际结果验证幂等。",
+        "location": "WorkBuddy 同一任务；output/reliable 目录",
+        "actions": [
+          "记下首次正文全文和条目数；不改周记和 v1，将上一步完整指令再提交一次。",
+          "打开状态确认 skipped、hash 与版本一致；比较正文和条目数，目录不应多出 weekly-digest-2 等副本。"
+        ],
+        "expected": "第二次跳过，正文未变，无重复条目或多余副本。",
+        "recovery": "仍追加/重写时把状态和重复位置反馈，修复先比较再写入的流程，然后用未变输入重测；只修本课输出。"
+      },
+      {
+        "id": "review-recovery",
+        "kind": "verify",
+        "title": "解释状态与恢复路径",
+        "purpose": "从文件判断下一步，而不只背名词。",
+        "location": "WorkBuddy run-state.json 与任务结果",
+        "actions": [
+          "检查 last_error 未记录凭证/完整正文，状态能解释输入、规则与产物是否一致。",
+          "在对话要求解释输入缺失、输出丢失、输入新增记录三种情况是否能跳过、从哪里恢复；只在聊天看说明，不往正文追加破坏比较。",
+          "确认此演练只验证串行本地重跑；对外投递或并发仍要另外设计锁、投递标识和处置。"
+        ],
+        "expected": "知道输入问题不应无限重试，正文丢失不能算已交付。",
+        "recovery": "状态与正文矛盾时保留有效正文，先报告差异再修复，不手工改 completed 冒充成功。"
+      }
+    ],
+    "checks": [
+      "首次有原文依据，状态在正文成功后完成。",
+      "第二次 skipped，正文和条目数不变。",
+      "能解释输入缺失和输出丢失的不同恢复。"
+    ]
+  },
+  "wb-lesson-22": {
+    "title": "用项目材料做一份先审大纲的汇报 PPT",
+    "pain": "直接生成整套 PPT，容易在事实没确认前投入排版，最后页数很多却没有汇报主线。",
+    "goal": "从项目说明与品牌规范提取事实，确认5页大纲后生成可编辑 PPTX，再逐页检查。",
+    "outcome": "output/presentation/outline.md、outline-approved.md、project-review.pptx、review.md。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "本机能打开 PPTX，或有当前受支持的演示文稿预览。",
+      "若需文档/PPT Skill，先检查当前可用能力说明，不安装来源不明脚本。"
+    ],
+    "materials": [
+      {
+        "path": "input/project-brief.docx",
+        "description": "虚构项目目标、现状、方案与计划，作为事实依据。"
+      },
+      {
+        "path": "input/brand-guide.md",
+        "description": "颜色、字体与版式约束，无需外部封面。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "extract-outline",
+        "kind": "prompt",
+        "title": "先读材料，输出5页大纲",
+        "purpose": "每页先回答一个问题，再做排版。",
+        "location": "WorkBuddy 新任务→workbuddy-practice→对话输入框",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "确认两份输入可读后提交指令。",
+          "打开 outline.md，检查材料摘要、待确认项、每页标题、要点与依据，暂不要求最终文件。"
+        ],
+        "expected": "5页覆盖问题、目标、方案、计划与待决策事项，缺失不编造。",
+        "recovery": "DOCX 读取失败先查文档能力；必要时用本机 Word/WPS 导出文本再读，不能凭文件名写项目内容。",
+        "prompts": [
+          {
+            "title": "材料到5页大纲",
+            "text": "读取 input/project-brief.docx、input/brand-guide.md，面向项目周会制作5页汇报，先不生成 PPTX。保存 output/presentation/outline.md：先列事实摘要、受众与待确认项，再列每页页码、结论式标题、最多3个要点、原文段落依据、建议图形/结构和演讲备注。顺序为背景问题、目标衡量、方案、执行计划、待决策与风险；缺指标或日期写待确认，不补编收益。设计用品牌规范和可编辑文字/简单图形，不依赖外部图片。等待我明确确认大纲再制作。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "DOCX 正文和品牌规范可读。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "approve-outline",
+        "kind": "action",
+        "title": "人工确认每页结论",
+        "purpose": "把内容确认保存成下一步真实输入。",
+        "location": "WorkBuddy outline.md 文件预览与当前任务",
+        "actions": [
+          "逐页对照原材料，删掉无依据收益、数字与承诺；自己补的信息也要能确认，未知留待确认。",
+          "提交具体修改，检查修订后明确回复“按已修订大纲制作”，要求另存 output/presentation/outline-approved.md，记确认日期与未决项。"
+        ],
+        "expected": "批准大纲是确实审过的5页方案，制作不会继续猜测。",
+        "recovery": "没有达成一致就继续修大纲；助手提前做出的 PPT 视为预稿，不能跳过确认。"
+      },
+      {
+        "id": "build-pptx",
+        "kind": "prompt",
+        "title": "按批准大纲生成可编辑文件",
+        "purpose": "把已确认内容转成交付物。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "确认 outline-approved.md 实际存在后提交制作指令。",
+          "检查返回 .pptx 的实际路径，从文件区或本机 PowerPoint/WPS/Keynote 打开。"
+        ],
+        "expected": "PPTX 有5页，文字图形可编辑，页序与大纲一致。",
+        "recovery": "无法生成真正 PPTX 时说明能力缺口，保留大纲；启用受支持的演示文稿能力后重试，不能将 HTML/图片改扩展名冒充。",
+        "prompts": [
+          {
+            "title": "制作5页 PPTX",
+            "text": "只按 output/presentation/outline-approved.md 内容，结合 input/brand-guide.md，制作 output/presentation/project-review.pptx，恰好5页。文字和简单图形可编辑，不用整页截图；遵守品牌颜色与字号，每页最多3要点，保留来源与备注。不新增材料之外的指标。检查标题、正文、图形不重叠或超出页边。结束给实际路径和5页标题。当前工具不能生成真 .pptx 时明确报告，不用其他格式冒充。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "大纲已由人确认保存。",
+              "当前环境具备实际 PPTX 生成能力。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-slides",
+        "kind": "verify",
+        "title": "逐页检查内容、编辑和布局",
+        "purpose": "能打开还不够，需确认可以汇报与修改。",
+        "location": "本机 PPT 软件或 WorkBuddy 演示预览；outline-approved.md",
+        "actions": [
+          "逐页核对标题、数字、日期、风险；点击正文确认单独可选可编辑。",
+          "全屏看5页是否裁字、重叠、对比不足，按页码和元素向 WorkBuddy 提修订，更新同一 PPTX。",
+          "复开最终文件核对修订，将5页检查与未决项保存 output/presentation/review.md。"
+        ],
+        "expected": "5页与大纲一致，抽查可编辑，布局问题已修复或明确标记。",
+        "recovery": "字体替换选品牌允许的本机字体；内容过密先精简要点或调整布局，不无限缩字号。"
+      }
+    ],
+    "checks": [
+      "outline-approved.md 由人确认。",
+      "真实 PPTX 可打开，5页且正文可编辑。",
+      "逐页检查并保存 review.md。"
+    ]
+  },
+  "wb-lesson-23": {
+    "title": "把事实材料做成可修改、可预览的网页",
+    "pain": "一句“漂亮网页”容易生成无法打开的工程、编造的卖点和失效按钮。",
+    "goal": "只用练习事实做单文件介绍页，检查桌面、手机和锚点导航，再完成一次明确修改。",
+    "outcome": "output/website/index.html 与 checks.md；双击可打开，无需 Git 或部署。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "有本机浏览器，能打开 HTML。",
+      "仅展示练习信息，不收集数据或提交表单。"
+    ],
+    "materials": [
+      {
+        "path": "input/facts.md",
+        "description": "名称、受众与功能的唯一事实来源。"
+      },
+      {
+        "path": "input/brand-guide.md",
+        "description": "颜色、字体和层级约束。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "set-page-scope",
+        "kind": "reading",
+        "title": "确定内容和可验收交互",
+        "purpose": "将功能控制在一次能完成的范围。",
+        "location": "WorkBuddy 文件区 facts.md 与 brand-guide.md",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "读出项目名、内部员工受众、10个FAQ的覆盖范围与尚未确定的预算/上线日期；没有的数据、价格和评价不放网页。",
+          "只做项目介绍、FAQ范围、试用边界3区，顶部导航真实跳转，主按钮跳到FAQ区域；材料没给具体问答就写范围说明，不编造问题答案。"
+        ],
+        "expected": "内容与交互可逐项对照材料，导航有真实目标。",
+        "recovery": "当前资料没有具体FAQ正文，就说明“目前覆盖10个常见问题，具体问答待补充”；不补造功能卡片，品牌字体缺失可用系统字体。"
+      },
+      {
+        "id": "make-html",
+        "kind": "prompt",
+        "title": "生成能直接打开的单文件",
+        "purpose": "先有真实页面再根据预览修正。",
+        "location": "WorkBuddy 新任务→workbuddy-practice→输入框",
+        "actions": [
+          "提交后确认 output/website/index.html 存在。",
+          "用 WorkBuddy 文件预览；不能执行页面时在系统文件管理器双击由浏览器打开。"
+        ],
+        "expected": "页面离线可读，标题、导航和正文完整，无假表单。",
+        "recovery": "如果生成需装依赖的工程，要求改成内嵌 CSS 单个 HTML；远程资源失效改用简单本地结构。",
+        "prompts": [
+          {
+            "title": "单文件介绍页",
+            "text": "读取 input/facts.md、input/brand-guide.md，只用已确认事实生成 output/website/index.html。中文单文件，可双击离线打开，CSS 内嵌，不用外部库、网络字体、远程图片、构建工具。含项目介绍、FAQ范围、试用边界3区，导航用真实锚点，主按钮跳到FAQ区；资料未提供具体问答，不得编造；语义化标题，Tab 可访问且焦点可见，320px宽无水平溢出。无依据的价格、用户数、评价不写，不做收集信息的表单。用清楚注释标主要内容区，便于修改。结束给实际路径和预览方式，不部署。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "输入可读，已确定只展示事实支持的内容与FAQ范围。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-widths",
+        "kind": "verify",
+        "title": "检查桌面、手机和键盘",
+        "purpose": "验证实际浏览行为。",
+        "location": "本机浏览器打开 index.html；开发者工具设备预览",
+        "actions": [
+          "约1280px宽点击3个导航，核对目标标题；按 Tab 和 Enter 检查焦点与导航。",
+          "设备预览测375px和320px，从头滚动检查卡片、文字、长链接，不应截断或整页水平滚动。",
+          "按宽度、元素、现象反馈问题，修同一 HTML，刷新再测。"
+        ],
+        "expected": "三个宽度可阅读，导航和键盘可用。",
+        "recovery": "横向溢出时指出具体元素，修固定宽或换行；不用隐藏所有溢出掩盖裁切。"
+      },
+      {
+        "id": "edit-record",
+        "kind": "action",
+        "title": "修改一段并复查",
+        "purpose": "证明页面能持续维护。",
+        "location": "WorkBuddy 当前任务、浏览器；output/website/checks.md",
+        "actions": [
+          "选 facts.md 一段已确认说明，要求把对应页面文案缩短并保持原意，指出区块名。",
+          "刷新确认生效，再对照原材料；让 WorkBuddy 将桌面、375px、320px、导航、键盘与修改结果保存 checks.md。"
+        ],
+        "expected": "同个 HTML 完成可见修改，记录真实检查结果，无外部账户依赖。",
+        "recovery": "若改出了新承诺则恢复来源支持措辞；显示旧页先确认打开的实际路径和刷新状态。"
+      }
+    ],
+    "checks": [
+      "index.html 可直接打开，事实均来自输入。",
+      "桌面、375px、320px、导航、键盘均检查。",
+      "完成一次修改，检查记录可打开。"
+    ]
+  },
+  "wb-lesson-24": {
+    "title": "从实际技能目录选一个写作 Skill，试用后停用",
+    "pain": "安装多不等于能用；来源、权限和触发不清时，简单润色也可能被带到无关外部操作。",
+    "goal": "从真实可见目录选择本地文章润色技能，检查详情、启用、调用，比较改动，再关闭并用新会话检查停用。",
+    "outcome": "output/skill/selection.md、article-revised.md、review.md，记录真实技能与效果及关闭状态。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "可访问 WorkBuddy 技能板块。",
+      "只选认可来源且范围合适的技能，不执行目录外任意安装命令，不提供密钥。"
+    ],
+    "materials": [
+      {
+        "path": "input/article.md",
+        "description": "低风险已写文章，用于对照润色，不发布。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "inspect-catalog",
+        "kind": "action",
+        "title": "在当前目录选择一个候选",
+        "purpose": "以真实可见条目为准，案例名称不保证一直可用。",
+        "location": "WorkBuddy 技能板块→「添加技能」→「查找技能」；或当前版本「专家·技能·连接器」中的技能市场",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "搜索文章润色、写作或去AI味，打开候选详情，查名称、发布方、来源、版本/日期、安装方式与权限/依赖。",
+          "选只处理本地文本、不需第三方登录和未知脚本的候选；没合适项就记录未找到，不照搬网络 shell 命令。",
+          "把实际信息交给当前任务保存 output/skill/selection.md；目录没提供的字段写未提供。"
+        ],
+        "expected": "能解释所选技能会读什么、是否联网和为何适合。",
+        "recovery": "权限不明就换候选；找不到时可用普通指令完成文章对照，但必须记录未完成技能试用，不能冒充已安装。"
+      },
+      {
+        "id": "enable-skill",
+        "kind": "action",
+        "title": "按页面安装并确认可调用",
+        "purpose": "让安装有客户端状态可核查。",
+        "location": "技能详情→安装/添加；已安装技能列表；任务输入框「/」",
+        "actions": [
+          "使用详情支持的安装/添加方式；只有包导入时先查来源再用“上传技能”，不执行旁路命令。",
+          "确认已安装列表启用，回任务输入“/”选择真实名称；如当前版本用其他调用选择器，按技能详情展示的方式引用。"
+        ],
+        "expected": "列表启用与任务选择器名称一致，selection.md 记录同一候选。",
+        "recovery": "刷新或新建任务仍找不到时读触发说明，不重复安装；出现额外高权限依赖则停止并换低风险候选。"
+      },
+      {
+        "id": "test-skill",
+        "kind": "prompt",
+        "title": "用一篇文章做受控润色",
+        "purpose": "检查表达改善，同时守住事实。",
+        "location": "WorkBuddy 当前任务：先从选择器插入技能，再贴指令",
+        "actions": [
+          "保留技能引用，替换实际名称提交。观察是否确实加载对应技能。",
+          "要求联网外发或安装额外依赖时先停下；生成后打开润色稿与对照记录。"
+        ],
+        "expected": "文章另存不覆盖原文，对照至少3处真实改动和技能规则。",
+        "recovery": "无加载证据就询问是否触发；普通改写产出文件不等于技能验证通过。",
+        "prompts": [
+          {
+            "title": "文章润色试用",
+            "text": "使用我刚在选择器中插入的 [实际技能名称]，只润色 input/article.md 正文，保留已有 title 等 frontmatter；不读取 cover、不生成图、不发布。缩短冗余但保留事实、数字、否定与条件，不加案例或承诺。保存 output/skill/article-revised.md；保存 output/skill/review.md，列至少3组原句/改句、所用技能规则、事实保留检查和人工待确认项。不覆盖输入，不外发；技能流程超出本地文本范围就先报告停止。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [
+              "名称替换为已安装和选择器中一致的真实名称。"
+            ],
+            "preparation": [
+              "技能已启用并插入输入框。",
+              "article.md 适合低风险试用。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compare-disable",
+        "kind": "verify",
+        "title": "比较后关闭，并在新会话检查",
+        "purpose": "防止已加载上下文造成停用误判。",
+        "location": "已安装技能列表→本次技能开关；WorkBuddy 新建任务",
+        "actions": [
+          "逐组核对3处改写，检查标题、数字、否定和条件，要求撤回不合适改动后复开文件。",
+          "在已安装列表关闭本次技能并查看状态；当前旧会话可能仍可调用已加载技能，不能用它判断关闭失败。",
+          "新建会话/任务查看可用技能与调用入口，确认本次技能不再自动加载；将界面观察与新会话结果手动反馈，让 WorkBuddy 补入 review.md。只关闭本次技能，不批量操作其他项。"
+        ],
+        "expected": "能说出实际效果，开关关闭，新会话验证记录清楚。",
+        "recovery": "关闭后新会话仍加载时按当前技能说明检查项目/全局启用范围；记录未解决状态，不宣称停用成功。"
+      }
+    ],
+    "checks": [
+      "记录实际技能来源与依赖，无不明命令。",
+      "有真实调用与3组可核对改动，输入未覆盖。",
+      "已关闭并新建会话检查，记录旧会话仍可能有已加载内容。"
+    ]
+  },
+  "wb-lesson-25": {
+    "title": "依据原始材料写一份有证据的公司事实报告",
+    "pain": "不同年份、单位和口径的数据一旦硬拼，流畅结论也可能完全不成立；推断经常被误写成事实。",
+    "goal": "只用虚构公司证据包，回答收入、利润与经营现金流是否同步变化，注明来源、公式与无法判断之处。",
+    "outcome": "output/research/evidence.md 与 company-report.md，区分事实、有限推断与未知。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "使用虚构公司练习材料，不查询股票行情或给交易结论。",
+      "替换真实公司时只处理获准的年报/原始公告，先核对年份、单位与合并范围。"
+    ],
+    "materials": [
+      {
+        "path": "input/research/company-facts.md",
+        "description": "虚构公司分年数据与来源编号，不能当作真实上市公司材料。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "define-question",
+        "kind": "reading",
+        "title": "限定一个问题，先看能否比较",
+        "purpose": "先核对口径再计算。",
+        "location": "WorkBuddy 文件区 input/research/company-facts.md",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "确认虚构标识，找年份、货币单位、收入、利润、经营现金流与来源编号。",
+          "检查单位、利润定义、合并范围是否一致，缺失不当0，口径不同不硬算同比。",
+          "本课只研究三指标同步性和证据缺口，不延伸股价、技术指标或买卖评级。"
+        ],
+        "expected": "问题与数据边界明确，不把所有资料套成宏大结论。",
+        "recovery": "口径冲突先列差异，只用可比年份或描述单年事实，不能偷偷换单位。"
+      },
+      {
+        "id": "build-evidence",
+        "kind": "prompt",
+        "title": "先做证据表",
+        "purpose": "在写报告前让每个数字可复核。",
+        "location": "WorkBuddy 新任务→workbuddy-practice→对话输入框",
+        "actions": [
+          "提交后打开 evidence.md，至少逐格核对两个年份与三项指标。",
+          "数值、来源或单位抄错时先修证据表，再进入分析。"
+        ],
+        "expected": "每个原始值有单位、年份、口径、来源，计算只用可比值且列公式。",
+        "recovery": "缺年保留缺失，不联网补未经批准资料；真实材料路线先由人提供原始报告。",
+        "prompts": [
+          {
+            "title": "公司证据表",
+            "text": "只读 input/research/company-facts.md，明确虚构公司练习。围绕收入、利润与经营现金流是否同步，保存 output/research/evidence.md。逐年列三指标原值、单位、口径、来源编号与原文位置；缺项记未披露，不当0。检查可比性后，计算可比相邻年份变化额与同比，写公式；分母0或口径变化不硬算。单列冲突、一次性项目与材料限制，不新增公司事实，不给买卖建议、技术分析或评级。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "已确认材料年份、单位及虚构性质。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "write-report",
+        "kind": "prompt",
+        "title": "区分事实、推断和无法判断",
+        "purpose": "让结论的确信程度匹配证据。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "证据表核对后提交报告指令。",
+          "打开 company-report.md，逐条看判断后是否有编号或计算依据，而不只是“数据显示”。"
+        ],
+        "expected": "报告有短结论、原始数据/计算、确定事实、谨慎推断与待核实问题。",
+        "recovery": "出现必然增长、证明造假等断言时改为可验证描述，列出仍需什么资料。",
+        "prompts": [
+          {
+            "title": "有边界的公司报告",
+            "text": "依据已核对的 output/research/evidence.md 与 input/research/company-facts.md，写 output/research/company-report.md，标题标虚构公司练习报告。回答三指标变化是否同步，结构为200字内结论、同口径数据与公式、确定事实、谨慎推断、无法判断及后续问题。事实附来源编号，推断写推理链和替代解释；现金流不同步只描述现象和待核实原因，不直接判定造假。缺少应收、存货或细分信息不能补造。不含投资评级、买卖或股票技术分析，保留资料时点与限制。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "evidence.md 已逐格与原材料核对。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recalculate-review",
+        "kind": "verify",
+        "title": "复算一项，追溯三类结论",
+        "purpose": "用原文和数字校验流畅叙述。",
+        "location": "WorkBuddy 两份研究文件、原材料与系统计算器",
+        "actions": [
+          "任选可比年份，按（本年－上年）÷上年复算同比，核对百分比和单位。",
+          "各抽查一条事实、推断、未知：事实有来源，推断有其他解释，未知没写成0或无风险。",
+          "把差异交给 WorkBuddy 同时修证据表和报告，复开确认一致。"
+        ],
+        "expected": "计算可复现，缺资料没有变成确定经营结论，没有孤立行情提示。",
+        "recovery": "复算不一致先查单位、百分比与利润定义；无证据段落删除或待核实。"
+      }
+    ],
+    "checks": [
+      "所有数字有年份、单位、口径和编号，缺项非0。",
+      "复算一个同比，核对事实、推断、未知各一条。",
+      "两文件一致，虚构标识清楚，无交易评级。"
+    ]
+  },
+  "wb-lesson-26": {
+    "title": "把已写好的文章整理成审核通过的发布草稿",
+    "pain": "文章写完后仍要排版、核事实和预览；直接交给自动发布容易跳过最后人工把关。",
+    "goal": "审校现有文章，生成可预览可复制的本地草稿；账号具备权限时再手动保存公众号草稿，插件只作条件扩展。",
+    "outcome": "output/publish/article-reviewed.md、article-draft.html 与 review.md；没有开发凭证也能完成。",
+    "prerequisites": [
+      "桌面端新建任务时选择 默认执行模式，工作空间选择解压后的 workbuddy-practice；本课相对路径均从这个目录起算。",
+      "文章已经写好，本课不必重做选题、分镜或视频角色流程。",
+      "平台路线使用有管理权限的账号，写草稿和发布均需先检查最终内容与目标。"
+    ],
+    "materials": [
+      {
+        "path": "input/article.md",
+        "description": "现成文章，可含 title/frontmatter；cover 缺失不影响文字草稿。"
+      },
+      {
+        "path": "input/facts.md",
+        "description": "核对名称、数字和能力表述的练习事实。"
+      },
+      {
+        "path": "input/brand-guide.md",
+        "description": "颜色、字体、风格参考，不要求自动生成封面。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "review-text",
+        "kind": "prompt",
+        "title": "先审内容，再做排版",
+        "purpose": "把事实修订与视觉处理分成两个成果。",
+        "location": "WorkBuddy 新任务→workbuddy-practice→对话输入框",
+        "actions": [
+          "在 WorkBuddy 桌面端新建任务，选择 默认执行模式，再从工作空间入口选中解压后的 workbuddy-practice；确认文件区可看到 input 目录。",
+          "打开文章与事实确认要处理的就是这一篇；cover 指向不存在文件时不补造路径。",
+          "提交审核，打开 article-reviewed.md 与 review.md，处理保留、修订、待确认项。"
+        ],
+        "expected": "已审稿保持原意，问题有依据和处理状态，标题摘要可供后续复制。",
+        "recovery": "不能证实的断言留待确认，不通过换措辞掩盖证据缺失；原文视频角色案例不作为本课强制顺序。",
+        "prompts": [
+          {
+            "title": "文章发布前审校",
+            "text": "读 input/article.md、input/facts.md、input/brand-guide.md。文章已写好，只做审核和必要润色，不重选题。保存 output/publish/article-reviewed.md，保持核心观点，修与 facts.md 冲突事实、缩短重复；保留实际 title，给60字内摘要。cover 缺失或文件不存在标待人工选图，不编路径、不下载图片。另存 output/publish/review.md，列原句、问题、依据、修订/待确认，检查标题、数字、引用、个人信息和外链。不调用上传、发布或写草稿箱工具，等我审正文。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "三份输入可读，素材有使用许可。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "approve-copy",
+        "kind": "action",
+        "title": "人工确认正文与素材",
+        "purpose": "后续排版只使用已经审过的文本。",
+        "location": "WorkBuddy article-reviewed.md、review.md 与 facts.md",
+        "actions": [
+          "逐项看审核表，至少核对一处数字/名称、一处结论范围和一处来源/链接；无法确认又不适合发布的内容删除。",
+          "提交具体修改，复看后明确回复“正文已审，开始排版”，要求在 review.md 记录结论。封面暂缺就选无封面本地草稿。"
+        ],
+        "expected": "正文问题已处理，缺项清楚，不再未经同意扩写。",
+        "recovery": "整段需重写时先改正文；敏感或事实问题不能靠排版漂亮就标通过。"
+      },
+      {
+        "id": "format-draft",
+        "kind": "prompt",
+        "title": "生成可预览、可复制的静态草稿",
+        "purpose": "不依赖开发接口也能交付实用成果。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "正文通过后提交排版指令，打开 article-draft.html。",
+          "用桌面与约375px宽检查标题、段距、列表和长链接。"
+        ],
+        "expected": "HTML 无外部图片脚本也能预览，与已审正文一致，缺封面不阻塞。",
+        "recovery": "有远程/脚本依赖就改静态内嵌样式；平台复制后格式变化时，保留 Markdown 为内容底稿。",
+        "prompts": [
+          {
+            "title": "已审文章排版",
+            "text": "只用 output/publish/article-reviewed.md 已审正文，参考 input/brand-guide.md，生成 output/publish/article-draft.html。中文静态文章：标题层级、段距、引用、列表、来源区清楚，无 JavaScript、外部字体、远程图片。正文不新增事实或改结论，frontmatter 不显示为正文。无有效 cover 就不放图片，不需要开发者凭证；375px宽可读且长链接换行。在 output/publish/review.md 追加本地预览检查项和实际路径，只生成本地草稿，不上传发布。",
+            "destination": "WorkBuddy 当前桌面任务对话输入框",
+            "replacements": [],
+            "preparation": [
+              "article-reviewed.md 已由人审核通过。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "manual-or-plugin",
+        "kind": "verify",
+        "title": "检查后选择草稿交付方式",
+        "purpose": "本地成果完整可用，平台写入需实际核实。",
+        "location": "浏览器 article-draft.html；可选微信公众号后台或已授权插件详情",
+        "actions": [
+          "逐段对照 Markdown，检查无漏段、乱码、占位符，375px复查后把实际结果记入 review.md；本地路线到此完成。",
+          "需要公众号草稿时，在有权限的后台手动新建图文，复制已审标题、摘要和正文，按后台要求人工选封面，预览后保存，在草稿列表重新打开核对；不需要开发凭证。",
+          "如已有获准插件，先核实当前说明是否支持账号、排版与写草稿、所需封面和权限、是否会直接发布。最终内容与目标确认后另行明确授权写入；不把案例一键发布当保证。"
+        ],
+        "expected": "本地稿已审可复制；选平台路线则实际草稿能打开，状态真实。",
+        "recovery": "插件不可用、缺封面或需开发配置时继续本地/后台手动路线；凭证只填专用配置页，不贴聊天。失败保留本地稿，别重复上传制造多份。"
+      }
+    ],
+    "checks": [
+      "内容先人工审核，排版未新增事实。",
+      "本地三文件可打开，已测手机宽度。",
+      "无插件凭证也完成；若写平台，实际草稿核对且未自动发布。"
+    ]
+  }
+}

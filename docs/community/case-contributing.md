@@ -25,7 +25,7 @@ outline: false
 ## 提交步骤
 
 1. 搜索案例集和蓝皮书，确认任务没有重复。
-2. Fork [AlephAITech/WorkBuddyGuide](https://github.com/AlephAITech/WorkBuddyGuide) 仓库。
+2. Fork [xj-bear/WorkBuddyGuide](https://github.com/xj-bear/WorkBuddyGuide) 仓库。
 3. 复制 `.github/CASE_TEMPLATE.md` 中的案例模板。
 4. 新建 `docs/cases/submissions/<case-slug>/index.md`。
 5. 将截图等素材放进同目录的 `assets/` 文件夹。

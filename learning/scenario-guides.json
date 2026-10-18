@@ -1,0 +1,224 @@
+[
+  {
+    "id": "wb-life-trip-planning",
+    "number": 1,
+    "title": "旅行计划：收集条件后比较路线",
+    "originalTitle": "三天旅行，不想打开二十个 App",
+    "summary": "先收集偏好，再比较路线、核验实时信息，最后由本人检查预订条件。",
+    "steps": [
+      {
+        "startLine": 15,
+        "endLine": 23,
+        "title": "场景一：三天旅行，不想打开二十个 App",
+        "lead": "先明确旅行任务、可用工具和当前行程风险，再开始规划。",
+        "sha256": "2a1af67624a3620b727751ca3db135f5e7b1b39f926bef05fba36409c59748d1",
+        "sourceHeading": "场景一：三天旅行，不想打开二十个 App",
+        "sourceAnchor": "场景一-三天旅行-不想打开二十个-app"
+      },
+      {
+        "startLine": 24,
+        "endLine": 32,
+        "title": "第一步：先收集约束",
+        "lead": "先补齐出发地、时间、同行人、预算、偏好和不可接受事项。",
+        "sha256": "283a773ad983d4c3ee31acf0a421184ad0f260bc628c75c7f85fcb0edfe943d7",
+        "sourceHeading": "第一步：先收集约束",
+        "sourceAnchor": "第一步-先收集约束"
+      },
+      {
+        "startLine": 33,
+        "endLine": 52,
+        "title": "第二步：候选路线与实时核验",
+        "lead": "先比较路线方向；价格、天气和开放信息必须带来源与查询时间。",
+        "sha256": "df64a9a818036be1eb53124ce5e2117bb8d75da3afc1e44349c755b0b197d38f",
+        "sourceHeading": "第二步：候选路线与实时核验",
+        "sourceAnchor": "第二步-候选路线与实时核验"
+      },
+      {
+        "startLine": 53,
+        "endLine": 62,
+        "title": "执行链与交付物",
+        "lead": "核对行程、预算、交通和预订前的人工确认点。",
+        "sha256": "0ccbe7116fdf3122236a179df25d61eceab03bfc402a6114bc11ae37edf89d03",
+        "sourceHeading": "执行链与交付物",
+        "sourceAnchor": "执行链与交付物"
+      }
+    ],
+    "checklist": [
+      "路线顺序与交通时间有来源",
+      "未核实的信息明确标待确认",
+      "未自动登录、预订或付款"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-trip-records",
+    "number": 2,
+    "title": "旅行后整理照片、票据与花费记录",
+    "originalTitle": "旅行结束后，把照片和账单变成可复用记录",
+    "summary": "只处理指定副本，分类票据并整理私人记录，公开分享前先脱敏。",
+    "steps": [
+      {
+        "startLine": 63,
+        "endLine": 78,
+        "title": "场景二：旅行结束后，把照片和账单变成可复用记录",
+        "lead": "先限定输入目录和副本范围，再整理票据、时间线与可分享内容。",
+        "sha256": "b7f8ab2353df28106f9749be90cbd9b957db5c6e751e4cf6802d5c0a25e9642c",
+        "sourceHeading": "场景二：旅行结束后，把照片和账单变成可复用记录",
+        "sourceAnchor": "场景二-旅行结束后-把照片和账单变成可复用记录"
+      }
+    ],
+    "checklist": [
+      "没有默认读取整本相册",
+      "原图未移动或删除",
+      "公开版本中的人物、定位和订单信息已脱敏"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-medical-prep",
+    "number": 3,
+    "title": "体检报告：整理就医准备材料",
+    "originalTitle": "体检报告看不懂，先准备一次更有效的就医",
+    "summary": "把原始指标、症状时间线和就诊问题整理成材料，不让 AI 代替医生判断。",
+    "steps": [
+      {
+        "startLine": 80,
+        "endLine": 89,
+        "title": "场景三：体检报告看不懂，先准备一次更有效的就医",
+        "lead": "先了解健康类任务的适用边界：整理资料和问题，不做在线诊断。",
+        "sha256": "684ae87a1594b12795fa21519313e312595df0d370a9c3b6910fd5cda8b31e3b",
+        "sourceHeading": "场景三：体检报告看不懂，先准备一次更有效的就医",
+        "sourceAnchor": "场景三-体检报告看不懂-先准备一次更有效的就医"
+      },
+      {
+        "startLine": 90,
+        "endLine": 109,
+        "title": "安全指令",
+        "lead": "按原文指令整理指标与症状；遇到紧急风险要联系线下医疗服务。",
+        "sha256": "6c4d1f78cd2eeaf4473ea29d0768a309ab4fc72f85884e88a2a726bb95e616a0",
+        "sourceHeading": "安全指令",
+        "sourceAnchor": "安全指令"
+      }
+    ],
+    "checklist": [
+      "指标和参考区间保持原文",
+      "没有诊断、患病概率或用药调整建议",
+      "就医问题由本人和专业人员确认"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-meal-planning",
+    "number": 4,
+    "title": "饮食与健康习惯：先声明限制再做计划",
+    "originalTitle": "健康习惯与饮食计划，可以做得更日常",
+    "summary": "将偏好、过敏、预算和厨具条件纳入计划；高风险需求转交专业人士。",
+    "steps": [
+      {
+        "startLine": 110,
+        "endLine": 121,
+        "title": "场景四：健康习惯与饮食计划，可以做得更日常",
+        "lead": "先提供饮食偏好、过敏信息、预算和可用厨具，再生成候选计划。",
+        "sha256": "3c578cb7560a5082e4fa6444d40229cdd71f17be2faeddfd8cd6e97d43f40cae",
+        "sourceHeading": "场景四：健康习惯与饮食计划，可以做得更日常",
+        "sourceAnchor": "场景四-健康习惯与饮食计划-可以做得更日常"
+      },
+      {
+        "startLine": 122,
+        "endLine": 131,
+        "title": "个性化方案的核对点",
+        "lead": "检查方案是否适配个人条件，避免把普通建议误读成医疗饮食处方。",
+        "sha256": "35a95317b050cd1f96abfa939fee2c655a39a48f2691e4dc1b13d0062637c7cc",
+        "sourceHeading": "场景四：健康习惯与饮食计划，可以做得更日常",
+        "sourceAnchor": "场景四-健康习惯与饮食计划-可以做得更日常"
+      }
+    ],
+    "checklist": [
+      "过敏、疾病、用药和孕期限制已说明",
+      "没有保证疗效或减重结果",
+      "专业限制已交给医生或注册营养专业人员确认"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-entertainment",
+    "number": 5,
+    "title": "传统文化与星盘：只做娱乐体验",
+    "originalTitle": "算命、星盘与卜卦，怎样写得有趣又不越界",
+    "summary": "生成娱乐性解读时明确标注其性质，并保护出生时间和地点等个人信息。",
+    "steps": [
+      {
+        "startLine": 132,
+        "endLine": 154,
+        "title": "场景五：算命、星盘与卜卦，怎样写得有趣又不越界",
+        "lead": "把请求限定为文化体验或写作灵感，不把传统解释当成事实或决策依据。",
+        "sha256": "2b17099950882874fc5efb745bbc413d7002a769e52a643336083cc70b2e47c2",
+        "sourceHeading": "场景五：算命、星盘与卜卦，怎样写得有趣又不越界",
+        "sourceAnchor": "场景五-算命、星盘与卜卦-怎样写得有趣又不越界"
+      }
+    ],
+    "checklist": [
+      "开头明确仅供娱乐与文化体验",
+      "未用于医疗、投资、法律、婚恋或职业决策",
+      "任务结束后清理不需要长期保存的个人信息"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-home-lists",
+    "number": 6,
+    "title": "家用产品比较：核对参数后再做选择",
+    "originalTitle": "穿搭、家庭清单和消费比较",
+    "summary": "根据本人提供的型号和参数整理比较表，区分可验证信息与营销说法。",
+    "steps": [
+      {
+        "startLine": 155,
+        "endLine": 168,
+        "title": "场景六：穿搭、家庭清单和消费比较",
+        "lead": "先从已有衣物、家庭成员需求和负责人清单开始，不默认产生购物推荐。",
+        "sha256": "e26b1671f23e23a86fe20d3234a6bf3b608733689f7506721b6697a771d0f4f3",
+        "sourceHeading": "场景六：穿搭、家庭清单和消费比较",
+        "sourceAnchor": "场景六-穿搭、家庭清单和消费比较"
+      },
+      {
+        "startLine": 169,
+        "endLine": 182,
+        "title": "消费比较与人工决策",
+        "lead": "对比参数、价格、售后和隐私；营销表述单独标记，不自动下单。",
+        "sha256": "a0f3a1de3a62b7dc2a6ef7dadf6e766c0ce3fb8ad27623409331313798a5875e",
+        "sourceHeading": "场景六：穿搭、家庭清单和消费比较",
+        "sourceAnchor": "场景六-穿搭、家庭清单和消费比较"
+      }
+    ],
+    "checklist": [
+      "事实来源和营销内容分列",
+      "家庭成员的药品与健康安排由本人核对",
+      "未自动下单或接受服务条款"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  },
+  {
+    "id": "wb-life-emotion-journal",
+    "number": 7,
+    "title": "情绪记录：整理模式并连接现实支持",
+    "originalTitle": "情绪记录与现实支持",
+    "summary": "整理事件和感受、生成沟通问题；不诊断，也不让用户只依赖 Agent。",
+    "steps": [
+      {
+        "startLine": 183,
+        "endLine": 198,
+        "title": "场景七：情绪记录与现实支持",
+        "lead": "只整理当事人提供的记录和重复模式，不诊断、不贴人格标签。",
+        "sha256": "a42a3c570bcca7b06fc269d35a1622449a36ff6a7e34fddc1664e5cbdccc1224",
+        "sourceHeading": "场景七：情绪记录与现实支持",
+        "sourceAnchor": "场景七-情绪记录与现实支持"
+      }
+    ],
+    "checklist": [
+      "记录只使用本人主动提供的信息",
+      "总结没有发展成诊断或人格标签",
+      "危机信号出现时转向现实可信赖的人、专业机构或紧急服务"
+    ],
+    "sourcePath": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 14 章 生活助手的价值，是减少琐碎/index.md"
+  }
+]

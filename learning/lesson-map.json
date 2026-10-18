@@ -1,0 +1,1363 @@
+[
+  {
+    "id": "wb-lesson-01",
+    "number": 1,
+    "level": "L0",
+    "originalTitle": "为什么说它是员工，不只是问答机",
+    "suggestedTitle": "WorkBuddy 如何从回答问题走向交付结果",
+    "grade": "A",
+    "reason": "原文明确区分问答与交付，并有对应界面图片；保持概念课，不虚构员工权限。",
+    "externalSources": [
+      {
+        "title": "官方：创建任务与选择工作空间",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/Create-Task"
+      },
+      {
+        "title": "官方：默认权限与安全边界",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Permission-Modes"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 1 章 初识 WorkBuddy/index.md",
+        "title": "第 1 章 初识 WorkBuddy",
+        "heading": "第 1 章 初识 WorkBuddy",
+        "anchor": "第-1-章-初识-workbuddy",
+        "startLine": 1,
+        "endLine": 47,
+        "excerpt": "# 第 1 章 初识 WorkBuddy **WorkBuddy** 是腾讯最新推出的全场景职场 AI 智能体工作台， 面向 人力资源、行政、运营、销售、研发等不同职场角色，是一款能够像真正同事一样思考、执行任务并交付结果的 AI 办公应用。 ## 从“回答问题”到“交付结果” 与传统 AI 助手不同，WorkBuddy 不只是陪用户聊天、回答问题或者给出建议。 用户只需要用一句自然语言描述需求，它就可以理解任务目标，在本地电脑中自主规划执行步骤，并完成复杂的多模态任务。 在获得用户授权后，WorkBuddy 可以读取和处理本地文件，自动完成批量文件处理、文档生成、表格分析、PPT 制作、多模态内容创作、行业调研、本地知识库构建等工作。 对于更加复杂的任务，它还可以自主拆解步骤，并通过多个智能体（Agents）并行，减少人工在不同工具、文件和任务之间反复切换的成本。 ```mermaid flowchart LR A[说清目标]",
+        "sha256": "68fb803eed7c4132250ac3e9a5533008b4b746c53b6eca7185851de663d443c5"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-df612569-1",
+      "image-df612569-2"
+    ],
+    "imageCount": 2,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-02",
+    "number": 2,
+    "level": "L0",
+    "originalTitle": "从安装到第一份文件清单，先跑通一个小任务",
+    "suggestedTitle": "安装 WorkBuddy，并在演练目录生成文件清单",
+    "grade": "B",
+    "reason": "安装和清单指令有依据，但第4章示例截图是销售分析PPT。清单步骤使用真实文字指令；PPT图不得改标为清单结果。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 2 章 WorkBuddy的下载、安装、登录与更新/index.md",
+        "title": "第 2 章 WorkBuddy的下载、安装、登录与更新",
+        "heading": "第 2 章 WorkBuddy的下载、安装、登录与更新",
+        "anchor": "第-2-章-workbuddy的下载、安装、登录与更新",
+        "startLine": 1,
+        "endLine": 101,
+        "excerpt": "# 第 2 章 WorkBuddy的下载、安装、登录与更新 ## WorkBuddy下载 访问 [WorkBuddy 官网](https://www.workbuddy.cn/)，点击页面中的“立即下载 WorkBuddy”，在桌面端列表选择与本机匹配的版本。 官网页面列出 Mac ARM64、Mac x64、Windows x64（兼容 ARM64）、鸿蒙电脑版和 Linux 等选项。具体版本、系统要求与安装方式以官网最新页面为准。 ***切记：从官方入口进入下载，不从网盘或不明镜像获取安装包。*** ## Windows 安装 1. 下载完成后双击安装文件。 1. 如系统弹出安全提示，先核对发布者与下载来源，再决定是否继续。 2. 按安装向导完成安装并启动 WorkBuddy。 3. 进入准备运行环境 ## macOS 安装 1. 打开安装文件，将 WorkBuddy 拖入“应用程序”； 2. 从“应用程序”启动； ## 登",
+        "sha256": "dfcc78464c9faf749fc5b27f4151162de76dc38eaec5e252f106952241a13550"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "快速创建一个 WorkBuddy 任务",
+        "anchor": "快速创建一个-workbuddy-任务",
+        "startLine": 3,
+        "endLine": 22,
+        "excerpt": "## 快速创建一个 WorkBuddy 任务 1. 点击“新建任务”； ![](assets/001_image_C4q3bdNKso.png) 2. 选择或创建独立工作目录；",
+        "sha256": "cf84ee40e556efb42461aa0300392f68a5828dcf0010e4dc6b2696fcb50780f7"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "入门任务 A：整理文件",
+        "anchor": "入门任务-a-整理文件",
+        "startLine": 56,
+        "endLine": 67,
+        "excerpt": "### 入门任务 A：整理文件 ```text 目标：整理 input 目录中的练习文件，便于按类型查找。 输入：仅处理当前工作区的 input 目录。 动作：识别文件类型，提出分类和重命名方案。 约束：不删除、不覆盖原文件；重名时保留两份并标记序号。 输出：先生成 inventory.xlsx 和 proposed-actions.md。",
+        "sha256": "7af273a903b6c21a3d36b4e585effd01d131a291254568d3baa3833d2727e313"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-2a60c729-1",
+      "image-2a60c729-2",
+      "image-2a60c729-3",
+      "image-2a60c729-4",
+      "image-6064c5b6-1",
+      "image-6064c5b6-10",
+      "image-6064c5b6-11",
+      "image-6064c5b6-12",
+      "image-6064c5b6-13",
+      "image-6064c5b6-14",
+      "image-6064c5b6-15",
+      "image-6064c5b6-16",
+      "image-6064c5b6-2",
+      "image-6064c5b6-3",
+      "image-6064c5b6-4",
+      "image-6064c5b6-5",
+      "image-6064c5b6-6",
+      "image-6064c5b6-7",
+      "image-6064c5b6-8",
+      "image-6064c5b6-9"
+    ],
+    "imageCount": 20,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-03",
+    "number": 3,
+    "level": "L0",
+    "originalTitle": "三种派活方式：该问就问，该干就干",
+    "suggestedTitle": "Ask、Craft、Plan：选对模式，再确认工作区",
+    "grade": "A",
+    "reason": "第3章有三模式表、范围、模型说明和4张界面图，能够直接形成认知与设置步骤。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 3 章 WorkBuddy 的主界面、任务与工作区/index.md",
+        "title": "第 3 章 WorkBuddy 的主界面、任务与工作区",
+        "heading": "第 3 章 WorkBuddy 的主界面、任务与工作区",
+        "anchor": "第-3-章-workbuddy-的主界面、任务与工作区",
+        "startLine": 1,
+        "endLine": 60,
+        "excerpt": "# 第 3 章 WorkBuddy 的主界面、任务与工作区 WorkBuddy 主界面可以理解为三个区域：左侧（侧边栏）管理任务，中间（对话区）下达和追踪任务，右侧（结果区）查看文件、变更、预览和最终产物。 ![](assets/001_image_MuLCbdPyDo.png)",
+        "sha256": "d1dbe03a4fc04d0447dc708eb8792313cd977bde4397876ac1a32f5aec846479"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-eddfd6d4-1",
+      "image-eddfd6d4-2",
+      "image-eddfd6d4-3",
+      "image-eddfd6d4-4"
+    ],
+    "imageCount": 4,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-04",
+    "number": 4,
+    "level": "L1",
+    "originalTitle": "派活只改三处，少返工好几轮",
+    "suggestedTitle": "派活写清六件事：目标、输入、动作、约束、输出、验收",
+    "grade": "B",
+    "reason": "原题“三处”与原文六要素不一致；标题按六要素收敛，不能删去约束和验收。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "如何写一个任务说明",
+        "anchor": "如何写一个任务说明",
+        "startLine": 45,
+        "endLine": 88,
+        "excerpt": "## 如何写一个任务说明 | 要素 | 要回答的问题 | |-|-| | 目标 | 最终要解决什么问题 | | 输入 | 使用哪些文件、目录或链接 | | 动作 | 需要分析、整理、转换还是生成 | | 约束 | 哪些不能改，采用什么规范 |",
+        "sha256": "177149f6da5b92acf59e5e690137ce6ef5c796d00a444cd27ab1b2c26c3278cd"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "办公三件套的共同工作流",
+        "anchor": "办公三件套的共同工作流",
+        "startLine": 9,
+        "endLine": 22,
+        "excerpt": "## 办公三件套的共同工作流 无论文档类型是什么，都建议先把任务拆成五个问题。很多“AI 做得不好”的办公任务，根源不是模型不会写，而是人没有把交付标准说清楚。 | 问题 | 要说清什么 | 示例 | |-|-|-| | 目标 | 这份材料要帮助谁做什么决定 | 给部门负责人看，用于判断项目是否继续投入。 | | 受众 | 阅读者是谁，懂不懂背景 | 管理层只看结论；项目组需要过程和责任人。 |",
+        "sha256": "29c590a03ad8f8c1ec7f361c4b7b3e0e866b279320dad70c2916d225f3520aa1"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-05",
+    "number": 5,
+    "level": "L1",
+    "originalTitle": "别再重复交代：让它记住你的习惯和规矩",
+    "suggestedTitle": "上下文、知识库与记忆：哪些信息应该长期保存",
+    "grade": "B",
+    "reason": "原文说明记忆的含义与风险，但没有完整的偏好设置界面教程；应先做概念课，不能承诺已教会软件记忆配置。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/课外阅读：一章看懂 AI 工作系统/index.md",
+        "title": "课外阅读：一章看懂 AI 工作系统",
+        "heading": "知识库、RAG 与记忆",
+        "anchor": "知识库、rag-与记忆",
+        "startLine": 328,
+        "endLine": 371,
+        "excerpt": "## 知识库、RAG 与记忆 这三者都和「AI 依据什么」有关，但保存的东西和失效方式完全不同。 ### 知识库",
+        "sha256": "12ab4bd084b08037faf18a068f13b648123789ff0078f398a99ccef8de5cdc32"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/课外阅读：一章看懂 AI 工作系统/index.md",
+        "title": "课外阅读：一章看懂 AI 工作系统",
+        "heading": "Token 与上下文窗口：模型眼前能看到多少",
+        "anchor": "token-与上下文窗口-模型眼前能看到多少",
+        "startLine": 80,
+        "endLine": 110,
+        "excerpt": "## Token 与上下文窗口：模型眼前能看到多少 Token 是模型处理文本的基本单位，不完全等于字数。中文里一个字可能对应一个或几个 Token，代码和标点也单独计费。上下文窗口是一次推理中模型能够处理的输入、历史对话和输出总量。 把 Token 想成模型的短期记忆容量：装得下才看得见，装不下就得丢或压缩。",
+        "sha256": "444c8432996a0616a71ce61daf305e4fdf7d829e3fa4858cbc0c2b47a82435e6"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-06",
+    "number": 6,
+    "level": "L1",
+    "originalTitle": "文件再多也别乱动：先预览，再归档",
+    "suggestedTitle": "文件整理先预览：生成清单、建议与人工确认",
+    "grade": "B",
+    "reason": "有不删除、不覆盖和确认前不移动的指令；没有完整的归档执行截图链，正式标题先承诺预览与确认。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "入门任务 A：整理文件",
+        "anchor": "入门任务-a-整理文件",
+        "startLine": 56,
+        "endLine": 67,
+        "excerpt": "### 入门任务 A：整理文件 ```text 目标：整理 input 目录中的练习文件，便于按类型查找。 输入：仅处理当前工作区的 input 目录。 动作：识别文件类型，提出分类和重命名方案。 约束：不删除、不覆盖原文件；重名时保留两份并标记序号。 输出：先生成 inventory.xlsx 和 proposed-actions.md。",
+        "sha256": "7af273a903b6c21a3d36b4e585effd01d131a291254568d3baa3833d2727e313"
+      },
+      {
+        "path": "docs/bluebook/附录/附录 A 常用指令模板/index.md",
+        "title": "附录 A 常用指令模板",
+        "heading": "A.1 文件整理",
+        "anchor": "a-1-文件整理",
+        "startLine": 3,
+        "endLine": 10,
+        "excerpt": "## A.1 文件整理 ```text 请整理当前文件夹中的文件。 按文件类型和主题分类，生成新的文件夹结构。 在执行前先给我一个整理方案，不要直接移动文件。 ```",
+        "sha256": "e1164f1725f0d204d7ebd2559e92d915a880484b85fc1ee5f5c023333302cb86"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-07",
+    "number": 7,
+    "level": "L1",
+    "originalTitle": "十二个月报表，清洗合并成一张总表",
+    "suggestedTitle": "多份 Excel 合并与对账：保留清洗变化和异常清单",
+    "grade": "B",
+    "reason": "第12章有合并与对账指令，门店Case有119文件实例；十二个月不是现有独立图文教程，应去除未经对应的样本限制。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "进阶实战：多表合并、对账与异常清单",
+        "anchor": "进阶实战-多表合并、对账与异常清单",
+        "startLine": 175,
+        "endLine": 194,
+        "excerpt": "### 进阶实战：多表合并、对账与异常清单 基础办公中最有价值的不是“做个图表”，而是把数据口径和异常暴露出来： ```text 合并 input/sales 中 6 个区域的周销售表。 先检查列名、数据类型、日期范围、币种和主键，不一致时停止并列差异。 按订单号去重，但保留重复来源；汇总前输出总行数、空值、异常值和重复数。",
+        "sha256": "14eb6c9c1fe6ccfc905e9a11c82bb87646ac1db397f08645d4e8314076c43876"
+      },
+      {
+        "path": "docs/cases/submissions/tea-shop-sales-analysis/index.md",
+        "title": "用 WorkBuddy 清洗 119 份门店 Excel 并生成可交互运营看板",
+        "heading": "场景描述",
+        "anchor": "场景描述",
+        "startLine": 24,
+        "endLine": 37,
+        "excerpt": "## 场景描述 茶饮连锁品牌「茗悦茶舍」（教学用模拟数据）在全国有约 50 家门店，各门店自行用 Excel 记录每日销售明细并汇总到总部。实际收到的 119 个 `.xlsx` 文件问题非常典型： - **列名三套体系并存**：中文（日期/品项/销售额）、中文变体（星期/品类/营业额(元)/客流量）、英文（Date/Category/Revenue(¥)/Customers/ATV） - **结构不一致**：14 个文件带大标题行（真实表头在第 2 行），24 个文件按「月」或「季」拆成多个 Sheet - **",
+        "sha256": "068eede95d5874e91f33874acce17c8d5e5c6fe8626d85b1e19d37253a9d7c4d"
+      },
+      {
+        "path": "docs/cases/submissions/tea-shop-sales-analysis/index.md",
+        "title": "用 WorkBuddy 清洗 119 份门店 Excel 并生成可交互运营看板",
+        "heading": "在 WorkBuddy 中的操作",
+        "anchor": "在-workbuddy-中的操作",
+        "startLine": 63,
+        "endLine": 72,
+        "excerpt": "## 在 WorkBuddy 中的操作 1. **摸底**：让 WorkBuddy 先扫描目录，报告文件数量、格式差异和脏数据类型，先出方案再动手。 2. **清洗合并**：确认方案后，WorkBuddy 编写并运行清洗脚本，输出 `cleaned_data/汇总表.xlsx`（汇总表 / 门店统计 / 数据质量报告 三个 Sheet），同时保留可复现脚本。 3. **生成 Excel 分析报告**：基于汇总表生成 8 个 Sheet 的 `门店运营分析报告.xlsx`，占比、合计、客单价、环比全部用 Excel ",
+        "sha256": "3a6d7d4e4f400cf230b47d4584a573de46afa89be11df61d78aead3d7a081893"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-09c21871-10",
+      "image-09c21871-11",
+      "image-58dc81f2-2"
+    ],
+    "imageCount": 3,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-08",
+    "number": 8,
+    "level": "L1",
+    "originalTitle": "发票拍照汇总成表，报销前先核对数字",
+    "suggestedTitle": "发票文件识别与台账：原件不动，数字逐项核对",
+    "grade": "B",
+    "reason": "更准确来源是第13章，含字段、重复票据与缺失字段处理及真实台账图；未展示手机拍照入口，不写拍照教学。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 12 章 从整理桌面文件这些小事做起/index.md",
+        "title": "第 13 章 从整理桌面文件这些小事做起",
+        "heading": "第 13 章 从整理桌面文件这些小事做起",
+        "anchor": "第-13-章-从整理桌面文件这些小事做起",
+        "startLine": 1,
+        "endLine": 27,
+        "excerpt": "# 第 13 章 从整理桌面文件这些小事做起 ## 整理桌面发票，不再回电脑前翻文件 桌面发票是典型的“电脑在替人承受混乱”的场景：电子发票、截图、PDF、微信下载文件、邮件附件混在一起，命名方式各不相同。人不在电脑前时，最烦的不是不知道怎么报销，而是不知道哪几张发票已经在电脑里、哪些字段还缺、哪些文件可能重复。 ### 场景痛点",
+        "sha256": "1275ebd7378a587778d19a42266541536f91809417ea2c8a3f25d53e95668037"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-6db9bc65-1"
+    ],
+    "imageCount": 1,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-09",
+    "number": 9,
+    "level": "L1",
+    "originalTitle": "会议文字稿，整理成能执行的纪要",
+    "suggestedTitle": "从会议转写整理纪要和待办：未知信息保留待确认",
+    "grade": "A",
+    "reason": "第18章有纪要结构、待办预览与对应2张图；无负责人或日期时明确待确认，写入任务系统前另行确认。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md",
+        "title": "第 18 章 会议结束不是终点，工作才刚刚开始",
+        "heading": "第四步：从转写生成可执行会议纪要",
+        "anchor": "第四步-从转写生成可执行会议纪要",
+        "startLine": 103,
+        "endLine": 134,
+        "excerpt": "### 第四步：从转写生成可执行会议纪要 一份纪要，包含五类信息 | 类型 | 例子 | 处理方式 | |-|-|-| | 背景事实 | 当前纪要平均需 40 分钟整理 | 附来源或发言时间 | | 已确认决定 | 首期只支持会后生成待办草稿 | 记录决定人和时间 |",
+        "sha256": "342913ae69dce38045bddc7a4e07ad70533d81130441b98d1b249dcec4a41630"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md",
+        "title": "第 18 章 会议结束不是终点，工作才刚刚开始",
+        "heading": "第五步：纪要里的待办，不能直接静默写入任务系统",
+        "anchor": "第五步-纪要里的待办-不能直接静默写入任务系统",
+        "startLine": 135,
+        "endLine": 154,
+        "excerpt": "### 第五步：纪要里的待办，不能直接静默写入任务系统 为什么要两步确认 会中发言和正式任务不是同一件事。把“可以看看”直接变成分派给某人的任务，会制造额外管理成本。 ```text 读取 minutes-approved.md 中的行动项，只生成待办导入预览。",
+        "sha256": "0893bb29272c446eb10fb0bfbc751662c23c78dd1f7470cbacf430da431dafa6"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "入门任务 B：生成会议纪要",
+        "anchor": "入门任务-b-生成会议纪要",
+        "startLine": 68,
+        "endLine": 77,
+        "excerpt": "### 入门任务 B：生成会议纪要 ```text 请把 input/meeting.txt 整理为结构化会议纪要。 必须包含：会议结论、待办事项、负责人、截止日期、待确认问题。 不能从原文确认的负责人或日期写“待确认”，不要自行补全。 输出 output/会议纪要.md 和 output/待办清单.xlsx。 验收：每一项结论可以在原文找到依据；待办不遗漏负责人和时间状态。",
+        "sha256": "30cca8bc0c722643227ca0ff76cda75246cc9d0faa2a3cda58aade91dc1d71f9"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-20b42156-4",
+      "image-20b42156-5"
+    ],
+    "imageCount": 2,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-10",
+    "number": 10,
+    "level": "L1",
+    "originalTitle": "一份模板加一张名单，批量生成合同和邮件",
+    "suggestedTitle": "生成 Word 初稿：先看大纲，再逐轮修改",
+    "grade": "B",
+    "reason": "批量合同与邮件的字段映射、防串数据流程没有可靠教程依据；本课调整为有蓝皮书和官方操作说明支撑的 Word 初稿与迭代修改。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "Word：从空白页到正式文档",
+        "anchor": "word-从空白页到正式文档",
+        "startLine": 46,
+        "endLine": 107,
+        "excerpt": "## Word：从空白页到正式文档 ### 这个场景的痛点 Word 看起来只是写字，但真实办公里的难点通常有四个：不知道该按什么结构写、语气不够正式、标题和编号混乱、内容没有证据来源。",
+        "sha256": "9a72fe4f4cd71b1e79f0efefaa41f64725cc826be4099258bedc06322b82496e"
+      }
+    ],
+    "externalSources": [
+      {
+        "title": "官方：创建任务",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/Create-Task"
+      },
+      {
+        "title": "官方：实践二——文档生成与编辑",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Practice-Cases/Practice-Two"
+      },
+      {
+        "title": "官方：独立文件浏览器与人机双写",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/File-Browser"
+      }
+    ],
+    "replacementRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "Word：从空白页到正式文档",
+        "anchor": "word-从空白页到正式文档",
+        "startLine": 46,
+        "endLine": 107,
+        "excerpt": "## Word：从空白页到正式文档 ### 这个场景的痛点 Word 看起来只是写字，但真实办公里的难点通常有四个：不知道该按什么结构写、语气不够正式、标题和编号混乱、内容没有证据来源。 尤其是方案、通知、报告、会议纪要、制度、申请、PRD 这类文档，如果开头就让 AI 自由发挥，结果往往像“万能模板”，读起来完整，却很难直接提交。",
+        "sha256": "9a72fe4f4cd71b1e79f0efefaa41f64725cc826be4099258bedc06322b82496e"
+      }
+    ],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 4,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-11",
+    "number": 11,
+    "level": "L1",
+    "originalTitle": "不会写代码，也能做销售看板和分析报告",
+    "suggestedTitle": "从门店销售表到分析报告与交互看板",
+    "grade": "A",
+    "reason": "现有门店Case包含输入问题、三轮指令、Excel报告、联动HTML看板、结果和验收，标题可以直接围绕真实任务。",
+    "sourceRefs": [
+      {
+        "path": "docs/cases/submissions/tea-shop-sales-analysis/index.md",
+        "title": "用 WorkBuddy 清洗 119 份门店 Excel 并生成可交互运营看板",
+        "heading": "用 WorkBuddy 清洗 119 份门店 Excel 并生成可交互运营看板",
+        "anchor": "用-workbuddy-清洗-119-份门店-excel-并生成可交互运营看板",
+        "startLine": 20,
+        "endLine": 173,
+        "excerpt": "# 用 WorkBuddy 清洗 119 份门店 Excel 并生成可交互运营看板 ![案例封面：门店运营分析看板](./assets/cover.jpg) ## 场景描述 茶饮连锁品牌「茗悦茶舍」（教学用模拟数据）在全国有约 50 家门店，各门店自行用 Excel 记录每日销售明细并汇总到总部。实际收到的 119 个 `.xlsx` 文件问题非常典型：",
+        "sha256": "c5c0932f5a14e1a7e6720c4cce662d0e165e7674d41518f79700253c485e4677"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "提示词示例：销售数据分析",
+        "anchor": "提示词示例-销售数据分析",
+        "startLine": 153,
+        "endLine": 174,
+        "excerpt": "### 提示词示例：销售数据分析 ```Plain Text 请读取 电商销售数据.xlsx，先不要修改原文件。 业务问题：分析本月各产品线的销售表现和盈利能力，判断哪些产品线贡献高、哪些利润表现较弱，并识别本月销售过程中的异常波动。 请输出： 说明数据字段含义，并检查缺失值、重复记录、异常值和字段格式问题； 按产品线统计销售额、毛利、毛利率、销售额占比和毛利贡献占比，并进行排名；",
+        "sha256": "58b07470781543af98556ff0ba544099617564c18752323f3a5374283020c0fc"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-09c21871-7",
+      "image-09c21871-8",
+      "image-09c21871-9",
+      "image-58dc81f2-1",
+      "image-58dc81f2-2",
+      "image-58dc81f2-3",
+      "image-58dc81f2-4",
+      "image-58dc81f2-5",
+      "image-58dc81f2-6"
+    ],
+    "imageCount": 9,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-12",
+    "number": 12,
+    "level": "L1",
+    "originalTitle": "用户在哪一步走了？用漏斗和问卷找线索",
+    "suggestedTitle": "比较两版制度或方案：标出差异与待确认问题",
+    "grade": "B",
+    "reason": "漏斗事件、问卷样本和联动分析缺少可复核的教程依据；本课改为蓝皮书已给出明确指令和核对边界的文档差异比较。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "进阶实战：比较两版制度、合同或方案",
+        "anchor": "进阶实战-比较两版制度、合同或方案",
+        "startLine": 108,
+        "endLine": 122,
+        "excerpt": "### 进阶实战：比较两版制度、合同或方案 比较两个版本，列出新增、删除、修改和格式变化，标注原文位置与待确认问题。",
+        "sha256": "1b696c9e739de6be37add60e7d9cbc93b85d15cae1608299178c71c038feaa62"
+      }
+    ],
+    "externalSources": [
+      {
+        "title": "官方：创建任务与添加上下文",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/Create-Task"
+      },
+      {
+        "title": "官方：独立文件浏览器与人机双写",
+        "url": "https://www.codebuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/File-Browser"
+      }
+    ],
+    "replacementRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "进阶实战：比较两版制度、合同或方案",
+        "anchor": "进阶实战-比较两版制度、合同或方案",
+        "startLine": 108,
+        "endLine": 122,
+        "excerpt": "### 进阶实战：比较两版制度、合同或方案 ```text 比较 policy-v3.docx 与 policy-v4.docx。 输出新增、删除、修改和仅格式变化四类差异，附章节和原文定位。 重点标记金额、日期、责任主体、审批条件、例外和否定表达。 生成影响清单和待确认问题，不给法律结论，不修改原文件。 ```",
+        "sha256": "1b696c9e739de6be37add60e7d9cbc93b85d15cae1608299178c71c038feaa62"
+      }
+    ],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 2,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-13",
+    "number": 13,
+    "level": "L1",
+    "originalTitle": "图表怎么选、怎么改，领导才看得懂",
+    "suggestedTitle": "核对销售图表：指标、汇总表与图表结论保持一致",
+    "grade": "B",
+    "reason": "有柱状图、折线图与数据口径示例，但不是完整图表选型课程；按原文核对图表与数据的内容收敛。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "提示词示例：销售数据分析",
+        "anchor": "提示词示例-销售数据分析",
+        "startLine": 153,
+        "endLine": 174,
+        "excerpt": "### 提示词示例：销售数据分析 ```Plain Text 请读取 电商销售数据.xlsx，先不要修改原文件。 业务问题：分析本月各产品线的销售表现和盈利能力，判断哪些产品线贡献高、哪些利润表现较弱，并识别本月销售过程中的异常波动。 请输出： 说明数据字段含义，并检查缺失值、重复记录、异常值和字段格式问题； 按产品线统计销售额、毛利、毛利率、销售额占比和毛利贡献占比，并进行排名；",
+        "sha256": "58b07470781543af98556ff0ba544099617564c18752323f3a5374283020c0fc"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "进阶实战：多表合并、对账与异常清单",
+        "anchor": "进阶实战-多表合并、对账与异常清单",
+        "startLine": 175,
+        "endLine": 194,
+        "excerpt": "### 进阶实战：多表合并、对账与异常清单 基础办公中最有价值的不是“做个图表”，而是把数据口径和异常暴露出来： ```text 合并 input/sales 中 6 个区域的周销售表。 先检查列名、数据类型、日期范围、币种和主键，不一致时停止并列差异。 按订单号去重，但保留重复来源；汇总前输出总行数、空值、异常值和重复数。",
+        "sha256": "14eb6c9c1fe6ccfc905e9a11c82bb87646ac1db397f08645d4e8314076c43876"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-09c21871-10",
+      "image-09c21871-11",
+      "image-09c21871-7",
+      "image-09c21871-8",
+      "image-09c21871-9"
+    ],
+    "imageCount": 5,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-14",
+    "number": 14,
+    "level": "L1",
+    "originalTitle": "会议录音变文字，隐私不出电脑？先核实这三步",
+    "suggestedTitle": "获取会议录制与转写：先确认权限、来源与保留期限",
+    "grade": "B",
+    "reason": "来源是腾讯会议Skill及连接器授权，不能由此宣称转写在本地完成、隐私不出电脑。保留全部3张授权和查询图。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md",
+        "title": "第 18 章 会议结束不是终点，工作才刚刚开始",
+        "heading": "第三步：会后获取录制、转写和会议内容",
+        "anchor": "第三步-会后获取录制、转写和会议内容",
+        "startLine": 73,
+        "endLine": 102,
+        "excerpt": "### 第三步：会后获取录制、转写和会议内容 会议结束后，最容易犯的错误是把“有录音”当成“已经有可用信息”。录制可能没有开启，转写可能尚未生成，调用人也可能没有查看权限。 ```text 查询会议号 123 456 789 对应的已结束会议。 先返回主题、时间和主持人，确认是目标会议后，再查询录制列表。 如果有权限，获取转写全文、分段信息和智能纪要；",
+        "sha256": "8e8b3472731ecf247abff40291dc6816ef1ac64359c881a1e5a3d5ba04dac3a8"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md",
+        "title": "第 18 章 会议结束不是终点，工作才刚刚开始",
+        "heading": "一套基础办公 Skill 栈",
+        "anchor": "一套基础办公-skill-栈",
+        "startLine": 185,
+        "endLine": 199,
+        "excerpt": "## 一套基础办公 Skill 栈 | 任务层 | 可选能力 | 默认安全动作 | |-|-|-| | 会议 | 腾讯会议 Skill、日历连接器 | 创建前预览，取消前二次确认 | | 内容 | 录制、转写、会议纪要模板 | 保留来源和时间戳 | | 协作 | 任务、邮件、IM、腾讯文档/WPS | 先生成草稿或导入预览 | | 产品 | PRD 模板、自定义产品经理 Skill | 只使用确认需求，保留未决问题 |",
+        "sha256": "495de888f47d9a539bbfdcd2a66c1ca61f70fecd12e221ac0e8fec0bc4da463e"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-20b42156-1",
+      "image-20b42156-2",
+      "image-20b42156-3"
+    ],
+    "imageCount": 3,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-15",
+    "number": 15,
+    "level": "L2",
+    "originalTitle": "让它按时自己上班：第一个定时任务",
+    "suggestedTitle": "建立第一个定时任务：先试跑，再检查执行记录",
+    "grade": "A",
+    "reason": "第11章有自动化设置、任务模板与4张原图。时间、工作目录、提示词和推送选项有明确说明。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+        "title": "第 11 章 WorkBuddy 自动化任务",
+        "heading": "第 11 章 WorkBuddy 自动化任务",
+        "anchor": "第-11-章-workbuddy-自动化任务",
+        "startLine": 1,
+        "endLine": 116,
+        "excerpt": "# 第 11 章 WorkBuddy 自动化任务 真正消耗人的，往往不是那些需要创造力的大任务，而是每天都要打开同样的页面、收集相似的信息、整理成同一种格式，再把结果发给同一批人。WorkBuddy 自动化的价值，就是把这些“时间固定、步骤相似、结果可检查”的工作变成可重复运行的 Agent 任务。 ## 为什么 WorkBuddy 可以自动化 传统自动化通常要求人先把每一个步骤写成代码：打开哪个系统、点击哪个按钮、读取哪一列、遇到异常怎么分支。",
+        "sha256": "b19564bebaa4d338688eda396feb231578fbc431471831a0a24ee26614aa3a1c"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-1b130e08-1",
+      "image-1b130e08-2",
+      "image-1b130e08-3",
+      "image-1b130e08-4"
+    ],
+    "imageCount": 4,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-16",
+    "number": 16,
+    "level": "L2",
+    "originalTitle": "每天八点，把行业重点送到手机",
+    "suggestedTitle": "每日 AI 简报：先试跑、再定时，并核对小程序推送",
+    "grade": "B",
+    "reason": "原文有08:00任务、资讯Skill和小程序推送选项，不能再说完全没有手机来源；但尚未实测整条链路，不将配置截图等同实际送达成功。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+        "title": "第 11 章 WorkBuddy 自动化任务",
+        "heading": "从一句想法到可运行任务",
+        "anchor": "从一句想法到可运行任务",
+        "startLine": 47,
+        "endLine": 69,
+        "excerpt": "## 从一句想法到可运行任务 创建自动化前，先把口头需求改写成一份小型任务说明。一个可靠的 Prompt 至少要回答：何时执行、读取什么、怎样处理、输出到哪里、怎样算完成、失败后怎么办、哪些动作禁止执行。 ```text 任务名称：每日 AI 行业简报 触发时间：每天 08:00，时区 Asia/Shanghai 工作目录：automation/ai-daily",
+        "sha256": "09c48e60e4b2012a65995e5bb062dfd4e078e36726c3b7c274e068d2142ed7ba"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+        "title": "第 11 章 WorkBuddy 自动化任务",
+        "heading": "创建一项自动化任务",
+        "anchor": "创建一项自动化任务",
+        "startLine": 70,
+        "endLine": 96,
+        "excerpt": "## 创建一项自动化任务 在 WorkBuddy 打开“自动化”页面，可以查看已安排任务和历史执行记录。点击“添加”后，需要配置任务名称、工作空间、提示词、模型与技能、定时规则，以及是否把完成结果推送到 WorkBuddy 小程序。 | 配置项 | 作用 | 填写建议 | |-|-|-| | 名称 | 区分不同自动化任务 | 写清对象和频率，如“每日 AI 简报” | | 工作空间 | 限定执行目录和文件保存位置 | 为每项自动化使用独立目录，避免互相覆盖 |",
+        "sha256": "5a1f37fb3485af1bc195585cc886eb58d0578ae8cadc289cdc34cf13dba91e6a"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 15 章 资讯整合：把信息流变成每日通知/index.md",
+        "title": "第 16 章 资讯整合：把信息流变成每日通知",
+        "heading": "第 16 章 资讯整合：把信息流变成每日通知",
+        "anchor": "第-16-章-资讯整合-把信息流变成每日通知",
+        "startLine": 1,
+        "endLine": 114,
+        "excerpt": "# 第 16 章 资讯整合：把信息流变成每日通知 资讯整合最怕两件事：一是信息太多，真正重要的内容被淹没；二是通知太吵，最后所有人都把它当背景噪音。 WorkBuddy 把多个信息源变成可筛选、可解释、可追踪的通知系统。比如，GitHub 热点项目每日通知、AIHOT 行业日报、论文与技术趋势追踪、公众号和博客监控、新闻与热榜舆情、事实核查与来源补证。 让用户每天少错过真正值得看的东西。",
+        "sha256": "940b9a2cbd331c5a88bd23f6649357660bb07c6ef8597919b213b1c6ea203fa3"
+      },
+      {
+        "path": "docs/cases/submissions/daily-ai-news/index.md",
+        "title": "【示例】用 WorkBuddy 自动整理每日 AI 资讯",
+        "heading": "【示例】用 WorkBuddy 自动整理每日 AI 资讯",
+        "anchor": "【示例】用-workbuddy-自动整理每日-ai-资讯",
+        "startLine": 19,
+        "endLine": 184,
+        "excerpt": "# 【示例】用 WorkBuddy 自动整理每日 AI 资讯 ## 场景描述 AI 资讯更新很快，同一事件经常出现在多个媒体和信息源中。逐个网站浏览不仅耗时，也容易错过模型发布、产品更新、开源项目和行业变化。 这个案例适合需要持续关注 AI 行业的产品、研发、运营、投资和内容团队。我们希望把“到处找新闻”变成一次可以重复执行的 WorkBuddy 任务。",
+        "sha256": "4cd361530bb87ab6074e28b65dd64cd3176074e0fe8f9e3738d5caf93efa8ae1"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 WorkBuddy 接入小程序与 IM 助理/index.md",
+        "title": "第 9 章 WorkBuddy 接入小程序与 IM 助理",
+        "heading": "小程序的两种模式",
+        "anchor": "小程序的两种模式",
+        "startLine": 3,
+        "endLine": 19,
+        "excerpt": "## 小程序的两种模式 ![](assets/001_image_Vv5bbtLVBo.png) | 模式 | 任务在哪里运行 | 是否依赖电脑在线 | 适合任务 | |-|-|-|-| | 本机模式 | 已连接的电脑 | 是 | 本地文件、本地 Skill、已有工作区 | | 云端模式 | 隔离的云端环境 | 否 | 调研、写作、临时分析、并行任务 |",
+        "sha256": "f73b9c17084d5d4335f23220ef7ab6bd9ce93222665040c6ea0c2437a75ce7f2"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-1b130e08-1",
+      "image-1b130e08-2",
+      "image-1b130e08-3",
+      "image-3c8e1e8d-1",
+      "image-8d82f756-1",
+      "image-8d82f756-2",
+      "image-8d82f756-3",
+      "image-8d82f756-4",
+      "image-8d82f756-5",
+      "image-8d82f756-6",
+      "image-afd89684-1",
+      "image-afd89684-2",
+      "image-afd89684-3"
+    ],
+    "imageCount": 13,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-17",
+    "number": 17,
+    "level": "L2",
+    "originalTitle": "周五下班前，周报初稿已经备好",
+    "suggestedTitle": "用飞书知识库生成周报：先限定资料与时间范围",
+    "grade": "B",
+    "reason": "第8章有知识库周报图文和GIF，第11章有周报模板。原文不是完整周五无人值守周报链路，标题先承诺已示范部分。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 飞书办公实战：从接入到交付/index.md",
+        "title": "第 8 章 飞书办公实战：从接入到交付",
+        "heading": "8.4 读完飞书知识库，自动生成周报",
+        "anchor": "_8-4-读完飞书知识库-自动生成周报",
+        "startLine": 102,
+        "endLine": 135,
+        "excerpt": "## 8.4 读完飞书知识库，自动生成周报 我会让 WeSight 把每天的工作自动沉淀到飞书知识库，但日报积累多了以后，重新翻阅本身又成了一项工作。所以我直接让 WorkBuddy 读取每日沉淀，整理本周主线、完成事项和可复用经验。 ```text 总结一下飞书知识库【每日知识沉淀】里的文档，看一下我这周使用 AI 做了什么。请按本周主线任务、完成事项和可复用经验三个部分输出。 ``` 生成的周报如图 8-8 所示。 ![从每日知识沉淀生成 AI 工作周报](./assets/weekly-report.gif) 图 8-8 从知识库生成周报 周报生成后，还可以让它继续发送到协作群： ```text 把这个周报发到【产品运营协作群】，用卡片形式呈现，并附上完整周报链接。 ``` 完整周报被整理为飞书文档，如图 8-9 所示。 ![完整周报与飞书文档](./assets/weekly-report-doc-crop25.png) 图 8-9 保存完整周报 WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-10 所示。 ![产品运营协作群中的周报卡片](./assets/weekly-report-card-crop25.png) 图 8-10 向协作群发送周报卡片 本次实践中，内部群消息可使用本人身份发送，外部群通知通过机器人身份发送。实际发送身份与可用能力，以当前连接器的授权方式和企业配置为准。",
+        "sha256": "286c764657d2c54465b50f9b6228ce8d858c354bbb7a45ad2721f62238b58c8f"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+        "title": "第 11 章 WorkBuddy 自动化任务",
+        "heading": "不想从零写 Prompt，可以先用模板",
+        "anchor": "不想从零写-prompt-可以先用模板",
+        "startLine": 97,
+        "endLine": 104,
+        "excerpt": "## 不想从零写 Prompt，可以先用模板 官方任务模板覆盖新闻推送、周报生成、体检预约和学习计划等常见场景。模板的价值是提供基本字段和任务结构，但它不是最终答案。选用后仍应修改数据来源、时间范围、输出位置、验收标准和禁止动作。 ![](assets/004_%E8%87%AA%E5%8A%A8%E5%8C%96-%E4%BB%BB%E5%8A%A1%E6%A8%A1%E6%9D%BF_FYNwbDWqbo.png)",
+        "sha256": "6b51d80d75919bb7416e3b4a624d631a7e96d02ff5b85fd824c2e61617073b45"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-1b130e08-4",
+      "image-4b374916-10",
+      "image-4b374916-8",
+      "image-4b374916-9"
+    ],
+    "imageCount": 4,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-18",
+    "number": 18,
+    "level": "L2",
+    "originalTitle": "每天九点，替你盯住竞品的新动作",
+    "suggestedTitle": "把微信收藏变成可复用知识：用 ima 收集，再由 WorkBuddy 整理",
+    "grade": "B",
+    "reason": "竞品监控缺少历史快照、变更比较和通知验收的完整依据；本课改为有社区实操案例和官方 ima 接入说明支撑的知识整理流程。",
+    "archivedRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+        "title": "第 11 章 WorkBuddy 自动化任务",
+        "heading": "更多值得尝试的自动化场景",
+        "anchor": "更多值得尝试的自动化场景",
+        "startLine": 105,
+        "endLine": 116,
+        "excerpt": "## 更多值得尝试的自动化场景 | 任务 | 触发方式 | 建议保留的人工检查 | |-|-|-| | 周报汇总 | 每周五读取本周任务、日历和交付文件 | 确认进度和风险表述后再发送 | | 销售日报 | 每天汇总 CRM 或表格中的新增客户与跟进记录 | 核对金额、客户状态和负责人 | | 费用与发票整理 | 每月读取指定目录中的票据和报销表 | 财务提交前核对税额、重复票据和归属 | | 自媒体选题雷达 | 每天收集热点、行业话题和评论区问题 | 人工判断品牌立场和是否追热点 |",
+        "sha256": "c81d150761749e0f44606aecaec35cc68a61b911b5197ee015415f1729020466"
+      }
+    ],
+    "sourceRefs": [
+      {
+        "path": "docs/cases/submissions/wechat-ima-knowledge/index.md",
+        "title": "告别微信收藏夹吃灰：用 ima + WorkBuddy 把碎片内容构建成可生长的知识体系",
+        "heading": "想要完成的任务",
+        "anchor": "想要完成的任务",
+        "startLine": 44,
+        "endLine": 67,
+        "excerpt": "## 想要完成的任务 1. 将微信中的文字、图片、公众号文章等内容存入 ima 知识库。 2. 在 WorkBuddy 中连接 ima 知识库，将知识库内容作为 AI 对话的上下文。 3. 让 WorkBuddy 按你指定的知识领域，把零碎内容梳理成有结构的知识体系（如分类框架、主题汇总、知识地图）。 4. 将 WorkBuddy 生成的结构化成果回传到 ima，形成「收集 → 加工 → 沉淀」的闭环。 5. 后续有新的微信内容时，可以持续追加并重新梳理。 ## 使用的 Skill 与连接器 | 工具 | 用途 |",
+        "sha256": "a6999917739bc3dc882b37dfa0de7123a740405f67a566ddcf405ca05316abac"
+      },
+      {
+        "path": "docs/cases/submissions/wechat-ima-knowledge/index.md",
+        "title": "告别微信收藏夹吃灰：用 ima + WorkBuddy 把碎片内容构建成可生长的知识体系",
+        "heading": "在 WorkBuddy 中的操作",
+        "anchor": "在-workbuddy-中的操作",
+        "startLine": 68,
+        "endLine": 125,
+        "excerpt": "## 在 WorkBuddy 中的操作 ### 第一步：把微信内容存入 ima 这是日常动作，不需要 WorkBuddy。微信里看到任何有价值的内容： - **公众号文章**：打开文章 → 右上角「...」→ 用小程序打开 → 选择 ima - **图片/截图**：长按图片 → 用小程序打开 → 选择 ima 日积月累，你的 ima 知识库里就有了原始素材。 ![workbuddy添加ima连接器](assets\\小程序一键存入ima.jpg) ### 第二步：在 WorkBuddy 中添加 ima 连接器 在 W",
+        "sha256": "7239a767a7247b23b878431f0bfe5b914b0b170e141f017704302468be7d6a6f"
+      },
+      {
+        "path": "docs/cases/submissions/wechat-ima-knowledge/index.md",
+        "title": "告别微信收藏夹吃灰：用 ima + WorkBuddy 把碎片内容构建成可生长的知识体系",
+        "heading": "提示词或任务指令",
+        "anchor": "提示词或任务指令",
+        "startLine": 126,
+        "endLine": 143,
+        "excerpt": "## 提示词或任务指令 ```text 请连接我的 ima 知识库，帮我做一次完整的知识体系梳理。 背景： 我把日常在微信看到的有价值内容（公众号文章、群聊讨论、技术博客截图等）都存到了 ima，内容集中在 [你的领域：如 AI 产品 / 技术写作 / 前端开发]。 要求： 1. 先浏览全部内容，做一次内容盘点，告诉我库里都有什么。 2. 按 3-5 个核心维度分类组织内容，每个维度下列出关键观点和对应的原始内容来源。 3. 找出内容之间的关联、互补和矛盾之处。 4. 画一张知识地图（文字形式即可），标注已覆盖的子",
+        "sha256": "cb1f4e0a5cd6f984ca93f43fd792f65e0d04130b3c372f8ce97e28693261008e"
+      },
+      {
+        "path": "docs/cases/submissions/wechat-ima-knowledge/index.md",
+        "title": "告别微信收藏夹吃灰：用 ima + WorkBuddy 把碎片内容构建成可生长的知识体系",
+        "heading": "验收标准",
+        "anchor": "验收标准",
+        "startLine": 154,
+        "endLine": 161,
+        "excerpt": "## 验收标准 - ima 客户端正常使用，微信内容能成功转发到 ima。 - WorkBuddy ima 连接器已授权，能在对话中成功读取知识库内容。 - WorkBuddy 能基于知识库内容，输出有结构的知识梳理报告（包含分类、关联、知识地图）。 - 梳理成果能成功写回 ima 知识库，在 ima 中可以搜索到。 - 后续新增内容后，WorkBuddy 能在原有体系上整合而非推倒重来。 ",
+        "sha256": "16c08957cb545bd3e0f7f9ce66a0cf3d852c72ae91b0c3b034a28b997c9f8e4b"
+      }
+    ],
+    "externalSources": [
+      {
+        "title": "官方：WorkBuddy 小程序添加 ima 知识库",
+        "url": "https://www.codebuddy.cn/docs/workbuddymini/features/Attachments-and-Skills"
+      }
+    ],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [],
+    "imageCount": 0,
+    "replacementImageCount": 6,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-19",
+    "number": 19,
+    "level": "L2",
+    "originalTitle": "周报写完怎么送到位？连接办公软件的完整流程",
+    "suggestedTitle": "接入飞书并发送通知：先授权，再核对对象和范围",
+    "grade": "B",
+    "reason": "第7章与第8章有连接器、创建应用、授权、群通知图文。不要把通用发送图直接标为周报已送达；需要连接#17的真实产物再另核查。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 7 章 WorkBuddy 使用连接器/index.md",
+        "title": "第 7 章 WorkBuddy 使用连接器",
+        "heading": "加载一个连接器",
+        "anchor": "加载一个连接器",
+        "startLine": 51,
+        "endLine": 64,
+        "excerpt": "## 加载一个连接器 **当前已支持 QQ 邮箱、腾讯文档、腾讯乐享、腾讯会议、TAPD 等连接器。** ![](assets/001_image_IZzfbK38Ao.png) 比如加载腾讯会议连接器，",
+        "sha256": "1dbdd0ec2d1600583553bf9310a0f2f5ef913f3a85109fd141b56cb8e80e2a36"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 飞书办公实战：从接入到交付/index.md",
+        "title": "第 8 章 飞书办公实战：从接入到交付",
+        "heading": "8.1 接入飞书连接器",
+        "anchor": "_8-1-接入飞书连接器",
+        "startLine": 13,
+        "endLine": 70,
+        "excerpt": "## 8.1 接入飞书连接器 本章从 WorkBuddy 对话中调用飞书能力。如果希望在飞书聊天窗口里向 WorkBuddy 发任务，可以阅读下一章的小程序与 IM 助理接入方法。 ### 第一步：打开连接器 打开 WorkBuddy，在左侧列表中找到「专家·技能·连接器」，入口如图 8-1 所示。 ![WorkBuddy 左侧的专家、技能与连接器入口](./assets/connector-entry-crop25.png) 图 8-1 连接器入口 ### 第二步：找到飞书连接器 在连接器中找到「飞书」，点击右上角的「+」，如图 8-2 所示。 ![在连接器列表中添加飞书](./assets/feishu-connector-crop25.png) 图 8-2 添加飞书连接器 ### 第三步：创建飞书应用 页面会跳转到飞书开放平台，按照页面提示输入应用名称，然后点击「创建」，如图 8-3 所示。 ![在飞书开放平台创建应用](./assets/create-app-crop25.png) 图 8-3 创建飞书应用 ### 第四步：开通并授权 点击「开通并授权」，按照页面提示完成授权，如图 8-4 所示。 ![飞书应用的权限授权页面](./assets/authorize-app-crop25.png) 图 8-4 开通并授权应用 WorkBuddy 可访问的资源和可执行的操作，受到当前账号权限、应用授权范围及企业管理员设置的共同影响。 ### 第五步：在对话中启用连接器 回到 WorkBuddy 对话框，点击左下角的「+」，找到连接器，打开飞书右侧的开关，如图 8-5 所示。 ![在 WorkBuddy 对话中启用飞书连接器](./assets/enable-connector-crop25.png) 图 8-5 启用飞书连接器 完成后，可以在用于测试的群里发出一条通知。下面是我使用的指令，执行前先确认群名和通知内容： ```text 在飞书群【产品周会】里用机器人发一条通知，明天 15:00 在 3 楼会议室开周会，请带上周的进展材料。 ``` 在目标群中收到消息，说明这条消息发送链路已跑通。我的测试结果如图 8-6 所示，其他资源的读取与写入仍需具备对应权限。 ![产品周会群收到 WorkBuddy 的测试通知](./assets/connection-test-crop25.png) 图 8-6 群内收到测试通知",
+        "sha256": "32745a8dc71e043866c95ab6d9c9f3e1fd022a742e8085f53baef0ed135bb656"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 飞书办公实战：从接入到交付/index.md",
+        "title": "第 8 章 飞书办公实战：从接入到交付",
+        "heading": "8.5 让机器人去外部群发通知",
+        "anchor": "_8-5-让机器人去外部群发通知",
+        "startLine": 136,
+        "endLine": 179,
+        "excerpt": "## 8.5 让机器人去外部群发通知 合作方、供应商和外部顾问经常都在一个外部群里。如果想让机器人代发通知，需要先开通外部群能力。 ```text 在飞书群【供应商对账群】里用机器人发一条通知，9 月对账单已上传到群文件，请各供应商在周五 18:00 前完成核对，并把盖章确认页拍照发回群里。 ``` 在 WorkBuddy 中提交任务，如图 8-11 所示。 ![向 WorkBuddy 提交外部群通知任务](./assets/external-group-prompt-crop25.png) 图 8-11 外部群通知任务 目标群如果是外部群，可能遇到机器人尚未入群或外部群能力未开通的提示。我的首次尝试如图 8-12 所示。 ![机器人尚未加入外部群时的失败提示](./assets/external-group-error-crop25.png) 图 8-12 检查外部群配置 打开对应机器人的应用后台，点击「创建版本」，如图 8-13 所示。 ![飞书应用后台的创建版本入口](./assets/create-app-version-crop25.png) 图 8-13 创建应用版本 找到「对外共享」，勾选「允许机器人被添加到外部群中使用」，保存并按照飞书页面提示完成版本发布，如图 8-14 所示。截图中同时展示了外部用户单聊选项，群通知场景需要的是外部群能力。 ![飞书应用版本中的对外共享设置](./assets/external-sharing-crop25.png) 图 8-14 开通外部群能力 完成配置后，告诉 WorkBuddy 配置已经完成。在本次实践中，它使用我的身份邀请机器人入群，再以机器人身份发送通知，执行结果如图 8-15 所示。该流程需要当前账号有相应的邀请权限。 ![机器人入群并发送通知的执行结果](./assets/external-group-result-crop25.png) 图 8-15 外部群通知执行结果 随后可以在对应群聊中看到通知，如图 8-16 所示。 ![供应商对账群收到机器人通知](./assets/external-group-message-crop25.png) 图 8-16 外部群收到通知",
+        "sha256": "3c901c738ba8572a2219573e5008b1f1ea2566f3f2894d50eefb01458f0b82b6"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-4b374916-1",
+      "image-4b374916-11",
+      "image-4b374916-12",
+      "image-4b374916-13",
+      "image-4b374916-14",
+      "image-4b374916-15",
+      "image-4b374916-16",
+      "image-4b374916-2",
+      "image-4b374916-3",
+      "image-4b374916-4",
+      "image-4b374916-5",
+      "image-4b374916-6",
+      "image-c5015dda-1",
+      "image-c5015dda-2",
+      "image-c5015dda-3"
+    ],
+    "imageCount": 15,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-20",
+    "number": 20,
+    "level": "L2",
+    "originalTitle": "出门在外，微信一句话指挥电脑",
+    "suggestedTitle": "用微信助理或小程序远程派活：分清云端与本机模式",
+    "grade": "A",
+    "reason": "第9章有微信绑定，第14章有本机远程任务和结果获取；保留模式和权限区别，避免把云端能力当本机控制。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 WorkBuddy 接入小程序与 IM 助理/index.md",
+        "title": "第 9 章 WorkBuddy 接入小程序与 IM 助理",
+        "heading": "小程序的两种模式",
+        "anchor": "小程序的两种模式",
+        "startLine": 3,
+        "endLine": 19,
+        "excerpt": "## 小程序的两种模式 ![](assets/001_image_Vv5bbtLVBo.png) | 模式 | 任务在哪里运行 | 是否依赖电脑在线 | 适合任务 | |-|-|-|-| | 本机模式 | 已连接的电脑 | 是 | 本地文件、本地 Skill、已有工作区 | | 云端模式 | 隔离的云端环境 | 否 | 调研、写作、临时分析、并行任务 |",
+        "sha256": "f73b9c17084d5d4335f23220ef7ab6bd9ce93222665040c6ea0c2437a75ce7f2"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 WorkBuddy 接入小程序与 IM 助理/index.md",
+        "title": "第 9 章 WorkBuddy 接入小程序与 IM 助理",
+        "heading": "接入微信助理：扫码绑定即可",
+        "anchor": "接入微信助理-扫码绑定即可",
+        "startLine": 36,
+        "endLine": 61,
+        "excerpt": "## 接入微信助理：扫码绑定即可 1. 打开 WorkBuddy，在左侧“助理”栏点击齿轮，进入“助理设置”； ![](assets/002_%E5%BE%AE%E4%BF%A1%E5%8A%A9%E7%90%86-%E8%BF%9B%E5%85%A5%E5%8A%A9%E7%90%86%E8%AE%BE%E7%BD%AE_NbI2b9v4fo.png) 2. 找到“微信助理集成”，点击“配置”；",
+        "sha256": "edb06000533097c3436b66e1c0123929a470aeb0ee28d787da127d9af76d6dd0"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 13 章 远程控制你的电脑，不用发愁不在电脑前/index.md",
+        "title": "第 14 章 远程控制你的电脑，不用发愁不在电脑前",
+        "heading": "第 14 章 远程控制你的电脑，不用发愁不在电脑前",
+        "anchor": "第-14-章-远程控制你的电脑-不用发愁不在电脑前",
+        "startLine": 1,
+        "endLine": 95,
+        "excerpt": "# 第 14 章 远程控制你的电脑，不用发愁不在电脑前 你人不在电脑前，WorkBuddy 小程序可以成为远程任务入口，把指令发回正在运行的电脑端，让电脑继续查文件、读资料、整理发票、处理微信文件，甚至持续汇报一个长任务的进展。 ## 小程序远程控制电脑 ![](assets/001_26MfTlZV_KWt4b43Mbo.jpg)",
+        "sha256": "6e1912f9a901d035a71c9c6c06da733af48ccf73b19c594e31d6f81232dd19a2"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-3c8e1e8d-1",
+      "image-3c8e1e8d-2",
+      "image-3c8e1e8d-3",
+      "image-3c8e1e8d-4",
+      "image-3c8e1e8d-5",
+      "image-e55801ef-1",
+      "image-e55801ef-2",
+      "image-e55801ef-3",
+      "image-e55801ef-4",
+      "image-e55801ef-5",
+      "image-e55801ef-6"
+    ],
+    "imageCount": 11,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-21",
+    "number": 21,
+    "level": "L3",
+    "originalTitle": "把它当实习生带：反馈、放权、留后路",
+    "suggestedTitle": "让自动化可接管：门禁、幂等、重试与回退",
+    "grade": "B",
+    "reason": "第26章有实际自动化案例、状态机和失败恢复；比“带实习生”更明确，亦更符合原文图文和验收内容。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 25 章 自动化工作流的可靠性/index.md",
+        "title": "第 26 章 自动化工作流的可靠性",
+        "heading": "第 26 章 自动化工作流的可靠性",
+        "anchor": "第-26-章-自动化工作流的可靠性",
+        "startLine": 1,
+        "endLine": 322,
+        "excerpt": "# 第 26 章 自动化工作流的可靠性 以\"每日 AI 热点选题聚合\"为贯穿案例，说明自动化工作流在从手动运行到定时可靠执行的过程中，需要处理哪些问题。 ## 案例背景：内容博主的每日选题任务 AI 内容领域更新速度快，每天需要从多个信息源中筛选当日值得写的选题。手动逐一翻阅各个平台耗时且容易遗漏。一个典型的 AI 博主选题需求如下：",
+        "sha256": "89e727ae8ae41ac84aa6ff3b8c874e3b412270d340522bb5d041e821c110a024"
+      },
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md",
+        "title": "第 25 章 如何进行多 Agent 系统设计",
+        "heading": "失败传播控制",
+        "anchor": "失败传播控制",
+        "startLine": 209,
+        "endLine": 220,
+        "excerpt": "## 失败传播控制 | 角色失败 | 降级方式 | |-|-| | Brief 角色无法获取产品信息 | 用户补充基础信息后重试 | | 素材生成失败 | 使用用户预置素材或标记空缺位置 | | 剪辑渲染超时 | 交付已完成的片段和分镜表 | | BGM 生成失败 | 提供推荐 BGM 类型描述，由用户自选 |",
+        "sha256": "7de9b2077d5d0e8efaf1e1bd934b2d34b2e5a17c3ce57aa0170cb7cd2b389185"
+      },
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md",
+        "title": "第 25 章 如何进行多 Agent 系统设计",
+        "heading": "主理人的职责",
+        "anchor": "主理人的职责",
+        "startLine": 137,
+        "endLine": 148,
+        "excerpt": "## 主理人的职责 主理人（制片人）是工作流控制器： - 解释用户任务并维护子任务状态； - 分发最小必要上下文给各角色； - 检查上游产物是否满足交接格式； - 决定并行、等待或重试；",
+        "sha256": "8dd0d36d72ebc303f71e19b82c4a35d0e86359ac0c0ff40372c0b5ba2231ff90"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-b23f15ab-1",
+      "image-b23f15ab-2",
+      "image-b23f15ab-3",
+      "image-b23f15ab-4",
+      "image-b23f15ab-5"
+    ],
+    "imageCount": 5,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-22",
+    "number": 22,
+    "level": "L3",
+    "originalTitle": "给领导做汇报：先定六页大纲，再生成演示文稿",
+    "suggestedTitle": "从材料制作汇报 PPT：先确认大纲，再逐页检查",
+    "grade": "B",
+    "reason": "原文不是固定六页，实际示例有8页要求与9页截图；去掉六页承诺，原图保留其真实页数，销售PPT示例归本主题。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+        "title": "第 12 章 办公三件套：Word、Excel、PPT",
+        "heading": "PPT：不是套模板，而是把材料变成叙事",
+        "anchor": "ppt-不是套模板-而是把材料变成叙事",
+        "startLine": 195,
+        "endLine": 245,
+        "excerpt": "## PPT：不是套模板，而是把材料变成叙事 ### 这个场景的痛点 PPT 最容易被误用。 很多人把任务写成“帮我做一份高级感 PPT”，结果 AI 只能猜风格，生成一堆好看的空话。真正可用的 PPT 必须先回答三个问题：这次汇报给谁看、对方听完要做什么决定、你有多少时间讲。",
+        "sha256": "d058ca93c432a854802e189677110d194c6dd9ae4a60098a32dcaed7fe90af62"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md",
+        "title": "第 18 章 会议结束不是终点，工作才刚刚开始",
+        "heading": "会后延伸：把会议纪要变成汇报 PPT",
+        "anchor": "会后延伸-把会议纪要变成汇报-ppt",
+        "startLine": 171,
+        "endLine": 184,
+        "excerpt": "## 会后延伸：把会议纪要变成汇报 PPT 先确定汇报对象和结论，再设计页面： ```text 根据会议纪要生成 8 页项目汇报 PPT。 受众是管理层，目标是确认首期范围和资源缺口。 页面：结论、背景、用户问题、已确认范围、进度、风险、资源请求、下一步。",
+        "sha256": "3d489e388d0f95eb40325b1d9d74c6f4c4f89afe998838191fad5f7446fb0727"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+        "title": "第 4 章 快速完成第一个 WorkBuddy 任务",
+        "heading": "快速创建一个 WorkBuddy 任务",
+        "anchor": "快速创建一个-workbuddy-任务",
+        "startLine": 23,
+        "endLine": 44,
+        "excerpt": "5. 输入任务说明，“帮我分析一下《电商销售数据.xlsx》数据，生成一份汇报 PPT。” ![](assets/005_image_ReDxbwNkYo.png) 6. 如有必要，指定 Skill、专家、连接器或资料库，这里暂时忽略 ![](assets/006_image_INLGb7TDQo.png)",
+        "sha256": "6d767180b37aa4e41e7e41b8134447a5f6f1d86d01e0b64d5991f24e039ca352"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-09c21871-12",
+      "image-20b42156-7",
+      "image-2a60c729-5",
+      "image-2a60c729-6",
+      "image-2a60c729-7",
+      "image-2a60c729-8"
+    ],
+    "imageCount": 6,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-23",
+    "number": 23,
+    "level": "L3",
+    "originalTitle": "搜索不拿旧闻，页面不只好看",
+    "suggestedTitle": "用提示词生成可预览网页：检查交互与移动端",
+    "grade": "B",
+    "reason": "网站生成有第24章模板、GIF、视频和作品集Case。“搜索不拿旧闻”是另一任务，不能借网站教程证明检索时效。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 23 章 其他用法补充：WorkBuddy 实操案例集/index.md",
+        "title": "第 24 章 其他用法补充：WorkBuddy 实操案例集",
+        "heading": "设计创意：用提示词生成完整网站",
+        "anchor": "设计创意-用提示词生成完整网站",
+        "startLine": 38,
+        "endLine": 87,
+        "excerpt": "## 设计创意：用提示词生成完整网站 这是一个容易被低估的用法。勾选\"网站设计\"场景后给出提示词，可以生成可运行的前端页面。以下是两个经过验证的模板。 ### 模板一：个人作品集 Hero Section 生成一个带有视频背景、鼠标交互和响应式布局的全屏 Hero 页面。",
+        "sha256": "0ed5b55d49f7f6e8939b1a1531fcf03c827d02b9a36f71ac99ffdf880689e01d"
+      },
+      {
+        "path": "docs/cases/submissions/jz-2025-showreel/index.md",
+        "title": "用 WorkBuddy 生成一个 GSAP 粒子球体作品集动画网站",
+        "heading": "用 WorkBuddy 生成一个 GSAP 粒子球体作品集动画网站",
+        "anchor": "用-workbuddy-生成一个-gsap-粒子球体作品集动画网站",
+        "startLine": 23,
+        "endLine": 235,
+        "excerpt": "# 用 WorkBuddy 生成一个 GSAP 粒子球体作品集动画网站 ## 场景描述 年底需要做一份工作室年度作品集 Showreel。传统的做法是用 After Effects 或 Premiere 手动剪辑，但这类工具对动效交互和 3D 视觉的迭代成本很高——每次调整缓动曲线或粒子参数都要重新渲染。 我希望换一种方式：用 GSAP + 软件 3D 投影做一个纯前端动画，300 个粒子聚拢成球体，6 个节点代表 6 组作品，点击节点后镜头聚焦、标题浮出、作品视频展开。整个过程在浏览器里实时运行，可以随时调整参数",
+        "sha256": "4bba1e749997c8387e594899e1b60b85eb87fca5dab8ff0133c36ad9e50dfd66"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-29d1a6b4-3",
+      "image-a99f2d0f-1",
+      "image-a99f2d0f-2"
+    ],
+    "imageCount": 3,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-24",
+    "number": 24,
+    "level": "L3",
+    "originalTitle": "下载一节课之前，先看看插件是不是小偷",
+    "suggestedTitle": "找到并试用一个 Skill：安装检查、调用与停用",
+    "grade": "B",
+    "reason": "第5章完整覆盖找Skill、试跑和关闭卸载，含12张图和GIF。课程下载与插件审计不是同一套步骤，标题应以Skill教程为中心。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 5 章 WorkBuddy加载一个真正用得上的 Skill/index.md",
+        "title": "第 5 章 WorkBuddy加载一个真正用得上的 Skill",
+        "heading": "第 5 章 WorkBuddy加载一个真正用得上的 Skill",
+        "anchor": "第-5-章-workbuddy加载一个真正用得上的-skill",
+        "startLine": 1,
+        "endLine": 289,
+        "excerpt": "# 第 5 章 WorkBuddy加载一个真正用得上的 Skill ## Skill 是什么 WorkBuddy 本身负责理解任务和组织执行；Skill 则是一组可复用的说明、脚本、参考资料和资源，告诉 Agent 某类任务应该怎样做、调用什么工具、交付什么格式。",
+        "sha256": "8b717ce8cb09b88719ceebdeea347a7bfb90e943874ca4bbc30597e2824179ca"
+      },
+      {
+        "path": "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/课外阅读：一章看懂 AI 工作系统/index.md",
+        "title": "课外阅读：一章看懂 AI 工作系统",
+        "heading": "Skill：可复用的专业工作方法",
+        "anchor": "skill-可复用的专业工作方法",
+        "startLine": 228,
+        "endLine": 271,
+        "excerpt": "## Skill：可复用的专业工作方法 Skill 不是更聪明的模型，而是把某类任务需要的说明、脚本、知识和模板组织起来，让 Agent 更稳定地完成动作。 Skill 的价值不在「让模型变强」，而在「把容易做错、容易遗漏的环节固定下来」。同样的发票处理，让模型每次现写，十次可能有三种写法；写成 Skill，十次走同一条被验证过的路。",
+        "sha256": "974e5a4bdcc2ff5a344bc4d32ae65f729705c5f2d5e88a0ec233eb6d6135ce5b"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-bf864705-1",
+      "image-bf864705-10",
+      "image-bf864705-11",
+      "image-bf864705-12",
+      "image-bf864705-2",
+      "image-bf864705-3",
+      "image-bf864705-4",
+      "image-bf864705-5",
+      "image-bf864705-6",
+      "image-bf864705-7",
+      "image-bf864705-8",
+      "image-bf864705-9"
+    ],
+    "imageCount": 12,
+    "replacementImageCount": 0,
+    "stepHeadingLevel": 3
+  },
+  {
+    "id": "wb-lesson-25",
+    "number": 25,
+    "level": "L3",
+    "originalTitle": "找个懂行的帮手：财报和立项方案怎么问",
+    "suggestedTitle": "公司研究：从原始资料核验到分析报告",
+    "grade": "B",
+    "reason": "年报Case和第19章财报部分有真实内容及截图；立项方案没有同等完整流程，技术面截图也不能改成财报图。",
+    "sourceRefs": [
+      {
+        "path": "docs/cases/submissions/annual-report-digital-transformation/index.md",
+        "title": "用 WorkBuddy 专家团吃透十年年报：一套可复用的上市公司深度研究方法",
+        "heading": "用 WorkBuddy 专家团吃透十年年报：一套可复用的上市公司深度研究方法",
+        "anchor": "用-workbuddy-专家团吃透十年年报-一套可复用的上市公司深度研究方法",
+        "startLine": 23,
+        "endLine": 188,
+        "excerpt": "# 用 WorkBuddy 专家团吃透十年年报：一套可复用的上市公司深度研究方法 ![案例封面：数字化转型叙事分析报告首页](./assets/cover.png) ## 场景描述 商业分析人员（MBA 学员、咨询顾问、行业研究员、投资与战略岗）面对一家陌生上市公司时，核心问题不是「缺信息」，而是**如何在短时间内建立对这家公司完整、可信、可检验的认知**。最权威、最完整的公开素材是历年年度报告，但一年一份的年报动辄两三百页，十年就是数千页，人工通读并交叉核对叙事口径与财务数据通常需要数周，且很难做到逐年可比、口径",
+        "sha256": "dc7ffebc9fe44fc526778bcbeb2b6dc79b950a3f7dcf31460b263acfffc64f18"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 18 章 把投资分析变成你的日常/index.md",
+        "title": "第 19 章 把投资分析变成你的日常",
+        "heading": "第二步：补上财报截图，做一次全面分析",
+        "anchor": "第二步-补上财报截图-做一次全面分析",
+        "startLine": 401,
+        "endLine": 445,
+        "excerpt": "### 第二步：补上财报截图，做一次全面分析 接着我又上传了 2025 年三季报和全年预增公告的截图，让它把基本面接进来，做一次完整评级： ```text 我又上传了这只股票的 2025 年三季度报数据和 2025 年全年预增数据。 现在请你： 1. 先识别截图中的所有财务指标数据",
+        "sha256": "1afc48a0b57dcdddc106036a6e6f0e7deb870accdb0e83f408bf9987eee16d42"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 18 章 把投资分析变成你的日常/index.md",
+        "title": "第 19 章 把投资分析变成你的日常",
+        "heading": "Prompt 1｜最基础：给公司建一个「事实底座」",
+        "anchor": "prompt-1-最基础-给公司建一个「事实底座」",
+        "startLine": 47,
+        "endLine": 64,
+        "excerpt": "### Prompt 1｜最基础：给公司建一个「事实底座」 **解决的场景**：刚接触一家公司，先别急着判断，先搞清楚它到底是干什么的。很多错误判断，从第一步认错了业务就开始了——你以为它靠 A 赚钱，结果利润主要来自 B。这一步的价值，是**压缩你「搞清楚事实」的时间成本**。 ```markdown 请帮我系统梳理【XXX 公司】的基础情况，输出结构化总结，包括： 1）核心业务与主要产品线 2）收入与利润来源构成",
+        "sha256": "6272b0cd6e757c826fe5051e87eb9de22ec2fc3626dde4663d43edc03dc94a3a"
+      },
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 18 章 把投资分析变成你的日常/index.md",
+        "title": "第 19 章 把投资分析变成你的日常",
+        "heading": "Prompt 4｜财务质量：这家公司赚的钱干不干净",
+        "anchor": "prompt-4-财务质量-这家公司赚的钱干不干净",
+        "startLine": 142,
+        "endLine": 161,
+        "excerpt": "### Prompt 4｜财务质量：这家公司赚的钱干不干净 **解决的场景**：财务调研指标很多，这里给一个通用格式。核心是强制做「利润 vs 现金流」的交叉验证——账面利润漂亮，现金流跟不上，往往是第一个预警信号。 ```markdown 请分析【<公司>】近几年的财务质量： 1）收入、利润与经营现金流的匹配情况 2）应收账款、存货、合同资产变化",
+        "sha256": "c31fab6ee136cc5d916a426de99f841c1c15827731419fac75d49f6fd5502e81"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-10f8e645-1",
+      "image-10f8e645-10",
+      "image-10f8e645-2",
+      "image-10f8e645-3",
+      "image-10f8e645-4",
+      "image-10f8e645-5",
+      "image-10f8e645-6",
+      "image-10f8e645-7",
+      "image-10f8e645-8",
+      "image-10f8e645-9",
+      "image-51d7c55e-10",
+      "image-51d7c55e-7",
+      "image-51d7c55e-8",
+      "image-51d7c55e-9"
+    ],
+    "imageCount": 14,
+    "replacementImageCount": 0
+  },
+  {
+    "id": "wb-lesson-26",
+    "number": 26,
+    "level": "L3",
+    "originalTitle": "一个人运营一个号：让三个助手分工，不乱套",
+    "suggestedTitle": "自媒体工作流与多角色分工：选题、排版和人工发布",
+    "grade": "B",
+    "reason": "第21章和公众号Case支持内容流程，第25章支持角色契约；尚无特定“三助手”完整实现，不能将宣传片专家团截图改标为公众号三助手。",
+    "sourceRefs": [
+      {
+        "path": "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 20 章 自媒体不只是靠努力，而是一条增长闭环/index.md",
+        "title": "第 21 章 自媒体不只是靠努力，而是一条增长闭环",
+        "heading": "第 21 章 自媒体不只是靠努力，而是一条增长闭环",
+        "anchor": "第-21-章-自媒体不只是靠努力-而是一条增长闭环",
+        "startLine": 1,
+        "endLine": 265,
+        "excerpt": "# 第 21 章 自媒体不只是靠努力，而是一条增长闭环 ## 内容没人看？往往不是因为你不够努力 一个人做自媒体，做自媒体最浪费时间的事，就是一上来就把内容打磨到满分。 听起来很反常识，但我真踩过这个坑。你写得很深，资料查得很全，结构改了三遍。结果发出去，阅读量个位数。",
+        "sha256": "47e244b7da52d032f64b783b8193e1d08de8c35ac7a1a6de19e265e581d2a5c2"
+      },
+      {
+        "path": "docs/cases/submissions/wechat-format-publish/index.md",
+        "title": "用 WorkBuddy 公众号 Skill 一键排版并发布到微信公众号草稿箱",
+        "heading": "用 WorkBuddy 公众号 Skill 一键排版并发布到微信公众号草稿箱",
+        "anchor": "用-workbuddy-公众号-skill-一键排版并发布到微信公众号草稿箱",
+        "startLine": 19,
+        "endLine": 213,
+        "excerpt": "# 用 WorkBuddy 公众号 Skill 一键排版并发布到微信公众号草稿箱 ## 场景描述 写公众号文章，最耗时的往往不是内容本身，而是排版。在微信后台编辑器里调整字号、行距、缩进、图片位置，经常要反复预览和修改。整篇文章从写完后到真正能发布，排版时间可能和写作时间一样长。用 WorkBuddy 把这件事变成两步：用 Markdown 写好内容，剩下的排版和发布交给 Skill 自动完成。 我自己平时写公众号最大的问题就是排版，真的对排版深恶痛绝，尤其是图片外链的处理。之前我的公众号排版流程是这样的：mark",
+        "sha256": "b322cc0d9b115f8c7e41db781aaa2e956d7ef0491b56b73e93b06dd326d4ecd7"
+      },
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md",
+        "title": "第 25 章 如何进行多 Agent 系统设计",
+        "heading": "单 Agent 和多 Agent 的真正差别",
+        "anchor": "单-agent-和多-agent-的真正差别",
+        "startLine": 7,
+        "endLine": 21,
+        "excerpt": "## 单 Agent 和多 Agent 的真正差别 | 维度 | 单 Agent | 多 Agent | |-|-|-| | 上下文 | 所有信息在一个任务 | 角色只接收必要上下文 | | 分工 | 一个执行体串行完成 | 多角色并行或接力 | | 工具 | 同一组权限 | 可按角色隔离工具和权限 | | 质量 | 自己生成、自己检查 | 可设置独立评审者 |",
+        "sha256": "2ec7a4dcc4489cc3c3351fd9e166cb23c5bec222622dea7dc2f86ba74bc8f307"
+      },
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md",
+        "title": "第 25 章 如何进行多 Agent 系统设计",
+        "heading": "角色契约",
+        "anchor": "角色契约",
+        "startLine": 58,
+        "endLine": 68,
+        "excerpt": "### 角色契约 | 角色 | 输入 | 输出 | 禁止动作 | |-|-|-|-| | 主理人 | 用户任务描述、素材空间 | 任务拆解、状态追踪、成片 | 不跳过子任务验收直接交付 | | Brief 角色 | 产品官网、介绍文档 | brief.md（产品定位、核心价值、目标用户） | 不直接写脚本 | | 分镜师 | brief.md | 分镜表（时间码、画面、字幕、转场、动效） | 不引入 Brief 未确认的信息 | | 素材师 | 分镜表 | 产品截图、概念图、界面素材 | 不使用无版权来源素材 |",
+        "sha256": "84addc0bc46532b0d090bfb3830b57be69f9087a147d5f449b848ff07198f379"
+      },
+      {
+        "path": "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md",
+        "title": "第 25 章 如何进行多 Agent 系统设计",
+        "heading": "三个必须由人确认的点",
+        "anchor": "三个必须由人确认的点",
+        "startLine": 149,
+        "endLine": 156,
+        "excerpt": "## 三个必须由人确认的点 1. **Brief 确认**：产品定位、目标用户、核心卖点是否准确； 2. **分镜确认**：叙事结构、镜头数量、节奏是否符合预期； 3. **BGM 选择**：情绪风格是否与成片调性匹配。 Agent 负责生成和执行，不能替代品牌方向和风格判断。",
+        "sha256": "e14d549db924023516adf56aef4f60091e8dc64b84e21857ec35560de609569b"
+      }
+    ],
+    "replacementRefs": [],
+    "publication": "unreviewed",
+    "reviewScope": "local-content-evidence",
+    "titleStatus": "proposal",
+    "imageOccurrenceIds": [
+      "image-04f55d60-1",
+      "image-04f55d60-10",
+      "image-04f55d60-11",
+      "image-04f55d60-12",
+      "image-04f55d60-13",
+      "image-04f55d60-14",
+      "image-04f55d60-15",
+      "image-04f55d60-16",
+      "image-04f55d60-2",
+      "image-04f55d60-3",
+      "image-04f55d60-4",
+      "image-04f55d60-5",
+      "image-04f55d60-6",
+      "image-04f55d60-7",
+      "image-04f55d60-8",
+      "image-04f55d60-9",
+      "image-2b3eff37-2",
+      "image-a2a14ea6-1"
+    ],
+    "imageCount": 18,
+    "replacementImageCount": 0
+  }
+]

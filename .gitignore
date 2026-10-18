@@ -18,3 +18,6 @@ docs/bluebook/**/source.md
 docs/bluebook/**/source.xml
 docs/bluebook/**/metadata.json
 docs/bluebook/manifest.json
+
+# Local delivery archives
+/delivery/*.zip

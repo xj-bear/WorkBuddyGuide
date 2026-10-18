@@ -1,5 +1,7 @@
 # WorkBuddy Guide Design QA
 
+> 历史检查记录。2026-10-17 的五屏设计稿复审发现此前“图标与图片通过”结论不足以证明与原稿一致；最新发现、四张补图及截图见 [本轮审查报告](artifacts/ui-audit-2026-10-17/report.md)。当前仍有标志、彩色图标、页边装饰及布局密度差异。
+
 ## Visual sources
 
 - Selected reference: `/var/folders/hr/bjd54z9s0sx7mq1dgj_lbqtc0000gp/T/codex-clipboard-3ad16ffa-0bd1-4298-87cb-41a47c358f86.png`

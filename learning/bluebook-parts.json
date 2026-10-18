@@ -1,0 +1,6 @@
+[
+  { "id": "L0", "label": "第一篇", "title": "使用手册", "description": "先把 WorkBuddy 用起来", "first": 1, "last": 11 },
+  { "id": "L1", "label": "第二篇", "title": "案例篇", "description": "从一项任务到一支 AI 团队", "first": 12, "last": 22 },
+  { "id": "L2", "label": "第三篇", "title": "进阶篇", "description": "把案例变成自己的工作系统", "first": 23, "last": 26 },
+  { "id": "L3", "label": "第四篇", "title": "岗位与行业落地", "description": "按岗位和行业拓展工作流", "first": 27, "last": 28 }
+]

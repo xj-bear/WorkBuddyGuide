@@ -18,7 +18,7 @@ outline: [2, 3]
 
 打开 WorkBuddy，在左侧列表中找到「专家·技能·连接器」，入口如图 8-1 所示。
 
-![WorkBuddy 左侧的专家、技能与连接器入口](./assets/connector-entry.png)
+![WorkBuddy 左侧的专家、技能与连接器入口](./assets/connector-entry-crop25.png)
 
 图 8-1 连接器入口
 
@@ -26,7 +26,7 @@ outline: [2, 3]
 
 在连接器中找到「飞书」，点击右上角的「+」，如图 8-2 所示。
 
-![在连接器列表中添加飞书](./assets/feishu-connector.png)
+![在连接器列表中添加飞书](./assets/feishu-connector-crop25.png)
 
 图 8-2 添加飞书连接器
 
@@ -34,7 +34,7 @@ outline: [2, 3]
 
 页面会跳转到飞书开放平台，按照页面提示输入应用名称，然后点击「创建」，如图 8-3 所示。
 
-![在飞书开放平台创建应用](./assets/create-app.png)
+![在飞书开放平台创建应用](./assets/create-app-crop25.png)
 
 图 8-3 创建飞书应用
 
@@ -42,7 +42,7 @@ outline: [2, 3]
 
 点击「开通并授权」，按照页面提示完成授权，如图 8-4 所示。
 
-![飞书应用的权限授权页面](./assets/authorize-app.png)
+![飞书应用的权限授权页面](./assets/authorize-app-crop25.png)
 
 图 8-4 开通并授权应用
 
@@ -52,7 +52,7 @@ WorkBuddy 可访问的资源和可执行的操作，受到当前账号权限、�
 
 回到 WorkBuddy 对话框，点击左下角的「+」，找到连接器，打开飞书右侧的开关，如图 8-5 所示。
 
-![在 WorkBuddy 对话中启用飞书连接器](./assets/enable-connector.png)
+![在 WorkBuddy 对话中启用飞书连接器](./assets/enable-connector-crop25.png)
 
 图 8-5 启用飞书连接器
 
@@ -64,7 +64,7 @@ WorkBuddy 可访问的资源和可执行的操作，受到当前账号权限、�
 
 在目标群中收到消息，说明这条消息发送链路已跑通。我的测试结果如图 8-6 所示，其他资源的读取与写入仍需具备对应权限。
 
-![产品周会群收到 WorkBuddy 的测试通知](./assets/connection-test.png)
+![产品周会群收到 WorkBuddy 的测试通知](./assets/connection-test-crop25.png)
 
 图 8-6 群内收到测试通知
 
@@ -121,13 +121,13 @@ WorkBuddy 可访问的资源和可执行的操作，受到当前账号权限、�
 
 完整周报被整理为飞书文档，如图 8-9 所示。
 
-![完整周报与飞书文档](./assets/weekly-report-doc.png)
+![完整周报与飞书文档](./assets/weekly-report-doc-crop25.png)
 
 图 8-9 保存完整周报
 
 WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-10 所示。
 
-![产品运营协作群中的周报卡片](./assets/weekly-report-card.png)
+![产品运营协作群中的周报卡片](./assets/weekly-report-card-crop25.png)
 
 图 8-10 向协作群发送周报卡片
 
@@ -143,37 +143,37 @@ WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-1
 
 在 WorkBuddy 中提交任务，如图 8-11 所示。
 
-![向 WorkBuddy 提交外部群通知任务](./assets/external-group-prompt.png)
+![向 WorkBuddy 提交外部群通知任务](./assets/external-group-prompt-crop25.png)
 
 图 8-11 外部群通知任务
 
 目标群如果是外部群，可能遇到机器人尚未入群或外部群能力未开通的提示。我的首次尝试如图 8-12 所示。
 
-![机器人尚未加入外部群时的失败提示](./assets/external-group-error.png)
+![机器人尚未加入外部群时的失败提示](./assets/external-group-error-crop25.png)
 
 图 8-12 检查外部群配置
 
 打开对应机器人的应用后台，点击「创建版本」，如图 8-13 所示。
 
-![飞书应用后台的创建版本入口](./assets/create-app-version.png)
+![飞书应用后台的创建版本入口](./assets/create-app-version-crop25.png)
 
 图 8-13 创建应用版本
 
 找到「对外共享」，勾选「允许机器人被添加到外部群中使用」，保存并按照飞书页面提示完成版本发布，如图 8-14 所示。截图中同时展示了外部用户单聊选项，群通知场景需要的是外部群能力。
 
-![飞书应用版本中的对外共享设置](./assets/external-sharing.png)
+![飞书应用版本中的对外共享设置](./assets/external-sharing-crop25.png)
 
 图 8-14 开通外部群能力
 
 完成配置后，告诉 WorkBuddy 配置已经完成。在本次实践中，它使用我的身份邀请机器人入群，再以机器人身份发送通知，执行结果如图 8-15 所示。该流程需要当前账号有相应的邀请权限。
 
-![机器人入群并发送通知的执行结果](./assets/external-group-result.png)
+![机器人入群并发送通知的执行结果](./assets/external-group-result-crop25.png)
 
 图 8-15 外部群通知执行结果
 
 随后可以在对应群聊中看到通知，如图 8-16 所示。
 
-![供应商对账群收到机器人通知](./assets/external-group-message.png)
+![供应商对账群收到机器人通知](./assets/external-group-message-crop25.png)
 
 图 8-16 外部群收到通知
 
@@ -196,25 +196,25 @@ WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-1
 
 发送需求后，WorkBuddy 会读取可访问的群聊和飞书日程，识别成员的空闲时段，如图 8-17 所示。
 
-![结合群聊与飞书日程选择会议时间](./assets/meeting-schedule.png)
+![结合群聊与飞书日程选择会议时间](./assets/meeting-schedule-crop25.png)
 
 图 8-17 选择会议时段
 
 如果还没有接入腾讯会议，它会提示通过授权链接连接相应的腾讯会议 CLI 能力。授权页面如图 8-18 所示。
 
-![腾讯会议 CLI 授权页面](./assets/meeting-authorization.png)
+![腾讯会议 CLI 授权页面](./assets/meeting-authorization-crop25.png)
 
 图 8-18 授权腾讯会议能力
 
 完成后，WorkBuddy 会汇报会议时间和链接，如图 8-19 所示。
 
-![WorkBuddy 汇报会议时间和链接](./assets/meeting-result.png)
+![WorkBuddy 汇报会议时间和链接](./assets/meeting-result-crop25.png)
 
 图 8-19 会议预约结果
 
 打开飞书，就能看到对应的会议通知，如图 8-20 所示。
 
-![飞书群中的会议通知](./assets/meeting-notice.png)
+![飞书群中的会议通知](./assets/meeting-notice-crop25.png)
 
 图 8-20 群内会议通知
 
@@ -260,7 +260,7 @@ WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-1
 
 我在 WorkBuddy 中发布的「品牌 GEO 可见度诊断师」，可以对品牌完成基建评估、AI 收录检查、竞品对标，并输出 AIVO 评分报告。专家入口如图 8-21 所示。
 
-![WorkBuddy 中的品牌 GEO 可见度诊断师](./assets/geo-expert.png)
+![WorkBuddy 中的品牌 GEO 可见度诊断师](./assets/geo-expert-crop25.png)
 
 图 8-21 品牌 GEO 可见度诊断师
 
@@ -284,25 +284,25 @@ WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-1
 
 执行结束后，WorkBuddy 会把诊断结果同步到飞书，并建立整改任务表。群内结果如图 8-22 所示。
 
-![飞书群中的 GEO 诊断结果](./assets/geo-report-message.png)
+![飞书群中的 GEO 诊断结果](./assets/geo-report-message-crop25.png)
 
 图 8-22 同步 GEO 诊断结果
 
 打开任务表，可以看到任务编号、问题描述、问题类型、状态、建议负责人和修改建议，如图 8-23 所示。
 
-![飞书多维表格中的 GEO 整改任务](./assets/geo-task-table.png)
+![飞书多维表格中的 GEO 整改任务](./assets/geo-task-table-crop25.png)
 
 图 8-23 GEO 整改任务表
 
 它还会按照提示词创建检查日程，如图 8-24 所示。
 
-![GEO 整改检查日程](./assets/geo-check-calendar.png)
+![GEO 整改检查日程](./assets/geo-check-calendar-crop25.png)
 
 图 8-24 创建整改检查日程
 
 临近时间时，可以收到日历助手的提醒，如图 8-25 所示。
 
-![日历助手发送整改检查提醒](./assets/geo-reminder.png)
+![日历助手发送整改检查提醒](./assets/geo-reminder-crop25.png)
 
 图 8-25 整改检查提醒
 
@@ -329,13 +329,13 @@ WorkBuddy 会找到对应群聊，再把周报卡片发出去，结果如图 8-1
 
 WorkBuddy 会把筛选后的热点写进多维表格，并补充借势角度、发布形式和时效等级，如图 8-27 所示。
 
-![飞书多维表格中的热点选题排期](./assets/trending-topic-table.png)
+![飞书多维表格中的热点选题排期](./assets/trending-topic-table-crop25.png)
 
 图 8-27 热点选题库
 
 复盘完成后，它还会把核心结论同步到指定群聊，如图 8-28 所示。
 
-![向内容组发送热点复盘核心结论](./assets/trending-review-message.png)
+![向内容组发送热点复盘核心结论](./assets/trending-review-message-crop25.png)
 
 图 8-28 向团队同步复盘结果
 

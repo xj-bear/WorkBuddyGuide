@@ -1,10 +1,25 @@
 import { defineConfig } from "vitepress";
+import { writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { prepareLearning } from "../../learning/prepare.mjs";
+import { configureTutorialLinks } from "../../learning/markdown.mjs";
+import { siteAssets } from "./site";
+import { chineseSearchTokens, learningSearchSections } from "../../learning/search.mjs";
+
 
 import { siteSidebar } from "./sidebar";
 import { configureMermaidMarkdown } from "./mermaid-markdown";
 import { createPageDescription, createSeoHead } from "./seo";
 
-const siteUrl = process.env.VITEPRESS_SITE_URL || "https://workbuddy.homes";
+const markdownOptions = {
+  config: md => { configureMermaidMarkdown(md); configureTutorialLinks(md); },
+  image: { lazyLoading: true },
+  codeCopyButtonTitle: "复制指令",
+  theme: { light: "github-light", dark: "github-dark" },
+};
+const learning = await prepareLearning(markdownOptions);
+
+const siteUrl = process.env.VITEPRESS_SITE_URL || "http://localhost:5173";
 
 export default defineConfig({
     lang: "zh-CN",
@@ -13,11 +28,15 @@ export default defineConfig({
     description: "从安装使用到 AI 工作系统：28 章 WorkBuddy 实战指南与团队落地方法。",
     cleanUrls: true,
     lastUpdated: true,
-    srcExclude: ["**/source.md", "plans/**"],
+    srcExclude: ["**/source.md", "plans/**", "superpowers/**"],
     sitemap: {
       hostname: siteUrl,
+      transformItems: items => items.filter(item => !item.url.includes("learn/lesson/") && !learning.lessons.some(lesson => lesson.status !== "published" && item.url.includes(lesson.id))),
     },
     transformPageData: (pageData, { siteConfig }) => {
+      if (pageData.relativePath.startsWith("bluebook/")) {
+        pageData.frontmatter.pageClass = pageData.relativePath === "bluebook/index.md" ? "bluebook-directory" : "bluebook-page";
+      }
       if (pageData.relativePath.startsWith("cases/")) {
         pageData.frontmatter.aside = false;
         pageData.frontmatter.outline = false;
@@ -27,10 +46,11 @@ export default defineConfig({
         description: createPageDescription(siteConfig.srcDir, pageData),
       };
     },
+    buildEnd: siteConfig => { writeFileSync(join(siteConfig.outDir, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl.replace(/\/$/, "")}/sitemap.xml\n`); },
     transformHead: (context) => createSeoHead(siteUrl, context),
     head: [
       ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
-      ["meta", { name: "theme-color", content: "#d8f238" }],
+      ["meta", { name: "theme-color", content: "#D9FBE3" }],
       ["meta", { name: "author", content: "WorkBuddy Guide Contributors" }],
       [
         "meta",
@@ -48,35 +68,36 @@ export default defineConfig({
         },
       ],
     ],
-    markdown: {
-      config: configureMermaidMarkdown,
-      image: {
-        lazyLoading: true,
-      },
-      theme: {
-        light: "github-light",
-        dark: "github-dark",
-      },
-    },
+    markdown: markdownOptions,
     themeConfig: {
-      siteTitle: "WorkBuddy Guide",
+      siteTitle: "WorkBuddy 蓝皮书",
+      darkModeSwitchLabel: "外观",
+      darkModeSwitchTitle: "切换深色主题",
+      lightModeSwitchTitle: "切换浅色主题",
+      sidebarMenuLabel: "章节目录",
+      returnToTopLabel: "回到顶部",
+      skipToContentLabel: "跳到正文",
+      ...(siteAssets.logo ? { logo: siteAssets.logo } : {}),
       nav: [
-        { text: "首页", link: "/" },
-        { text: "开始阅读", link: "/bluebook/" },
-        { text: "案例集", link: "/cases/" },
-        { text: "帮你解决", link: "/help/" },
-        { text: "阅读指南", link: "/reading-guide" },
-        {
-          text: "交流群",
-          items: [{ component: "GroupQrMenu" }],
-        },
+        { text: "学习路线", link: "/learn/" },
+        { text: "实战场景", link: "/solve/" },
+        { text: "完整蓝皮书", link: "/bluebook/" },
+        { text: "关于", link: "/about/" },
+        { text: "PDF 下载", link: siteAssets.pdf || "/bluebook/#bluebook-download" },
       ],
       sidebar: siteSidebar,
       socialLinks: [
-        { icon: "github", link: "https://github.com/AlephAITech/WorkBuddyGuide" },
+        { icon: "github", link: "https://github.com/xj-bear/WorkBuddyGuide" },
       ],
       search: {
         provider: "local",
+        options: {
+          miniSearch: { options: { tokenize: chineseSearchTokens }, searchOptions: { combineWith: "AND" }, _splitIntoSections: file => learningSearchSections(file, learning) },
+          translations: {
+            button: { buttonText: "搜索", buttonAriaLabel: "搜索" },
+            modal: { displayDetails: "显示详细结果", resetButtonTitle: "清空搜索", backButtonTitle: "返回", noResultsText: "没有找到相关内容", footer: { selectText: "选择", navigateText: "切换结果", closeText: "关闭" } },
+          },
+        },
       },
       outline: {
         level: [2, 3],
@@ -94,13 +115,9 @@ export default defineConfig({
         },
       },
       editLink: {
-        pattern: "https://github.com/AlephAITech/WorkBuddyGuide/edit/main/docs/:path",
+        pattern: "https://github.com/xj-bear/WorkBuddyGuide",
         text: "在 GitHub 上改进此页",
       },
-      footer: {
-        message:
-          '以真实任务为主线的 WorkBuddy 社区实战读本 · Pixel icons by <a href="https://pixeliconlibrary.com/" target="_blank" rel="noreferrer">HackerNoon</a>',
-        copyright: "Copyright © 2026 WorkBuddy Guide Contributors",
-      },
+
     },
   });

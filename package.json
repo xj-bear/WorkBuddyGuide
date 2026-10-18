@@ -13,14 +13,15 @@
     "test": "vitest run",
     "build": "vitepress build docs",
     "docs:build": "vitepress build docs",
-    "preview": "vitepress preview docs --host 127.0.0.1",
-    "docs:preview": "vitepress preview docs --host 127.0.0.1",
+    "preview": "node scripts/preview.mjs",
+    "docs:preview": "node scripts/preview.mjs",
     "traffic:db:migrate:local": "wrangler d1 migrations apply TRAFFIC_DB --local",
     "traffic:db:seed:local": "wrangler d1 execute TRAFFIC_DB --local --file scripts/local-traffic-seed.sql",
     "traffic:setup:local": "npm run traffic:db:migrate:local && npm run traffic:db:seed:local",
     "traffic:collector:dev": "wrangler dev --config wrangler.collector.jsonc --test-scheduled",
     "pages:dev": "wrangler pages dev docs/.vitepress/dist --port 8788",
-    "pages:deploy": "wrangler pages deploy docs/.vitepress/dist --project-name workbuddy-guide"
+    "pages:deploy": "wrangler pages deploy docs/.vitepress/dist --project-name workbuddy-guide",
+    "verify:delivery": "node scripts/verify-delivery.mjs"
   },
   "devDependencies": {
     "@fontsource/silkscreen": "^5.2.8",

@@ -1,0 +1,5 @@
+.learning-lesson-heading--illustrated{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,402px);gap:24px;align-items:center}
+.learning-lesson-heading--illustrated .learning-lesson-heading__copy{min-width:0}
+.learning-lesson-heading__visual{position:relative;width:100%;aspect-ratio:1525/631;overflow:hidden;margin:0}
+.learning-lesson-heading__visual img{position:absolute;top:-17.9%;left:-17.6%;display:block;width:124.6%;height:auto;max-width:none;image-rendering:pixelated}
+@media(max-width:767px){.learning-lesson-heading--illustrated{grid-template-columns:1fr;gap:16px}.learning-lesson-heading__visual{width:min(100%,448px);margin-inline:auto}}

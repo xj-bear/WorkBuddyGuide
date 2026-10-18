@@ -45,6 +45,3 @@ WorkBuddy 面向的是完整的工作任务。
 
 同时，针对本地文件操作、终端执行等场景，WorkBuddy 还提供高危指令拦截和权限控制机制，降低 AI 自主执行过程中的风险。
 
-想对workbuddy打分，可以去[观猹](https://watcha.cn/)，写出你对workbuddy的真实评价～
-
-![](assets/003_image_Idhdsahdl.png)

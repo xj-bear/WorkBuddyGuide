@@ -13,6 +13,8 @@ pageClass: community-cases-page
 
 社区案例通过完整性、安全性和可读性审核后即可发布；经过进一步复现和编辑的经典任务，未来可能被收录进《WorkBuddy 实战蓝皮书》正文。
 
+<CommunityCases />
+
 ## 如何提交 Case
 
 1. 先搜索左侧的社区 Case 和[蓝皮书目录](/bluebook/)，确认场景或任务没有重复。
@@ -33,9 +35,9 @@ pageClass: community-cases-page
 <section class="case-co-create" aria-labelledby="case-co-create-title">
   <div class="case-co-create__copy">
     <p class="case-co-create__label">CONTRIBUTOR COMMUNITY</p>
-    <h2 id="case-co-create-title">提交 PR 后，加入 WorkBuddy 共创群</h2>
-    <p>如果你正在准备或已经提交 Case PR，欢迎添加微信。我们会邀请你进入 WorkBuddy 共创群，一起讨论案例结构、复现过程、审核建议和蓝皮书后续选题。</p>
-    <strong>添加微信时，请备注：workbuddy共创</strong>
+    <h2 id="case-co-create-title">一起完善 WorkBuddy 实战案例</h2>
+    <p>如果你正在准备或已经提交案例，欢迎交流案例结构、复现过程和后续选题。原项目的案例与作者署名保留，本站联系入口由站主单独维护。</p>
+    <strong>联系二维码将在页脚统一补充</strong>
     <ul>
       <li>交流 Case 选题，避免重复提交。</li>
       <li>讨论 Skill、操作步骤和结果证明。</li>
@@ -43,10 +45,7 @@ pageClass: community-cases-page
       <li>参与经典 Case 进入蓝皮书正文的共创。</li>
     </ul>
   </div>
-  <a class="case-co-create__qr" href="/cases/workbuddy-co-create-wechat.png" target="_blank" rel="noreferrer" aria-label="查看 WorkBuddy 共创联系人微信二维码大图">
-    <img src="/cases/workbuddy-co-create-wechat.png" alt="刘聪NLP 微信二维码，添加时备注 workbuddy共创" loading="lazy">
-    <span>扫码添加微信 · 备注“workbuddy共创”</span>
-  </a>
+  <div class="case-co-create__qr"><strong>一起交流真实案例</strong><span>讨论群与个人二维码待补充</span><a href="#contact">查看页脚联系入口 ↓</a></div>
 </section>
 
 <div class="case-editor-note">

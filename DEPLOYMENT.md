@@ -1,3 +1,9 @@
+# 部署说明
+
+本轮自有服务器交付优先阅读 [静态自托管说明](./SELF_HOSTING.md)。下方保留原项目 Cloudflare 可选方案，**自托管不需要 D1、Worker 或远程数据库迁移**。
+
+---
+
 # Cloudflare Pages 部署
 
 本站采用 VitePress 静态构建，并通过 Cloudflare Pages 的 GitHub 集成持续部署。

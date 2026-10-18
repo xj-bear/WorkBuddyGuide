@@ -29,11 +29,11 @@ const renderDiagram = async () => {
       themeVariables: dark
         ? undefined
         : {
-            primaryColor: "#eef6d1",
-            primaryTextColor: "#12140f",
-            primaryBorderColor: "#355e18",
-            lineColor: "#62675e",
-            secondaryColor: "#f5f7f0",
+            primaryColor: "#d9fbe3",
+            primaryTextColor: "#171a17",
+            primaryBorderColor: "#126b41",
+            lineColor: "#566159",
+            secondaryColor: "#fafaf7",
             tertiaryColor: "#ffffff",
           },
     });

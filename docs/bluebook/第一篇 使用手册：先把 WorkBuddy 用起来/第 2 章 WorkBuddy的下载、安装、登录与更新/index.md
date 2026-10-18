@@ -2,13 +2,11 @@
 
 ## WorkBuddy下载
 
-下载WorkBuddy，点击官方地址（https://www.codebuddy.cn/work/），选择WorkBuddy，点击“下载WorkBuddy”即可下载。
+访问 [WorkBuddy 官网](https://www.workbuddy.cn/)，点击页面中的“立即下载 WorkBuddy”，在桌面端列表选择与本机匹配的版本。
 
-![](assets/001_image_GGeabJkE2o.png)
+![WorkBuddy 官网首页中的客户端下载菜单，展示 Mac、Windows、鸿蒙和 Linux 选项](assets/018_workbuddy-download-page.jpg)
 
-网站会自动检查你当前设备，判断你是什么版本，Mac ARM64、Mac x64或者Windows x64。
-
-![](assets/002_image_HaXcbwaJXo.png)
+官网页面列出 Mac ARM64、Mac x64、Windows x64（兼容 ARM64）、鸿蒙电脑版和 Linux 等选项。具体版本、系统要求与安装方式以官网最新页面为准。
 
 ***切记：从官方入口进入下载，不从网盘或不明镜像获取安装包。***
 

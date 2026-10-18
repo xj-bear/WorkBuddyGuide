@@ -1,0 +1,25 @@
+.learning-scenario-foundations {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 24px;
+  margin: 24px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--learn-line);
+  background: var(--learn-mint);
+  font-size: 13px;
+}
+.learning-scenario-foundations a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--learn-green);
+}
+.learning-shell .learning-scenario-course-list--top { margin-top: 36px; }
+@media (max-width: 767px) {
+  .learning-scenario-foundations { align-items: flex-start; flex-direction: column; gap: 0; padding: 14px; }
+}
+.learning-work-task-summary{margin:18px 0 24px}
+.learning-work-task-summary>div+div{margin-top:16px}
+.learning-work-task-summary dt{margin-bottom:6px;font-size:12px;font-weight:700;color:var(--learn-green)}
+.learning-work-task-summary dd{margin:0;font-size:13px;line-height:1.8;color:var(--learn-muted)}

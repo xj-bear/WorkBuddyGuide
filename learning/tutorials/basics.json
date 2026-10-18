@@ -1,0 +1,1337 @@
+{
+  "wb-lesson-01": {
+    "title": "第一次派活：把三份便笺整理成一页简报",
+    "pain": "资料散在几个文件里，问答能给建议，却没有一份能交给别人阅读的文件。",
+    "goal": "让 WorkBuddy 读取三份练习便笺，生成有来源、能打开核对的一页工作简报。",
+    "outcome": "output/first-brief.md：包含背景、安排、待确认问题和来源文件。",
+    "prerequisites": [
+      "已能打开并使用 WorkBuddy；尚未安装时先做第 02 课。",
+      "下载并解压统一练习包，数据均为虚构示例。"
+    ],
+    "materials": [
+      {
+        "path": "input/inbox/brief.txt",
+        "description": "任务背景便笺。"
+      },
+      {
+        "path": "input/inbox/agenda.txt",
+        "description": "议程安排便笺。"
+      },
+      {
+        "path": "input/inbox/notes-copy.txt",
+        "description": "讨论记录副本，保留原件不变。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-first-task",
+        "kind": "action",
+        "title": "新建“第一份简报”任务",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/inbox 中的 brief.txt、agenda.txt、notes-copy.txt；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "send-brief-request",
+        "kind": "prompt",
+        "title": "发送一条能交付文件的任务说明",
+        "purpose": "体验从自然语言目标到实际文件的完整过程。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "复制下面的 Prompt，确认三条输入路径后发送。",
+          "留意过程说明：应先读取指定文件，再写入 output/first-brief.md。",
+          "若只在聊天中回答，继续要求把同一内容保存到指定文件。"
+        ],
+        "expected": "结果区出现 output/first-brief.md 的文件入口。",
+        "recovery": "若提示读不到文件，先在文件区核对拼写；若内容为空，指出缺少哪份来源并要求重新读取。",
+        "prompts": [
+          {
+            "title": "生成第一份工作简报",
+            "text": "请只读取 input/inbox/brief.txt、input/inbox/agenda.txt、input/inbox/notes-copy.txt，合并成一页中文工作简报，保存为 output/first-brief.md。包含背景、已知安排、下一步事项、待确认问题；每条事实注明来自哪个文件。原文未提供的信息写“待确认”，冲突信息并列，不替我作决定。不修改、移动或重命名 input 中的文件。完成后告诉我产物路径和仍需人工确认的事项。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/inbox/brief.txt、input/inbox/agenda.txt、input/inbox/notes-copy.txt。",
+              "本轮预期输出：output/first-brief.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "open-and-trace-brief",
+        "kind": "verify",
+        "title": "打开简报，把两条事实找回原文",
+        "purpose": "把“看起来不错”变成有依据的验收。",
+        "location": "WorkBuddy 结果区 → first-brief.md；文件区 → input/inbox",
+        "actions": [
+          "打开 first-brief.md，确认它是一份文件而非仅聊天回答。",
+          "任取一条安排和一条下一步事项，在标注的输入文件中找到依据。",
+          "确认没有把讨论建议写成已确认决定；发现错误时引用原句要求只修正对应条目。"
+        ],
+        "expected": "简报事实有来源，缺失项明确保留为待确认，原便笺内容没有变化。",
+        "recovery": "若来源只写“根据资料”，要求补出文件名和短引文；核对不通过的条目先标为待确认。"
+      }
+    ],
+    "checks": [
+      "能在 output 中打开实际生成的 first-brief.md。",
+      "至少核对两条事实及其来源。",
+      "三份 input/inbox 文件未被改动。"
+    ]
+  },
+  "wb-lesson-02": {
+    "title": "安装并跑通：生成第一份文件清单",
+    "pain": "装好应用后仍不知道怎样选择资料目录，也不知道结果存在哪里。",
+    "goal": "完成对应系统的安装与登录，在练习工作区列出三份便笺。",
+    "outcome": "output/getting-started-files.md：列出 input/inbox 的三个文件及用途。",
+    "prerequisites": [
+      "准备可安装应用的 Windows 或 macOS 电脑。",
+      "已有可用版本可直接进入建任务步骤。"
+    ],
+    "materials": [
+      {
+        "path": "input/inbox/brief.txt",
+        "description": "清单中的背景文件。"
+      },
+      {
+        "path": "input/inbox/agenda.txt",
+        "description": "清单中的议程文件。"
+      },
+      {
+        "path": "input/inbox/notes-copy.txt",
+        "description": "清单中的记录文件。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "install-and-sign-in",
+        "kind": "action",
+        "title": "安装与你电脑匹配的版本并登录",
+        "purpose": "先保证应用能正常启动，再开始文件练习。",
+        "location": "浏览器 → https://www.codebuddy.cn/work/；系统安装界面；WorkBuddy 登录页",
+        "actions": [
+          "在浏览器直接打开 https://www.codebuddy.cn/work/，点击“下载 WorkBuddy”，确认安装包与电脑的 Windows/macOS 系统及芯片架构匹配。",
+          "Windows 打开安装器并按向导完成；macOS 打开安装包，将 WorkBuddy 拖入“应用程序”。只做自己系统对应的安装步骤。",
+          "启动 WorkBuddy，按页面提供的方式登录；完成后回到应用，确认能看到新建任务入口。"
+        ],
+        "expected": "WorkBuddy 已打开，登录状态可见，并能创建新任务。",
+        "recovery": "若安装包打不开，先核对官方来源、系统与架构；若登录后没有返回，检查网页登录是否完成，再回应用确认，不重复安装或修改系统安全设置。"
+      },
+      {
+        "id": "choose-practice-workspace",
+        "kind": "action",
+        "title": "新建任务并选择练习工作区",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/inbox 中的三个 .txt 文件；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "request-starting-list",
+        "kind": "prompt",
+        "title": "让 WorkBuddy 写出第一份清单",
+        "purpose": "用只读输入的小任务验证工作区和文件输出链路。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "复制 Prompt 并发送，等待文件读取和写入完成。",
+          "检查回复中的输出路径是否为 output/getting-started-files.md。"
+        ],
+        "expected": "结果区出现包含文件名、相对路径和用途的 Markdown 清单。",
+        "recovery": "若提示无访问权限，只核对并授权本次练习工作区；若写入失败，确认 output 可写，不扩大授权范围。",
+        "prompts": [
+          {
+            "title": "生成启动清单",
+            "text": "请列出当前工作区 input/inbox 下的三个练习文本文件，读取每个文件后用一句话概括用途，生成 output/getting-started-files.md。每项写文件名、相对路径、用途。只读取 input/inbox，不修改输入、不移动文件，不扫描其他目录。如果实际不是三个文件，先报告实际数量和差异，不编造清单。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/inbox/brief.txt、input/inbox/agenda.txt、input/inbox/notes-copy.txt。",
+              "本轮预期输出：output/getting-started-files.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "check-starting-list",
+        "kind": "verify",
+        "title": "从结果区打开清单并数一遍",
+        "purpose": "确认安装、读取、生成和打开结果都已跑通。",
+        "location": "WorkBuddy 结果区 → getting-started-files.md；系统文件管理器 → input/inbox",
+        "actions": [
+          "打开清单，检查三个文件名与 input/inbox 中的名字逐一对应。",
+          "打开其中一个原文件，比较清单用途是否符合原文。",
+          "在系统文件管理器中定位 output/getting-started-files.md，记住结果实际保存在哪里。"
+        ],
+        "expected": "清单有三项，路径正确，内容与原文件一致，能从工作区再次打开。",
+        "recovery": "若只有聊天文字，要求保存到指定路径；若少文件，指出遗漏文件名并让它仅补齐清单。"
+      }
+    ],
+    "checks": [
+      "已经登录并能创建任务。",
+      "选中的是解压后的 workbuddy-practice 文件夹。",
+      "清单列出且只列出三份 inbox 文件。"
+    ]
+  },
+  "wb-lesson-03": {
+    "title": "选对模式：先用 Ask 问清，再用 默认执行模式 交付",
+    "pain": "想问一个问题却开始改文件，或想要文件却只得到一段回答。",
+    "goal": "围绕同一份周记，用 Ask 理解材料，再用 默认执行模式 生成待办草稿，并判断何时适合 Plan。",
+    "outcome": "output/mode-practice.md：从周记提取的待办草稿；理解两种模式的操作差别。",
+    "prerequisites": [
+      "WorkBuddy 已安装并可登录使用。"
+    ],
+    "materials": [
+      {
+        "path": "input/weekly-notes.md",
+        "description": "本次问答与待办草稿的唯一事实来源。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-mode-task",
+        "kind": "action",
+        "title": "打开同一份周记材料",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/weekly-notes.md；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "ask-before-writing",
+        "kind": "prompt",
+        "title": "切到 Ask，只询问周记内容",
+        "purpose": "体验以理解和答复为主的一轮对话。",
+        "location": "WorkBuddy 模式选择器 → Ask；当前任务对话输入框",
+        "actions": [
+          "把模式切到 Ask 后发送本轮 Prompt。",
+          "检查答复是否区分明确事项和不确定信息。",
+          "本轮不要求文件产物；把答复与原文对照，下一轮仍在同一任务进行。"
+        ],
+        "expected": "对话中得到带来源的事项说明，本轮不生成文件。",
+        "recovery": "若 Ask 无法读取工作区文件，通过本任务附件入口附上 input/weekly-notes.md；不要粘贴无关资料。",
+        "prompts": [
+          {
+            "title": "Ask：只理解，不写文件",
+            "text": "请阅读 input/weekly-notes.md，在对话中回答：有哪些已经发生的事项，哪些是后续待办，哪些负责人或日期仍不明确？每类给出原文短句依据。本轮只答复，不创建或修改文件，没有预期输出文件；下一轮我会明确要求生成待办草稿。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/weekly-notes.md。",
+              "本轮预期输出：无，本轮只在对话中答复；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "craft-a-small-file",
+        "kind": "prompt",
+        "title": "切到 默认执行模式，把待办写成文件",
+        "purpose": "让文件交付与执行模式对应起来。",
+        "location": "WorkBuddy 模式选择器 → 默认执行模式；当前任务对话输入框",
+        "actions": [
+          "改为 默认执行模式，再发送文件生成要求。",
+          "等待 output/mode-practice.md 出现，不把 Ask 的答复当作已落盘结果。"
+        ],
+        "expected": "output/mode-practice.md 可在结果区打开，内容以周记为准。",
+        "recovery": "如果缺少文件入口，要求把待办草稿保存到指定路径；若引入新任务，要求按原文删去。",
+        "prompts": [
+          {
+            "title": "默认执行模式：生成待办草稿",
+            "text": "请根据 input/weekly-notes.md 生成 output/mode-practice.md，包含事项、状态、负责人、日期、原文依据。只提取原文明确提到的工作；缺失负责人或日期写“待确认”。这是本地草稿，不创建外部任务、不发消息，不修改 input/weekly-notes.md。完成后返回文件路径。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/weekly-notes.md。",
+              "本轮预期输出：output/mode-practice.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-mode-result",
+        "kind": "verify",
+        "title": "检查文件，并判断下次要不要先 Plan",
+        "purpose": "把模式选择与任务规模联系起来。",
+        "location": "WorkBuddy 结果区 → mode-practice.md；模式选择器",
+        "actions": [
+          "打开产物，核对已完成事项没有误列为未完成。",
+          "查看模式选择器中的 Plan：跨多个文件或步骤、希望先审核计划时可考虑它，本次不必补跑。",
+          "在学习记录中写下三个用途：Ask 理解材料，默认执行模式 执行交付，Plan 先审多步计划。"
+        ],
+        "expected": "拿到真实草稿，并能为三种模式各举一个用途。",
+        "recovery": "界面位置有变化时按问答、执行、计划用途寻找入口；先确认当前模式再发送，不依赖截图坐标。"
+      }
+    ],
+    "checks": [
+      "Ask 轮只得到理解材料的答复。",
+      "默认执行模式 轮生成实际的 mode-practice.md。",
+      "能解释本次为何不必额外执行 Plan。"
+    ]
+  },
+  "wb-lesson-04": {
+    "title": "把“帮我写周报”改成一条可验收指令",
+    "pain": "一句“帮我写周报”没有读者、资料或格式，AI 只能猜。",
+    "goal": "用目标、输入、动作、约束、输出、验收六件事，生成有依据的周报草稿。",
+    "outcome": "output/weekly-report.md：面向项目负责人的一页周报。",
+    "prerequisites": [
+      "已完成建任务与打开产物的基本练习。"
+    ],
+    "materials": [
+      {
+        "path": "input/weekly-notes.md",
+        "description": "周报事实来源，不预设未出现的业绩或数字。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-weekly-task",
+        "kind": "action",
+        "title": "选中周记，为周报定读者",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/weekly-notes.md；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "define-six-parts",
+        "kind": "action",
+        "title": "发送前，给六件事各找一句话",
+        "purpose": "把交付口径写进同一条任务说明。",
+        "location": "WorkBuddy 对话输入框草稿区；文件区 → weekly-notes.md",
+        "actions": [
+          "打开周记，确认它能支撑一份小周报。",
+          "阅读下一步 Prompt 的六个标签，分别找出读者、唯一输入、归纳动作、事实约束、输出路径和验收方式。",
+          "本次采用“给项目负责人看”的练习口径，不添加自己公司的真实材料。"
+        ],
+        "expected": "发送前能指出每项要求在 Prompt 中的位置。",
+        "recovery": "周记没有的数字不能补成目标值；把对应信息标为待确认，缩小报告内容。"
+      },
+      {
+        "id": "send-six-part-brief",
+        "kind": "prompt",
+        "title": "发送六要素周报指令",
+        "purpose": "让每项任务要求对应可检查的结果。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "复制整段 Prompt 发送，不只发送第一句“写周报”。",
+          "完成后检查 output/weekly-report.md 是否出现。"
+        ],
+        "expected": "生成包含进展、风险、下周计划与待确认事项的文件。",
+        "recovery": "若输出成泛用模板，指出缺少周记事实依据，要求只按该文件重写。",
+        "prompts": [
+          {
+            "title": "六要素：一页周报",
+            "text": "目标：给项目负责人看一页周报，便于判断本周进展与下周风险。\n输入：只用 input/weekly-notes.md。\n动作：按本周进展、问题与风险、下周计划、待确认事项整理，每项保留来源短句。\n约束：不编造数字、完成状态、负责人或期限；原文没有就写“待确认”，不改输入。\n输出：output/weekly-report.md。\n验收：读者能区分已完成和计划；每条事实可回到周记；没有依据的原因不能写成结论。完成后列出仍需我补充的信息。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/weekly-notes.md。",
+              "本轮预期输出：output/weekly-report.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "review-six-part-output",
+        "kind": "verify",
+        "title": "用六件事逐项对照产物",
+        "purpose": "检查任务写清楚后是否真的被执行。",
+        "location": "WorkBuddy 结果区 → weekly-report.md；文件区 → weekly-notes.md",
+        "actions": [
+          "打开周报，判断是否适合项目负责人快速阅读。",
+          "任选两条进展，回周记核对完成状态与来源短句。",
+          "某段太长时直接引用该段要求压缩，并保持其他段落和事实不变。"
+        ],
+        "expected": "周报符合读者与结构，修改能定位到具体段落。",
+        "recovery": "出现无法追溯的成绩或承诺时，指出该句要求删除或标待确认，再重新打开检查。"
+      }
+    ],
+    "checks": [
+      "能在 Prompt 中指出六要素。",
+      "产物按路径保存且含四部分。",
+      "已完成与下一步没有混写。"
+    ]
+  },
+  "wb-lesson-05": {
+    "title": "给信息分层：做一份上下文与长期资料清单",
+    "pain": "把所有聊天当长期记忆容易引用过期信息；只给零散句子又缺少依据。",
+    "goal": "比较品牌规范和本周记录，为当前上下文、可复用资料与候选偏好各列清单。",
+    "outcome": "output/context-map.md：带来源、适用范围和复核建议的信息分层表。",
+    "prerequisites": [
+      "能够读取 Markdown 文件并打开输出文件。",
+      "本课只生成候选清单，无需开通知识库或启用长期记忆。"
+    ],
+    "materials": [
+      {
+        "path": "input/brand-guide.md",
+        "description": "可复用的写作和品牌规范示例。"
+      },
+      {
+        "path": "input/weekly-notes.md",
+        "description": "有时效性的本周进展示例。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-context-task",
+        "kind": "action",
+        "title": "打开品牌规范与本周记录",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/brand-guide.md、input/weekly-notes.md；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "sort-context-evidence",
+        "kind": "prompt",
+        "title": "让 WorkBuddy 按用途分类资料",
+        "purpose": "用真实小材料理解上下文、知识库资料和记忆候选的差别。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，要求每条分类有来源和理由。",
+          "阅读结果时留意：信息出现在本周记录，不代表自动成为长期规则。"
+        ],
+        "expected": "context-map.md 包含三类信息与需要复核的边界。",
+        "recovery": "若声称已永久记住或建立知识库，重申只要本地分类文件，并核对是否发生额外保存。",
+        "prompts": [
+          {
+            "title": "做信息分层表",
+            "text": "只读取 input/brand-guide.md 和 input/weekly-notes.md，生成 output/context-map.md。按三类列出候选信息：①只服务当前任务的上下文，如本周进度；②适合将来按需检索的长期资料，如规范；③可能值得人工确认后作为偏好的规则。每行写信息摘要、来源文件与短引文、分类理由、适用范围、何时应复核。不要凭空添加长期偏好、负责人或生效日期；缺少的写“待确认”。不要创建知识库或写入长期记忆，不修改输入。这是一份由人审核的候选清单。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/brand-guide.md、input/weekly-notes.md。",
+              "本轮预期输出：output/context-map.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "review-context-boundaries",
+        "kind": "verify",
+        "title": "检查哪些信息不该长期保存",
+        "purpose": "练习识别时效，而不是机械接受分类。",
+        "location": "WorkBuddy 结果区 → context-map.md；文件区 → 两份输入",
+        "actions": [
+          "找到一条本周进度，确认归入当前上下文而非永久偏好。",
+          "找到一条品牌规范，核对引用及适用范围和复核条件。",
+          "若周记被归为长期规则，指出它仅适用本周，请求修正该行；没有误分则说明为何不必改。"
+        ],
+        "expected": "能用来源和时效解释分类，清单仍是本地候选文件。",
+        "recovery": "规则冲突时不让模型自行决定谁优先；并列冲突来源，标待人工确认。"
+      }
+    ],
+    "checks": [
+      "清单引用两份输入。",
+      "本周进度没有被当成长期规则。",
+      "候选文件不等于启用知识库或写入记忆。"
+    ]
+  },
+  "wb-lesson-06": {
+    "title": "文件整理先预览：做清单和整理建议",
+    "pain": "一上来要求“整理文件”，可能移动或覆盖原件；整理后又说不清改了什么。",
+    "goal": "只盘点 input/inbox 的三份副本，生成可追溯清单和待确认方案。",
+    "outcome": "output/inventory.xlsx 与 output/proposed-actions.md；input/inbox 原文件保持不变。",
+    "prerequisites": [
+      "已解压统一练习包；inbox 中的文件就是演练副本。",
+      "本课到审核方案为止，不执行移动、删除或重命名。"
+    ],
+    "materials": [
+      {
+        "path": "input/inbox/brief.txt",
+        "description": "背景材料副本。"
+      },
+      {
+        "path": "input/inbox/agenda.txt",
+        "description": "议程材料副本。"
+      },
+      {
+        "path": "input/inbox/notes-copy.txt",
+        "description": "记录材料副本。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-inbox-task",
+        "kind": "action",
+        "title": "新建整理任务，只指向练习工作区",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/inbox/brief.txt、agenda.txt、notes-copy.txt；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "record-inbox-baseline",
+        "kind": "action",
+        "title": "发送前记录三份输入的原样",
+        "purpose": "保留文件名与内容基线供直接对照。",
+        "location": "系统文件管理器 → workbuddy-practice/input/inbox",
+        "actions": [
+          "打开 input/inbox，确认只有 brief.txt、agenda.txt、notes-copy.txt 三份文件。",
+          "打开三份短文本，记录或复制完整内容到自己的学习笔记；同时记录文件名、大小和修改时间，稍后逐份对照。",
+          "换自己的材料时先复制不敏感文件到独立练习目录；本课默认继续用统一样本。"
+        ],
+        "expected": "知道整理前有三个文件，能识别内容与修改状态。",
+        "recovery": "数量不是三时先检查是否选错文件夹或解压后多嵌套一层；不让模型猜测缺失文件。"
+      },
+      {
+        "id": "request-inventory-proposal",
+        "kind": "prompt",
+        "title": "只发一次：清单加整理建议",
+        "purpose": "先看建议再决定，避免误动原件。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "复制完整 Prompt，一次请求两份产物。",
+          "等待 output/inventory.xlsx 与 output/proposed-actions.md 都生成。",
+          "若出现移动或重命名建议，确认它仅在方案里，没有执行；附录 A.1 是可选参考，不必发送第二条指令。"
+        ],
+        "expected": "得到三个文件的清单和逐项建议，输入文件未移动。",
+        "recovery": "若请求执行移动、删除或改名，不确认执行；重申本课只要预览，先检查已有产物。",
+        "prompts": [
+          {
+            "title": "清单与方案：原件不动",
+            "text": "请仅盘点当前工作区 input/inbox 下的 brief.txt、agenda.txt、notes-copy.txt 三份练习文件。读取内容后，生成 output/inventory.xlsx，字段为原相对路径、文件名、类型、大小、主题摘要。再生成 output/proposed-actions.md，为每份文件列建议分类、建议新路径或名称、理由、冲突处理方式；建议保持原样时也明确说明。清单数量必须与实际文件数一致；实际不是三个就报告差异，不编造缺失文件。禁止删除、移动、重命名、覆盖或改写 input 中任何文件。当前只交付清单和方案，不执行整理，不把方案当作我已确认。完成后返回两份产物路径。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/inbox/brief.txt、input/inbox/agenda.txt、input/inbox/notes-copy.txt。",
+              "本轮预期输出：output/inventory.xlsx、output/proposed-actions.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-proposal-originals",
+        "kind": "verify",
+        "title": "打开两份产物，再回去确认原件",
+        "purpose": "核对数量、建议可追溯性和输入不变。",
+        "location": "WorkBuddy 结果区 → inventory.xlsx、proposed-actions.md；系统文件管理器 → input/inbox",
+        "actions": [
+          "打开 inventory.xlsx，数据应为三行，路径均指向 input/inbox。",
+          "打开 proposed-actions.md，找到三份文件的原路径与建议路径，核对没有覆盖风险。",
+          "回 input/inbox，比对文件名、大小、修改时间与先前记录的完整内容；任一变化都先停下排查。",
+          "本课到此结束；附录 A.1 可以比较措辞，但不追加发送，也不执行方案。"
+        ],
+        "expected": "清单与实际三个文件相符，建议可回溯，输入内容与位置未变。",
+        "recovery": "清单少项时指出遗漏文件名补齐；原件被改动时不再整理，先保留现状排查，再从练习包取新副本重做。"
+      }
+    ],
+    "checks": [
+      "inventory.xlsx 恰有三条输入记录。",
+      "每项整理建议都有原路径与理由。",
+      "三份输入的文件名、位置、内容未改变。",
+      "没有把附录 A.1 当成第二个必发 Prompt。"
+    ]
+  },
+  "wb-lesson-07": {
+    "title": "合并六份销售表：去重后仍能对账",
+    "pain": "直接拼接会让重复订单放大销售额；只看结果又不知道清洗删掉了什么。",
+    "goal": "合并六个同结构小表，保留跨文件重复来源，解释每一行和每一元的变化。",
+    "outcome": "output/clean-sales.xlsx、output/exception-list.xlsx、output/reconciliation.md。",
+    "prerequisites": [
+      "能用 Excel 或兼容表格应用打开 xlsx。",
+      "本课用六份虚构小表，不需要参考案例的 119 份门店文件。"
+    ],
+    "materials": [
+      {
+        "path": "input/sales/region-01.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      },
+      {
+        "path": "input/sales/region-02.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      },
+      {
+        "path": "input/sales/region-03.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      },
+      {
+        "path": "input/sales/region-04.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      },
+      {
+        "path": "input/sales/region-05.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      },
+      {
+        "path": "input/sales/region-06.xlsx",
+        "description": "区域销售表，含三行数据；字段为订单号、日期、区域、品类、销售额、成本。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-six-sales",
+        "kind": "action",
+        "title": "选中六份小表，确认本课数据范围",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/sales/region-01.xlsx 至 region-06.xlsx；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "confirm-merge-key",
+        "kind": "action",
+        "title": "先核对字段和订单号去重口径",
+        "purpose": "避免把截图中的大案例规模套到练习数据。",
+        "location": "WorkBuddy 文件区 → input/sales；表格应用",
+        "actions": [
+          "确认 region-01.xlsx 至 region-06.xlsx 共六份，每份三行，总计 18 行。",
+          "打开两份表，查看六个表头：订单号、日期、区域、品类、销售额、成本。",
+          "按订单号去重：业务字段完全一致的重复保留一条并记录来源；金额等字段冲突则列异常，不任选一条。"
+        ],
+        "expected": "合并范围与主键明确，知道原始 18 行中有一个跨文件重复。",
+        "recovery": "文件名或列名不符时先核对练习包，不手工改成相似字段；下一步应报告差异再处理。"
+      },
+      {
+        "id": "merge-and-reconcile",
+        "kind": "prompt",
+        "title": "交付干净表、异常表与对账说明",
+        "purpose": "让去重可追溯，金额能解释到原始数据。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，等待三个文件生成。",
+          "发现列名、单位或主键冲突时，先处理差异，不催它直接给业务结论。"
+        ],
+        "expected": "干净表保留来源，重复项在异常表可见，对账说明解释原始与清洗金额差额。",
+        "recovery": "若只交一张拼接表，要求补重复来源和金额桥接；去重口径无法确认时停留在数据检查。",
+        "prompts": [
+          {
+            "title": "六表合并与对账",
+            "text": "只处理 input/sales/region-01.xlsx 至 input/sales/region-06.xlsx 六个文件。先检查订单号、日期、区域、品类、销售额、成本的列名、类型、日期范围与金额单位；差异不能确认时停止并报告。按订单号去重：所有业务字段一致的重复只保留一条，同时记录全部来源文件和原行号；同订单号内容冲突进入异常，不自行裁决。输出 output/clean-sales.xlsx（干净明细，保留来源），output/exception-list.xlsx（重复及其他异常，含保留与排除依据），output/reconciliation.md（各文件行数和金额、原始总量、排除的重复行数及金额、去重后总量）。用“原始总量−排除重复量＝去重后总量”对行数、销售额和成本分别对账；差异不为 0 不给管理结论。不修改输入，不把异常静默删除。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/sales/region-01.xlsx 至 input/sales/region-06.xlsx。",
+              "本轮预期输出：output/clean-sales.xlsx、output/exception-list.xlsx、output/reconciliation.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "audit-sales-bridge",
+        "kind": "verify",
+        "title": "从 18 行核对到 17 行，再核对金额",
+        "purpose": "验证重复保留来源，清洗没有无法解释的差额。",
+        "location": "WorkBuddy 结果区 → 三份产物；表格应用",
+        "actions": [
+          "打开 clean-sales.xlsx，样本应从原始 18 行得到 17 个唯一订单。",
+          "在 exception-list.xlsx 找到跨文件重复订单，回源表核对两处字段与金额。",
+          "打开 reconciliation.md，核对原始销售额减排除的重复金额等于清洗销售额，成本也做同样核对。",
+          "对账无差异才用干净表分析；119 份门店案例仅作扩展阅读。"
+        ],
+        "expected": "行数满足 18−1＝17，销售额与成本都能用重复项解释差额。",
+        "recovery": "若不是 17 行，检查文件范围、表头和冲突，不为凑数删行；金额不平时要求按来源列差额并暂停结论。"
+      }
+    ],
+    "checks": [
+      "输入六份、原始 18 行、唯一订单 17 条。",
+      "重复订单的两个来源能定位。",
+      "销售额和成本对账差异均为 0。"
+    ]
+  },
+  "wb-lesson-08": {
+    "title": "三张发票做台账：逐项核对日期与金额",
+    "pain": "PDF 文件名不能代替发票字段，识别错一个金额会把合计带偏。",
+    "goal": "从三张示例发票提取字段，生成可求和台账，每项都能回 PDF 核对。",
+    "outcome": "output/invoice-ledger.xlsx 与 output/invoice-review.md；不移动或改名原 PDF。",
+    "prerequisites": [
+      "能打开 PDF 和 xlsx。",
+      "样本是虚构英文发票，按原文识别，不补填税号或抬头。"
+    ],
+    "materials": [
+      {
+        "path": "input/invoices/invoice-demo-01.pdf",
+        "description": "英文发票样本，核对 Date、Invoice number、Seller、Amount。"
+      },
+      {
+        "path": "input/invoices/invoice-demo-02.pdf",
+        "description": "英文发票样本，核对 Date、Invoice number、Seller、Amount。"
+      },
+      {
+        "path": "input/invoices/invoice-demo-03.pdf",
+        "description": "英文发票样本，核对 Date、Invoice number、Seller、Amount。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-invoice-task",
+        "kind": "action",
+        "title": "新建发票台账任务",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/invoices/invoice-demo-01.pdf、invoice-demo-02.pdf、invoice-demo-03.pdf；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "extract-invoice-ledger",
+        "kind": "prompt",
+        "title": "只识别三张样本，生成台账与复核清单",
+        "purpose": "把可见字段与不确定项分开。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，观察是否仅读取三个 PDF。",
+          "等待台账与说明，暂不据此报销或改名原件。"
+        ],
+        "expected": "台账有三条记录及合计公式，不确定字段有标记。",
+        "recovery": "PDF 读不了时先用阅读器确认文件能打开；要求报告具体文件与字段，不凭常识猜金额。",
+        "prompts": [
+          {
+            "title": "三张发票识别",
+            "text": "读取 input/invoices/invoice-demo-01.pdf、input/invoices/invoice-demo-02.pdf、input/invoices/invoice-demo-03.pdf。提取页面的 Date（日期）、Invoice number（发票号码）、Seller（销售方）、Amount（金额），保存 output/invoice-ledger.xlsx。每行附来源文件、页码和原文字段；金额用数值单元格，并用 SUM 公式合计；单位或币种以 PDF 为准。另生成 output/invoice-review.md，列出可能重复、无法识别或待核对项；样本没有的抬头、税号写“原文未提供”，不编造。只处理三张样本，不扫描桌面或下载目录，不移动、删除、重命名或覆盖原 PDF。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/invoices/invoice-demo-01.pdf、input/invoices/invoice-demo-02.pdf、input/invoices/invoice-demo-03.pdf。",
+              "本轮预期输出：output/invoice-ledger.xlsx、output/invoice-review.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "verify-each-invoice",
+        "kind": "verify",
+        "title": "三张逐张核对，再重新算合计",
+        "purpose": "确保合计正确建立在每笔金额正确之上。",
+        "location": "PDF 阅读器 → 三张输入；表格应用 → invoice-ledger.xlsx",
+        "actions": [
+          "按来源逐张打开 PDF，对照日期、号码、销售方、金额四项，不能只看合计。",
+          "检查台账恰有三条记录；选中合计单元格，在公式栏确认使用 SUM 而非手填。",
+          "用三张 PDF 页面的金额自己相加，与台账合计比较；统一样本应为三张、合计 400.00 元。这个值只作人工核对基准，不能替代逐张识别和核验；查看 review.md 是否解释缺失项与重复判断。",
+          "回 input/invoices 确认三张 PDF 的文件名与位置不变。"
+        ],
+        "expected": "四个可见字段逐张对应，三张样本的金额手工求和与台账合计均为 400.00 元，未知项未被猜填。",
+        "recovery": "金额或号码不符时指出具体文件与页面原值，只改该行再重算；币种不同时不得直接相加。"
+      }
+    ],
+    "checks": [
+      "三条台账与三张 PDF 一一对应。",
+      "四个字段已逐张核对。",
+      "合计用公式且与手工求和一致。"
+    ]
+  },
+  "wb-lesson-09": {
+    "title": "会议转写变待办：先审核纪要，再生成预览",
+    "pain": "讨论建议容易被写成承诺，负责人和日期一旦猜错，待办就会误导执行。",
+    "goal": "从转写生成草稿，人工核对另存审核版，再生成本地待办预览。",
+    "outcome": "output/minutes-draft.md → 人工审核 → output/minutes-approved.md → output/todo-preview.xlsx。",
+    "prerequisites": [
+      "能在文本编辑器中打开、编辑、另存 Markdown。",
+      "本课无需外部任务系统、连接器或参会人账号。"
+    ],
+    "materials": [
+      {
+        "path": "input/meeting.txt",
+        "description": "教学会议转写，结论与行动项均以它为依据。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-meeting-task",
+        "kind": "action",
+        "title": "新建会议纪要任务并定位转写",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/meeting.txt；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "draft-meeting-minutes",
+        "kind": "prompt",
+        "title": "第一轮只生成纪要草稿",
+        "purpose": "区分事实、决定、建议与未决事项，留出审核点。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送草稿 Prompt，等待 output/minutes-draft.md。",
+          "打开草稿，不跳到生成待办或创建外部任务。"
+        ],
+        "expected": "草稿包含结论、行动项、未决问题和原文依据。",
+        "recovery": "若跳过草稿派任务，停止后续动作，重申仅需本地草稿；无依据的人名、日期改为待确认。",
+        "prompts": [
+          {
+            "title": "从转写生成纪要草稿",
+            "text": "只读取 input/meeting.txt，生成 output/minutes-draft.md。包含会议基本信息、结论、按议题的摘要、已确认决定、行动项、讨论建议和未决问题。决定与行动项附原文短引文或可定位段落；关键数字、否定表达按原文核对。行动项列任务、负责人、截止日期、交付物；不能确认的信息写“待确认”，不按语气猜。此轮仅生成草稿，不生成审核版、不创建待办、不写外部系统、不发消息，不修改输入。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/meeting.txt。",
+              "本轮预期输出：output/minutes-draft.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "human-approve-minutes",
+        "kind": "action",
+        "title": "人工审核，另存 minutes-approved.md",
+        "purpose": "为第二轮提供确实经人检查的唯一输入。",
+        "location": "文本编辑器 → minutes-draft.md；对照 input/meeting.txt",
+        "actions": [
+          "同时打开草稿与转写，逐条核对决定、负责人、日期、数字和否定词。",
+          "删去无依据承诺，未明确项保留待确认，不为凑齐表格补造责任人。",
+          "在顶部记录“已按原文人工核对”，将审核后的内容保存为 output/minutes-approved.md，保留 draft 对照。",
+          "回文件区确认 approved 已存在并能打开，再进行下一轮。"
+        ],
+        "expected": "approved 是由你审核保存的版本，缺失信息仍透明标记。",
+        "recovery": "编辑器不能另存 Markdown 时先复制 draft 为指定文件再编辑；未完成审核就停在草稿，不让模型代写“人工已确认”。"
+      },
+      {
+        "id": "preview-approved-todos",
+        "kind": "prompt",
+        "title": "只读审核版，生成待办预览",
+        "purpose": "避免把草稿错误带到后续列表。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "手工保存 approved 后再发第二轮 Prompt。",
+          "等待 todo-preview.xlsx，核对回复没有创建外部任务。"
+        ],
+        "expected": "本地表格区分可确认与待补充事项，没有写入外部系统。",
+        "recovery": "找不到 approved 时不要回退用 draft，返回上一步完成另存和核对。",
+        "prompts": [
+          {
+            "title": "审核版转待办预览",
+            "text": "只读取我已保存的 output/minutes-approved.md；文件不存在就停止，告诉我先人工审核，不用草稿替代。生成 output/todo-preview.xlsx，包含标题、描述、负责人、截止日期、优先级、验收物、来源段落、确认状态。未提供的优先级等信息写“待确认”；负责人或日期缺失的条目放“待补充”工作表，其余放“待办预览”工作表，按负责人分组。每项可回到审核版对应行动项。本轮只做本地预览，不调用连接器、不创建外部任务、不发送通知，不改纪要。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：output/minutes-approved.md（先由你人工审核并保存）。",
+              "本轮预期输出：output/todo-preview.xlsx；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "trace-todos-to-approved",
+        "kind": "verify",
+        "title": "把待办逐条对回审核版",
+        "purpose": "避免将未确认项伪装成正式任务。",
+        "location": "表格应用 → todo-preview.xlsx；文本编辑器 → minutes-approved.md",
+        "actions": [
+          "对照审核版行动项，检查预览无遗漏、无新增任务承诺。",
+          "缺负责人或日期的条目均应在待补充表，不能仅靠颜色表达未知状态。",
+          "任选一条沿来源回到审核版，再回转写核对原句；本课到本地预览为止。"
+        ],
+        "expected": "三阶段文件齐全，待办源自审核版，未知信息仍需人补齐。",
+        "recovery": "出现额外任务时要求按审核版重对齐；若 approved 本身有误，先人工修改它，再重生成预览。"
+      }
+    ],
+    "checks": [
+      "draft 已人工核对后另存 approved。",
+      "预览只来自 approved，未绕过审核。",
+      "缺负责人或日期的项在待补充表。",
+      "没有向外部系统写入或发消息。"
+    ]
+  },
+  "wb-lesson-10": {
+    "title": "先审大纲，再把项目材料写成 Word 初稿",
+    "pain": "直接生成方案，结构像模板、事实却无依据；返工又从头写。",
+    "goal": "先把项目简报变大纲，再用明确小改动生成可编辑 Word。",
+    "outcome": "output/project-outline.md、output/project-draft.docx、output/project-change-note.md。",
+    "prerequisites": [
+      "能打开 docx，能在文本编辑器修改 Markdown。"
+    ],
+    "materials": [
+      {
+        "path": "input/project-brief.docx",
+        "description": "项目事实来源。"
+      },
+      {
+        "path": "input/brand-guide.md",
+        "description": "语气与规范参考，不能代替项目事实。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-project-writing",
+        "kind": "action",
+        "title": "为项目初稿选定两份来源",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/project-brief.docx、input/brand-guide.md；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "request-project-outline",
+        "kind": "prompt",
+        "title": "第一轮先交大纲与缺失项",
+        "purpose": "在写长文前确认读者与结构。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送大纲 Prompt，只等一份 Markdown 产物。",
+          "打开 project-outline.md，核对目标、安排和风险能回到简报。"
+        ],
+        "expected": "得到面向项目负责人的结构与待确认项，尚未生成 Word 正文。",
+        "recovery": "若已写成长文，要求先收回到章节大纲；缺预算、人数或日期时保留待确认。",
+        "prompts": [
+          {
+            "title": "先审项目方案大纲",
+            "text": "读取 input/project-brief.docx 作为唯一事实来源，input/brand-guide.md 只用于语气和格式。面向项目负责人，生成 output/project-outline.md，包含项目目标、现状与依据、执行安排、风险、待确认事项五部分。每部分列拟写要点及事实来源；缺预算、日期或负责人写“待确认”，不编造。此轮只要大纲，不生成 Word，不改输入。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/project-brief.docx、input/brand-guide.md。",
+              "本轮预期输出：output/project-outline.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "review-project-outline",
+        "kind": "action",
+        "title": "审核大纲，把风险放到执行安排之前",
+        "purpose": "用明确变更练习局部修改，保持事实口径。",
+        "location": "文本编辑器 → output/project-outline.md",
+        "actions": [
+          "对照简报，删去无依据要点，保留待确认项。",
+          "把“风险”移到“执行安排”前，保存同一个 project-outline.md；这是本次示范的结构反馈。",
+          "确认顺序为目标、现状与依据、风险、执行安排、待确认事项，再发下一轮。"
+        ],
+        "expected": "审核大纲已保存，第二轮遵循的结构明确。",
+        "recovery": "不同意某个要点时先在大纲中标注具体修改并保存，不仅在心里认可与文件不同的版本。"
+      },
+      {
+        "id": "write-project-draft",
+        "kind": "prompt",
+        "title": "第二轮按审核大纲生成 Word",
+        "purpose": "将确认结构落成可编辑文件，记录修改范围。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送初稿 Prompt，要求读取已保存大纲。",
+          "完成后打开 docx；还需修改时引用具体章节，说明保留什么、只改什么，不只说“重写”。"
+        ],
+        "expected": "生成可编辑 Word 和修改说明，风险章节按审核结果前置。",
+        "recovery": "结构或排版不符时指出标题级别与段落位置要求局部调整；事实不符先回输入核对。",
+        "prompts": [
+          {
+            "title": "按审核大纲写初稿",
+            "text": "读取我已审核保存的 output/project-outline.md，结合 input/project-brief.docx 的事实与 input/brand-guide.md 的规范，生成 output/project-draft.docx。按审核大纲写，风险章节在执行安排之前；使用可编辑文本和真实标题样式。缺失信息保留“待确认”，不添加无依据的预算、人数、日期或效果承诺。另生成 output/project-change-note.md，列结构、待确认项与事实来源。不修改三份输入；大纲缺失就停止，不跳过审核。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：output/project-outline.md（已人工审核）、input/project-brief.docx、input/brand-guide.md。",
+              "本轮预期输出：output/project-draft.docx、output/project-change-note.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inspect-editable-word",
+        "kind": "verify",
+        "title": "打开 Word 检查结构、事实与可编辑性",
+        "purpose": "同时验收内容与文档质量。",
+        "location": "Word 或兼容应用 → project-draft.docx；结果区 → project-change-note.md",
+        "actions": [
+          "检查标题层级、段落顺序、表格换页和文字是否可选中编辑。",
+          "核对风险在执行安排前，从正文选两条事实回到 project-brief.docx。",
+          "看修改说明，确认缺失信息仍标待确认；问题用章节名和具体句子反馈。"
+        ],
+        "expected": "文档能继续编辑，结构遵循大纲，事实与缺失项可追溯。",
+        "recovery": "文件打不开或正文是整页图片时要求重新输出标准可编辑 docx；溢出则指出具体页和表格调整。"
+      }
+    ],
+    "checks": [
+      "先由人审核保存大纲，再生成 Word。",
+      "风险章节已前置。",
+      "正文可编辑，事实可追溯，未知项未编造。"
+    ]
+  },
+  "wb-lesson-11": {
+    "title": "六份销售表做分析：公式报告与离线看板",
+    "pain": "看板数字写死、重复订单未处理，就难以据此判断。",
+    "goal": "用与第 07 课相同的六份样本，做可重算分析工作簿，核对离线看板筛选结果。",
+    "outcome": "output/sales-analysis.xlsx、output/sales-dashboard.html、output/sales-summary.md。",
+    "prerequisites": [
+      "能打开 xlsx 和本地 HTML，用表格应用查看公式与重算。",
+      "无需先做第 07 课，本课从原始六表重新检查去重。",
+      "六表小样本不使用参考案例的 119 份文件、门店数量或历史跨度。"
+    ],
+    "materials": [
+      {
+        "path": "input/sales/region-01.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      },
+      {
+        "path": "input/sales/region-02.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      },
+      {
+        "path": "input/sales/region-03.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      },
+      {
+        "path": "input/sales/region-04.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      },
+      {
+        "path": "input/sales/region-05.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      },
+      {
+        "path": "input/sales/region-06.xlsx",
+        "description": "与第 07 课相同的虚构数据，每份三条记录，六个字段。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-sales-analysis",
+        "kind": "action",
+        "title": "定位六份数据，明确能算哪些指标",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/sales/region-01.xlsx 至 region-06.xlsx；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "define-sales-metrics",
+        "kind": "action",
+        "title": "用现有字段明确指标，不补造客流",
+        "purpose": "每项指标都有真实分子、分母和口径。",
+        "location": "文件区 → input/sales；本课 Prompt 预览",
+        "actions": [
+          "检查字段只有订单号、日期、区域、品类、销售额、成本。",
+          "用销售额合计、成本合计、毛利＝销售额−成本、毛利率＝毛利合计÷销售额合计，销售额为零时标不可计算。",
+          "按区域、品类和现有日期汇总；没有客流、目标或完整上月数据，不算客单价、达成率、环比。"
+        ],
+        "expected": "明确可算指标，知道去重后才做分析。",
+        "recovery": "若使用门店、客流、目标等字段，要求指出来源；无来源就删去，不凭样本规模猜背景。"
+      },
+      {
+        "id": "generate-sales-report-dashboard",
+        "kind": "prompt",
+        "title": "生成活公式报告和离线看板",
+        "purpose": "原始数据、清洗记录、汇总与图表共用口径。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，等待三份产物。",
+          "先看 sales-summary.md 的数据质量与对账，未对平前不接受管理结论。"
+        ],
+        "expected": "工作簿含来源、去重明细、公式汇总、图表；看板能筛选实际区域与品类。",
+        "recovery": "只交静态数字或截图时要求补真实公式与筛选计算；对账不平先处理差异。",
+        "prompts": [
+          {
+            "title": "六表销售分析与离线看板",
+            "text": "读取 input/sales/region-01.xlsx 至 input/sales/region-06.xlsx。先检查六字段与金额单位，按订单号对完全相同记录去重，保留来源与重复排除记录；有冲突则停止列明。以去重明细为唯一口径，输出 output/sales-analysis.xlsx：含原始来源、去重明细、异常记录、区域汇总、品类汇总、日期汇总和图表。销售额与成本用 SUM/SUMIF 等真实公式；每行毛利＝销售额−成本，汇总毛利率＝毛利合计÷销售额合计，零分母显示不可计算；不得平均行毛利率。图表引用汇总单元格，不粘贴写死数字。输出 output/sales-dashboard.html：不依赖网络，内嵌本次去重数据，提供区域与品类筛选，筛选后销售额、成本、毛利、毛利率和图表同步更新，显示当前筛选与记录数。说明 HTML 是本次数据快照，不自动读取后来修改的 Excel。再输出 output/sales-summary.md，记录实际输入行数、重复排除及清洗结果、行数与销售额/成本对账、指标公式、日期范围和三条有数值依据的观察；原因无依据写待核实。不算无字段支持的客流、客单价、目标达成率、环比，不改输入。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/sales/region-01.xlsx 至 input/sales/region-06.xlsx。",
+              "本轮预期输出：output/sales-analysis.xlsx、output/sales-dashboard.html、output/sales-summary.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "test-recalculating-metrics",
+        "kind": "verify",
+        "title": "修改输出副本，验证公式会重算",
+        "purpose": "用可逆数值变化识别写死汇总。",
+        "location": "表格应用 → output/sales-analysis.xlsx",
+        "actions": [
+          "先核对去重后 17 个订单，重复的两个来源可见，销售额与成本对账差异为零。",
+          "点选区域汇总销售额和毛利率，看公式引用；毛利率应是总毛利除以总销售额。",
+          "将工作簿另存 output/sales-analysis-check.xlsx，在副本的去重明细中任选一笔销售额加 100、成本不变。",
+          "重算后对应区域、品类、总销售额均应增加 100，总毛利也增加 100，图表随汇总变化；验完关闭副本，正式工作簿保持原值。"
+        ],
+        "expected": "公式随明细变化重算，正式分析文件与输入保持原值。",
+        "recovery": "数值没变时检查自动计算和引用范围；要求修正公式后重新测试，不接受手工改总计。"
+      },
+      {
+        "id": "check-offline-filter",
+        "kind": "verify",
+        "title": "把看板筛选结果对回 Excel",
+        "purpose": "验证交互改变真实统计值，且口径与报告一致。",
+        "location": "浏览器 → sales-dashboard.html；表格应用 → 正式 sales-analysis.xlsx",
+        "actions": [
+          "用浏览器打开本地 HTML，先核对“全部”与正式工作簿总计。",
+          "选择实际存在的区域，再选有数据的品类，对比记录数、销售额、成本、毛利、毛利率。",
+          "清空筛选，确认回到全部；查看 summary 是否说明样本范围限制。",
+          "HTML 内嵌本次快照，副本重算测试不会更新 HTML；数据更新后需要重新生成看板。"
+        ],
+        "expected": "筛选数字按同一去重口径变化，恢复全部能与正式 Excel 对齐。",
+        "recovery": "本地打开空白或请求远程资源时要求内嵌依赖；数字不随筛选改变时要求修复计算后再验收。"
+      }
+    ],
+    "checks": [
+      "原始18行、去重17条，来源和金额差额可追溯。",
+      "汇总用可重算公式，毛利率按总毛利÷总销售额。",
+      "副本加100后汇总和图表重算。",
+      "看板全部与筛选结果能与正式 Excel 对齐。"
+    ]
+  },
+  "wb-lesson-12": {
+    "title": "比较两版方案：把变化变成待确认清单",
+    "pain": "逐页找不同容易漏金额、日期和责任变化，格式调整又掩盖内容修改。",
+    "goal": "比较固定两版方案，生成带原文定位的差异表，人工核对关键变化。",
+    "outcome": "output/proposal-diff.xlsx 与 output/proposal-review.md。",
+    "prerequisites": [
+      "能打开两份 docx 与 xlsx。",
+      "版本方向固定：v1 旧版，v2 新版。"
+    ],
+    "materials": [
+      {
+        "path": "input/proposal-v1.docx",
+        "description": "旧版方案。"
+      },
+      {
+        "path": "input/proposal-v2.docx",
+        "description": "新版方案，不与旧版对调。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-proposal-comparison",
+        "kind": "action",
+        "title": "同时定位旧版 v1 与新版 v2",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/proposal-v1.docx、input/proposal-v2.docx；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "compare-proposal-versions",
+        "kind": "prompt",
+        "title": "区分新增、删除、修改与格式变化",
+        "purpose": "每个差异能返回两版原文，而非笼统评价。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，确认方向为 v1 → v2。",
+          "等待差异表和问题清单，不把摘要当成责任人的确认结论。"
+        ],
+        "expected": "差异表含旧文、新文与位置，重点变化进入人工确认清单。",
+        "recovery": "方向写反时要求按 v1 旧版重做新增/删除；只有页码定位时补章节和段落首句，避免换页影响。",
+        "prompts": [
+          {
+            "title": "两版方案差异与影响",
+            "text": "比较 input/proposal-v1.docx（旧版）和 input/proposal-v2.docx（新版），方向为 v1 → v2。生成 output/proposal-diff.xlsx，逐项列新增、删除、修改、仅格式变化，含差异编号、章节/段落位置、旧版原句、新版原句、类型、影响说明；某版没有内容就明确写不存在，不编造原句。重点检查金额、日期、责任主体、审批条件、例外和否定表达。再生成 output/proposal-review.md，引用差异编号列需方案负责人确认的问题；影响不确定时标待确认，不替负责人批准或给法律结论。不修改原文。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/proposal-v1.docx、input/proposal-v2.docx。",
+              "本轮预期输出：output/proposal-diff.xlsx、output/proposal-review.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "locate-critical-changes",
+        "kind": "verify",
+        "title": "找回原句，重点核对金额与日期",
+        "purpose": "避免遗漏关键变化或把格式当实质修改。",
+        "location": "Word → 两份 proposal；表格应用 → proposal-diff.xlsx",
+        "actions": [
+          "按差异表打开两版章节，逐项核对金额、日期、责任主体，不只随机看一个段落。",
+          "核对新增项在旧版不存在，删除项在新版不存在。",
+          "检查“仅格式变化”分类；确实有格式变化时核对业务含义未变，没有时允许记录“未发现”，不凑项。",
+          "review 中每个问题都应有差异编号和需谁确认的说明；未指定人名时保留待确认。"
+        ],
+        "expected": "关键变化有双方原句与位置，方向正确，问题未被当成已批准决定。",
+        "recovery": "漏项时引用旧、新原句补入差异表；无定位依据的影响评价先标待确认，不靠模型自信判断。"
+      }
+    ],
+    "checks": [
+      "始终按 v1 旧版到 v2 新版比较。",
+      "四类变化区分清楚，未发生的类型不凑数。",
+      "金额、日期、责任主体回两版原文核对。",
+      "没有修改原文或替责任人批准。"
+    ]
+  },
+  "wb-lesson-13": {
+    "title": "核对一张销售图：从明细算到结论",
+    "pain": "柱状图漂亮，标题可能夸大结论，毛利率也可能用错分母。",
+    "goal": "从单表生成汇总与图表，用公式、单位、来源检查结论。",
+    "outcome": "output/chart-check.xlsx 与 output/chart-review.md：公式汇总、引用图表和核验说明。",
+    "prerequisites": [
+      "能在表格应用查看公式栏和图表数据源。",
+      "使用独立 sales.xlsx，不依赖第 07 或 11 课产物。"
+    ],
+    "materials": [
+      {
+        "path": "input/sales.xlsx",
+        "description": "单表销售样本，字段为订单号、日期、区域、品类、销售额、成本。"
+      }
+    ],
+    "steps": [
+      {
+        "id": "open-chart-check",
+        "kind": "action",
+        "title": "打开单表销售样本",
+        "purpose": "让这次任务只读取指定材料，结果有固定保存位置。",
+        "location": "WorkBuddy 左侧任务栏 → 新建任务 → 工作区选择器",
+        "actions": [
+          "新建本课任务，选择解压后的 workbuddy-practice 文件夹作为工作区。",
+          "确认文件区能找到 input/sales.xlsx；选择 默认执行模式用于生成文件。",
+          "检查结果保存目录为工作区内的 output，而不是下载目录或其他工作资料目录。"
+        ],
+        "expected": "任务已打开，路径末尾为 workbuddy-practice，可以定位本课输入。",
+        "recovery": "若文件不可见，重新选择解压后的文件夹；不要选压缩包本身，也不要让 WorkBuddy 猜其他目录。"
+      },
+      {
+        "id": "generate-auditable-chart",
+        "kind": "prompt",
+        "title": "先汇总，再让图表引用它",
+        "purpose": "图表和文字结论追到同一计算口径。",
+        "location": "WorkBuddy 当前任务对话输入框",
+        "actions": [
+          "发送 Prompt，等待 Excel 与说明。",
+          "先查看数据质量检查；有订单冲突时先处理，不直接接受图表。"
+        ],
+        "expected": "工作簿含明细、品类汇总、公式、图表，说明列指标口径。",
+        "recovery": "只生成图像时要求改为引用汇总的 Excel 原生图表；结论用未知单位或时段时要求回源说明。",
+        "prompts": [
+          {
+            "title": "生成可核对的销售图表",
+            "text": "只读取 input/sales.xlsx，检查订单号、日期、区域、品类、销售额、成本及重复/缺失；无法确认的问题先报告。生成 output/chart-check.xlsx，包含来源明细、品类汇总和比较各品类销售额与毛利的原生柱状图。汇总销售额、成本用 SUMIF 或等价真实公式，毛利＝销售额合计−成本合计，毛利率＝毛利÷销售额合计，零分母标不可计算；不得简单平均行毛利率。图表引用汇总单元格，标品类、金额单位、数据日期范围；单位以源资料为准，不确定就标待确认。生成 output/chart-review.md，写指标定义、图表数据区域、三条带数字依据的观察及复核项。不补造客流、环比、业务原因，不修改输入。",
+            "destination": "WorkBuddy当前任务对话输入框",
+            "replacements": [
+              "本练习没有待替换占位符，保留相对路径即可。换自己的材料时，先把副本放进工作区，再同时替换输入路径与输出文件名。"
+            ],
+            "preparation": [
+              "确认当前工作区为解压后的 workbuddy-practice。",
+              "发送前确认输入存在：input/sales.xlsx。",
+              "本轮预期输出：output/chart-check.xlsx、output/chart-review.md；有同名旧结果时先另存需要保留的内容。"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "recompute-one-category",
+        "kind": "verify",
+        "title": "手算一个品类，检查公式和图表引用",
+        "purpose": "把指标、汇总和图表连成验证链。",
+        "location": "表格应用 → chart-check.xlsx；文件区 → input/sales.xlsx",
+        "actions": [
+          "选一个品类，将该品类销售额、成本分别求和，用差额得毛利。",
+          "用该品类总毛利除以总销售额，与汇总毛利率比较；零销售额应显示不可计算。",
+          "点选汇总看公式，查看图表数据源是否引用这些单元格。",
+          "核对纵轴单位、横轴品类、日期范围，图例不能把成本当毛利。"
+        ],
+        "expected": "手算与汇总一致，毛利率分母正确，图表用的正是被核对的汇总。",
+        "recovery": "仅精度不同时比较未四舍五入数值；公式或源区域不同则指出单元格或区域要求修正。"
+      },
+      {
+        "id": "qualify-chart-conclusion",
+        "kind": "action",
+        "title": "让一句图表结论有明确边界",
+        "purpose": "区分可见事实与数据无法证明的原因。",
+        "location": "文本编辑器 → output/chart-review.md；表格应用 → chart-check.xlsx",
+        "actions": [
+          "检查三条观察引用的品类、数字、日期范围。",
+          "出现“因为促销”“最有增长潜力”等无依据原因时，改为样本可观察的事实，把原因标待核实。",
+          "即使原结论正确，也在 review 末尾补人工核验记录：核对了哪个品类、总销售额、毛利率、是否一致。",
+          "保存后重新打开，确认核验记录已落盘。"
+        ],
+        "expected": "至少完成一次带数字的人工核验，结论范围与样本一致。",
+        "recovery": "无法支持的判断应删去或标待核实；不要改图表数字迎合原来的标题。"
+      }
+    ],
+    "checks": [
+      "一个品类的销售额、成本、毛利、毛利率已独立核算。",
+      "图表引用汇总，单位和日期范围清楚。",
+      "说明有人工核验记录，推测未伪装为事实。"
+    ]
+  }
+}

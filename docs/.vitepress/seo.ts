@@ -6,7 +6,7 @@ import type { HeadConfig, PageData, TransformContext } from "vitepress";
 const SITE_NAME = "WorkBuddy 实战蓝皮书";
 const SITE_ALTERNATE_NAME = "WorkBuddy Guide";
 const ORGANIZATION_NAME = "WorkBuddy Guide Contributors";
-const GITHUB_URL = "https://github.com/AlephAITech/WorkBuddyGuide";
+const GITHUB_URL = "https://github.com/xj-bear/WorkBuddyGuide";
 const DEFAULT_DESCRIPTION =
   "从安装使用到 AI 工作系统：28 章 WorkBuddy 实战指南与团队落地方法。";
 
@@ -218,7 +218,7 @@ export function createSeoHead(
     ];
   }
 
-  const canonicalUrl = absolutePageUrl(siteUrl, page);
+  const canonicalUrl = absolutePageUrl(siteUrl, page.replace(/^learn\/lesson\//, "learn/"));
   const socialImageUrl = new URL("/og/workbuddy-guide.png", `${siteUrl}/`).href;
   const description = pageData.description
     ? truncateDescription(pageData.description)
@@ -294,7 +294,9 @@ export function createSeoHead(
       {
         name: "robots",
         content:
-          "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+          pageData.frontmatter.learningStatus && pageData.frontmatter.learningStatus !== "published"
+            ? "noindex, follow"
+            : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
       },
     ],
     ["link", { rel: "canonical", href: canonicalUrl }],

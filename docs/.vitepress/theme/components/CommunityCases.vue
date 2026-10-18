@@ -1,0 +1,5 @@
+<script setup lang="ts">
+import { data } from '../../learning.data';
+</script>
+<template><section class="case-catalog" aria-label="全部社区案例"><a v-for="(item, index) in data.cases" :key="item.url" :href="item.url"><span>{{ String(index + 1).padStart(2, '0') }} / COMMUNITY CASE</span><h3>{{ item.title }}</h3><p>查看完整案例与原教程 →</p></a></section></template>
+<style scoped>.case-catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:32px 0 48px}.case-catalog a{display:flex;flex-direction:column;gap:14px;border:1px solid var(--vp-c-divider);padding:24px;color:var(--vp-c-text-1);text-decoration:none;background:var(--wb-surface);border-radius:4px}.case-catalog a:hover{border-color:var(--vp-c-brand-1);background:var(--wb-acid-soft)}.case-catalog span{font:10px monospace;color:var(--vp-c-text-2);letter-spacing:.08em}.case-catalog h3{font-size:17px;line-height:1.7;font-weight:700;margin:0}.case-catalog p{font-size:12px;color:var(--vp-c-brand-1);margin:auto 0 0;padding-top:12px}@media(max-width:640px){.case-catalog{grid-template-columns:1fr}}</style>

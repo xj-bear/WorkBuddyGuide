@@ -1,0 +1,155 @@
+{
+  "fictional": true,
+  "sales": {
+    "rows": 18,
+    "uniqueOrders": 17,
+    "revenueAfterDedup": 3250,
+    "costAfterDedup": 1795
+  },
+  "invoices": {
+    "count": 3,
+    "total": 400
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "b5f16c0ce3e8a33ed9580f39a544799a1530605bfefdb15f8ecffe7f797cc54f"
+    },
+    {
+      "path": "input/article.md",
+      "sha256": "a0014c71e2edcd8402030d4f5a2f10b434dfb31aa722373dfb52972748ba93f5"
+    },
+    {
+      "path": "input/automation/task-spec.md",
+      "sha256": "81c95b0c7bfbb542fd5ea8b2f156b67aba03987643a47af02a9f81d983a4484e"
+    },
+    {
+      "path": "input/brand-guide.md",
+      "sha256": "29558d4817315da1adfa3c52be8230ff3fa2834efd33df8e14941b3a7b84d355"
+    },
+    {
+      "path": "input/brief-sources.md",
+      "sha256": "5f5c87bd42c03912a61ad5fe31e6448ebb613c3c6d51a82705e59c4deddc26ea"
+    },
+    {
+      "path": "input/cover.png",
+      "sha256": "a1caebc248530afb7cc467326208282ebad92ef3795e9b5ebd8feb6e7e0722cb"
+    },
+    {
+      "path": "input/facts.md",
+      "sha256": "6ba6b54acb0db670a6fe84d68994ec2f7231570b117f1c2cba48c67af8cb0f42"
+    },
+    {
+      "path": "input/ima-exported-notes.md",
+      "sha256": "f069ca1feb3c5e9302efd322d57f15637b9292ebc26d330d1b68781a702915e2"
+    },
+    {
+      "path": "input/inbox/agenda.txt",
+      "sha256": "6e5cc1739f509bc693451890466ec0bd98389cb4f1fd814d5a7540a06510b6b9"
+    },
+    {
+      "path": "input/inbox/brief.txt",
+      "sha256": "0afe4c9bb5c893fb8d10b8b2ba17c064af4a5111ad1c18b31ea5f9c47da8544e"
+    },
+    {
+      "path": "input/inbox/notes-copy.txt",
+      "sha256": "09f9932bb70bf071d869c4d922503bad1c6cc05226128811c945ff75c0340c81"
+    },
+    {
+      "path": "input/invoices/invoice-demo-01.pdf",
+      "sha256": "d8f5f8472f93be1ff0ee52fddf5b0ffd1fa591df0252c1ff148cfc52cc2ae371"
+    },
+    {
+      "path": "input/invoices/invoice-demo-02.pdf",
+      "sha256": "f6482ead978d8a41d01272a7172511368e1608e536fa7554c96a3b99b8e76eb6"
+    },
+    {
+      "path": "input/invoices/invoice-demo-03.pdf",
+      "sha256": "fd37da2eb9d3a6f906eace5b20c13c02f53adde9a6e86cd88f5c6f73e41908c4"
+    },
+    {
+      "path": "input/life/culture-example.txt",
+      "sha256": "64d67724a45cde7b584be3071f685d9faaf3b9bde9e877150031b93e3ca7d486"
+    },
+    {
+      "path": "input/life/emotion-notes.txt",
+      "sha256": "ca51a67ab0f447c2f81e199d69b7582dbc818933afc98292cd4dc2145dc05278"
+    },
+    {
+      "path": "input/life/health-report.txt",
+      "sha256": "5809a2c4015d7230d2d5cc187ff1021df7dca5ed5fe2e9e31ff4a21732230b6d"
+    },
+    {
+      "path": "input/life/home-products.csv",
+      "sha256": "d6cead5de653e566bbc2b825908044d534e0fb2b894fcf2eb4ac0e1cd69b240a"
+    },
+    {
+      "path": "input/life/meals.txt",
+      "sha256": "bd63321b28de028a4782456841d208f235b8037719cca92871a7c0d2506c09fa"
+    },
+    {
+      "path": "input/life/travel.txt",
+      "sha256": "7e319eda7d042e4b4b9d3f82fd189fe3bb6a2995cdb4fd467fce21e2bd144ee4"
+    },
+    {
+      "path": "input/life/trip-expenses.csv",
+      "sha256": "1c4e570c0596ae83bc94a06ef8d816d99a47c372e7570f91b6522b2ed6aa8fde"
+    },
+    {
+      "path": "input/meeting.txt",
+      "sha256": "7b88d54173fa6ad0babef2b24355cdbbbfdbfc7826352655524822fc784d2f4e"
+    },
+    {
+      "path": "input/project-brief.docx",
+      "sha256": "1759a75fcda5161ea259a7dba3cf12ed8d44f37cb4e84b67a4492653d1c18f17"
+    },
+    {
+      "path": "input/proposal-v1.docx",
+      "sha256": "6d72fe352778f3f93d4bda2b7390e1822727cbf8273b8bffa3ea5e41f36b20a1"
+    },
+    {
+      "path": "input/proposal-v2.docx",
+      "sha256": "4fb2b8d171e92337686d8eb03d76f7c6b43af15d6d6ecd2c182162abea0332b5"
+    },
+    {
+      "path": "input/research/company-facts.md",
+      "sha256": "8215b671febf3959f0aadddea6bedb8607e48435c8eb66ecce766156de2e5638"
+    },
+    {
+      "path": "input/sales/region-01.xlsx",
+      "sha256": "7f1b09f3fff7c024580c6131d0b22a16f05386f2f5e4c756c1b184a65414f66b"
+    },
+    {
+      "path": "input/sales/region-02.xlsx",
+      "sha256": "9e35be9cb501ef8d76e36b9883298b6a3050a75abd05e2b2eda7a91bc6296abe"
+    },
+    {
+      "path": "input/sales/region-03.xlsx",
+      "sha256": "5962a676df9c86e7cba9a0432fd1baa2c2198304fd72aa01cdc855d6112dd686"
+    },
+    {
+      "path": "input/sales/region-04.xlsx",
+      "sha256": "2898b9f218d2acd591ab1bb50c1ee0cb9b19350d3a59a82c110f52bdb4f0f3fc"
+    },
+    {
+      "path": "input/sales/region-05.xlsx",
+      "sha256": "9121e17adb41964efab7920d29c05f68d44f7df595cb8e07d8e27d65c009b9d2"
+    },
+    {
+      "path": "input/sales/region-06.xlsx",
+      "sha256": "e2444e090da6777d1765145915352b93c4d8e33a3a7dbf5d3562a5e7ab04dbe8"
+    },
+    {
+      "path": "input/sales.xlsx",
+      "sha256": "25a1de180142d1eebe5ebc95e01fadd4e1fc2894e89cc406d3ee5aa7ce46f6c9"
+    },
+    {
+      "path": "input/weekly-notes.md",
+      "sha256": "709d4e09e12a64516421fc3e37393b90c0de010b3c939a586fefaf3086a3cd94"
+    },
+    {
+      "path": "output/.keep",
+      "sha256": "f5faff8544a8685002a585503c88859ee4dc98f7154cb477cac813e3cc4c294d"
+    }
+  ]
+}

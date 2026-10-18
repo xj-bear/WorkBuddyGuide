@@ -1,0 +1,90 @@
+.vp-doc .work-scenario-stepper {
+  margin: 24px 0 36px;
+  padding: 20px;
+  border: 1px solid var(--learn-line);
+  background: var(--learn-paper);
+  box-shadow: 5px 5px 0 var(--learn-mint);
+}
+
+.work-scenario-stepper__header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.vp-doc .work-scenario-stepper__header h2 {
+  margin: 4px 0 0;
+  border: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.work-scenario-stepper__current {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 48%;
+  text-align: right;
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+}
+
+.work-scenario-stepper__current strong { color: var(--learn-green); }
+.vp-doc .work-scenario-stepper progress { display: block; width: 100%; height: 6px; margin: 18px 0; accent-color: var(--learn-green); }
+
+.work-scenario-stepper__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-scenario-stepper__list > li { display: block; list-style: none; }
+.work-scenario-stepper__list > li::marker { content: ""; }
+
+.vp-doc .work-scenario-stepper__list button {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  width: 100%;
+  min-height: 54px;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--learn-line);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  text-align: left;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.vp-doc .work-scenario-stepper__list button > span:first-child {
+  flex: 0 0 auto;
+  color: var(--learn-green);
+  font: 11px var(--font-mono, monospace);
+}
+
+.vp-doc .work-scenario-stepper__list button.is-active {
+  border-color: var(--learn-green);
+  background: var(--learn-mint);
+  color: var(--vp-c-text-1);
+}
+
+.work-scenario-stepper__mobile-select { display: none; }
+.work-scenario-stepper__controls { display: flex; justify-content: space-between; margin-top: 14px; }
+.vp-doc .work-scenario-stepper__controls button { min-height: 40px; padding: 8px 12px; border: 1px solid var(--learn-line); background: transparent; color: var(--learn-green); cursor: pointer; }
+.vp-doc .work-scenario-stepper__controls button:disabled { opacity: .45; cursor: not-allowed; }
+
+@media (max-width: 767px) {
+  .vp-doc .work-scenario-stepper { margin: 20px 0 30px; padding: 15px; }
+  .work-scenario-stepper__header { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .work-scenario-stepper__current { max-width: 100%; text-align: left; }
+  .work-scenario-stepper__list { display: none; }
+  .work-scenario-stepper__mobile-select { display: flex; align-items: center; gap: 12px; font-size: 12px; }
+  .work-scenario-stepper__mobile-select select { flex: 1; min-width: 0; min-height: 44px; padding: 8px; border: 1px solid var(--learn-line); background: var(--vp-c-bg); color: var(--vp-c-text-1); }
+}

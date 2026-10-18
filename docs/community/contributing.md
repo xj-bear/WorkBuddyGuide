@@ -18,7 +18,7 @@ WorkBuddy 的能力、界面和使用方式会持续变化。这本蓝皮书希�
 
 ## 最轻量的方式：提交 Issue
 
-如果暂时不想修改文件，可以在 [GitHub Issues](https://github.com/AlephAITech/WorkBuddyGuide/issues) 中说明：
+如果暂时不想修改文件，可以在 [GitHub Issues](https://github.com/xj-bear/WorkBuddyGuide/issues) 中说明：
 
 1. 哪一页需要调整。
 2. 现在的问题是什么。
@@ -33,7 +33,7 @@ WorkBuddy 的能力、界面和使用方式会持续变化。这本蓝皮书希�
 4. 本地运行 `npm install` 和 `npm run docs:build`。
 5. 提交 Pull Request，并说明改动、原因和验证方式。
 
-完整规范见仓库根目录的 [CONTRIBUTING.md](https://github.com/AlephAITech/WorkBuddyGuide/blob/main/CONTRIBUTING.md)。
+完整规范见仓库根目录的 [CONTRIBUTING.md](https://github.com/xj-bear/WorkBuddyGuide/blob/main/CONTRIBUTING.md)。
 
 ## 内容原则
 
@@ -43,25 +43,8 @@ WorkBuddy 的能力、界面和使用方式会持续变化。这本蓝皮书希�
 - **安全边界清晰**：涉及文件、账号、密钥、发布和外部操作时说明风险。
 - **尊重隐私与版权**：不要提交密钥、个人数据或无权公开的资料。
 
-## 联系我们
+## 原社区作者与贡献者
 
-如果你想交流共创想法、提交案例，或者参与蓝皮书后续维护，可以扫描二维码联系我们。点击图片可查看大图。
+原项目贡献者包括刘聪NLP、袋鼠帝、甲木、Joy 等社区作者。原蓝皮书与案例继续保留各自署名，感谢他们的内容贡献。
 
-<div class="wb-contact-grid">
-  <a class="wb-contact-card" href="/community/contacts/liu-cong-nlp.jpg" target="_blank" rel="noreferrer">
-    <img src="/community/contacts/liu-cong-nlp.jpg" alt="刘聪NLP 微信二维码" loading="lazy">
-    <span>刘聪NLP</span>
-  </a>
-  <a class="wb-contact-card" href="/community/contacts/dai-shu-di.jpg" target="_blank" rel="noreferrer">
-    <img src="/community/contacts/dai-shu-di.jpg" alt="袋鼠帝微信二维码" loading="lazy">
-    <span>袋鼠帝</span>
-  </a>
-  <a class="wb-contact-card" href="/community/contacts/jia-mu.jpg" target="_blank" rel="noreferrer">
-    <img src="/community/contacts/jia-mu.jpg" alt="甲木微信二维码" loading="lazy">
-    <span>甲木</span>
-  </a>
-  <a class="wb-contact-card" href="/community/contacts/joy.jpg" target="_blank" rel="noreferrer">
-    <img src="/community/contacts/joy.jpg" alt="Joy 微信二维码" loading="lazy">
-    <span>Joy</span>
-  </a>
-</div>
+本站的讨论群和公众号二维码统一维护在[页脚联系入口](#contact)，点击可查看大图。

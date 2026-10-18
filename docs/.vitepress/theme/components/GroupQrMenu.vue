@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { siteAssets } from '../../site';
 withDefaults(
   defineProps<{
     screenMenu?: boolean;
@@ -12,18 +13,11 @@ withDefaults(
 <template>
   <figure class="wb-group-qr" :class="{ 'is-screen-menu': screenMenu }">
     <div class="wb-group-qr__frame">
-      <img
-        src="/community/workbuddy-wechat-group-20260918.jpg"
-        width="396"
-        height="396"
-        alt="WorkBuddy 微信交流群二维码"
-        loading="lazy"
-        decoding="async"
-      />
+      <img v-if="siteAssets.discussionQr" :src="siteAssets.discussionQr" alt="讨论群二维码" width="500" height="500" /><p v-else>本站讨论群二维码待补充</p>
     </div>
     <figcaption>
       <span>WECHAT GROUP</span>
-      微信扫码加入交流群
+      扫码加入讨论群
     </figcaption>
   </figure>
 </template>

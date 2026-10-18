@@ -1,0 +1,270 @@
+[
+  {
+    "id": "file-archive",
+    "title": "按规则归档文件，保留路径对照",
+    "categoryIds": [
+      "files"
+    ],
+    "pain": "混合文件堆在同一目录，分类容易误移或覆盖。",
+    "outcome": "交付归档副本、文件清单和可追溯的路径对照表。",
+    "relatedLessonIds": [
+      "wb-lesson-02",
+      "wb-lesson-04",
+      "wb-lesson-06"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 4 章 快速完成第一个 WorkBuddy 任务/index.md",
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 12 章 从整理桌面文件这些小事做起/index.md",
+      "docs/bluebook/附录/附录 A 常用指令模板/index.md"
+    ],
+    "images": [
+      "/solve/20261018/03-01.png",
+      "/solve/20261018/03-02.jpg",
+      "/solve/20261018/03-03.png",
+      "/solve/20261018/03-04.png"
+    ],
+    "preparation": "待整理文件副本、分类规则、独立输出目录。"
+  },
+  {
+    "id": "monthly-report-merge",
+    "title": "对齐字段后合并多月报表",
+    "categoryIds": [
+      "data"
+    ],
+    "pain": "多月报表列名、日期和金额口径不同，直接追加会错列。",
+    "outcome": "交付标准总表、字段映射和能解释行数金额差异的日志。",
+    "relatedLessonIds": [
+      "wb-lesson-07",
+      "wb-lesson-13"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md"
+    ],
+    "images": [
+      "/solve/20261018/04-01.png",
+      "/solve/20261018/04-02.png",
+      "/solve/20261018/04-03.png",
+      "/solve/20261018/04-04.png",
+      "/solve/20261018/04-05.png"
+    ],
+    "preparation": "多月 Excel/CSV 副本、月份对应表、字段与金额口径。"
+  },
+  {
+    "id": "invoice-reconciliation",
+    "title": "提取发票明细并复核金额",
+    "categoryIds": [
+      "files"
+    ],
+    "pain": "票据图片需要逐张录入，模糊数字和重复报销容易遗漏。",
+    "outcome": "交付带来源文件、识别状态与金额核验结果的票据明细表。",
+    "relatedLessonIds": [
+      "wb-lesson-08"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 12 章 从整理桌面文件这些小事做起/index.md"
+    ],
+    "images": [
+      "/solve/20261018/05-01.png",
+      "/solve/20261018/05-02.png",
+      "/solve/20261018/05-03.png",
+      "/solve/20261018/05-04.png",
+      "/solve/20261018/05-05.png"
+    ],
+    "preparation": "清晰的票据副本、必录字段、币种及报销范围。"
+  },
+  {
+    "id": "meeting-minutes",
+    "title": "把会议文字稿整理成纪要与待办",
+    "categoryIds": [
+      "knowledge"
+    ],
+    "pain": "长篇转写混杂讨论和决定，责任人与截止日期不清楚。",
+    "outcome": "交付四模块纪要、可回溯行动项和待确认事项清单。",
+    "relatedLessonIds": [
+      "wb-lesson-09",
+      "wb-lesson-14"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 17 章 会议结束不是终点，工作才刚刚开始/index.md"
+    ],
+    "images": [
+      "/solve/20261018/06-01.png",
+      "/solve/20261018/06-02.png",
+      "/solve/20261018/06-03.png",
+      "/solve/20261018/06-04.png",
+      "/solve/20261018/06-05.jpg"
+    ],
+    "preparation": "会议文字稿、会议日期与议程、可确认的参会信息。"
+  },
+  {
+    "id": "batch-contracts",
+    "title": "按客户名单生成合同与邮件草稿",
+    "categoryIds": [
+      "office"
+    ],
+    "pain": "逐份替换合同客户字段时，金额、名称和邮件称呼容易混用。",
+    "outcome": "交付每客户独立的合同、配套邮件草稿及字段核对清单。",
+    "relatedLessonIds": [
+      "wb-lesson-10",
+      "wb-lesson-12"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md"
+    ],
+    "images": [
+      "/solve/20261018/07-01.png",
+      "/solve/20261018/07-03.png",
+      "/solve/20261018/07-05.png"
+    ],
+    "preparation": "已审核的合同模板、客户名单、字段映射与命名规则。"
+  },
+  {
+    "id": "sales-dashboard",
+    "title": "把销售表做成可核对的网页看板",
+    "categoryIds": [
+      "data"
+    ],
+    "pain": "销售明细难以直接汇报，图表和指标又容易口径不一致。",
+    "outcome": "交付可本地打开的HTML看板、指标口径表与数据核对说明。",
+    "relatedLessonIds": [
+      "wb-lesson-11",
+      "wb-lesson-13",
+      "wb-lesson-23"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md"
+    ],
+    "images": [
+      "/solve/20261018/08-01.png",
+      "/solve/20261018/08-02.png",
+      "/solve/20261018/08-03.png",
+      "/solve/20261018/08-04.png"
+    ],
+    "preparation": "销售明细副本、指标口径、需要展示的维度。"
+  },
+  {
+    "id": "daily-intelligence",
+    "title": "建立有来源的每日行业早报",
+    "categoryIds": [
+      "research",
+      "automation"
+    ],
+    "pain": "每天重复浏览行业消息，新闻重复、来源和日期难以追踪。",
+    "outcome": "交付可追溯早报、手动试跑记录与受控定时配置。",
+    "relatedLessonIds": [
+      "wb-lesson-15",
+      "wb-lesson-16",
+      "wb-lesson-21"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 10 章 WorkBuddy 自动化任务/index.md",
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 15 章 资讯整合：把信息流变成每日通知/index.md",
+      "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 25 章 自动化工作流的可靠性/index.md"
+    ],
+    "images": [
+      "/solve/20261018/09-01.png",
+      "/solve/20261018/09-02.png",
+      "/solve/20261018/09-04.jpg",
+      "/solve/20261018/09-05.jpg"
+    ],
+    "preparation": "可访问的信息源清单、关注主题、时区与阅读频率。"
+  },
+  {
+    "id": "weekly-report",
+    "title": "用真实日志生成周报并创建在线草稿",
+    "categoryIds": [
+      "office",
+      "automation"
+    ],
+    "pain": "周报依靠回忆容易遗漏，自动生成又可能夸大进展。",
+    "outcome": "交付有材料依据的四段式周报与本人复核的在线草稿。",
+    "relatedLessonIds": [
+      "wb-lesson-04",
+      "wb-lesson-17",
+      "wb-lesson-19"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 7 章 WorkBuddy 使用连接器/index.md",
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 飞书办公实战：从接入到交付/index.md"
+    ],
+    "images": [
+      "/solve/20261018/10-02.png",
+      "/solve/20261018/10-04.png",
+      "/solve/20261018/10-05.jpg"
+    ],
+    "preparation": "本周工作日志、任务记录、周报时间范围与格式。"
+  },
+  {
+    "id": "remote-tasks",
+    "title": "从手机派发受控的远程任务",
+    "categoryIds": [
+      "automation"
+    ],
+    "pain": "人离开工位后需要查电脑文件，却难以确认任务在哪运行。",
+    "outcome": "交付明确运行设备、读取范围和人工确认边界的远程查询结果。",
+    "relatedLessonIds": [
+      "wb-lesson-20"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 8 章 WorkBuddy 接入小程序与 IM 助理/index.md",
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 13 章 远程控制你的电脑，不用发愁不在电脑前/index.md"
+    ],
+    "images": [
+      "/solve/20261018/11-01.jpg",
+      "/solve/20261018/11-02.png",
+      "/solve/20261018/11-03.jpg",
+      "/solve/20261018/11-05.png"
+    ],
+    "preparation": "已登录的手机入口、需连接的电脑、限定目录与测试文件。"
+  },
+  {
+    "id": "financial-report-presentation",
+    "title": "从公开财报整理六页汇报初稿",
+    "categoryIds": [
+      "research"
+    ],
+    "pain": "长篇财报难抓重点，汇报数字和结论又需要能回查原文。",
+    "outcome": "交付带页码依据的事实清单、六页大纲及人工审核的PPT初稿。",
+    "relatedLessonIds": [
+      "wb-lesson-22",
+      "wb-lesson-25"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第一篇 使用手册：先把 WorkBuddy 用起来/第 6 章 WorkBuddy的专家和专家团/index.md",
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 11 章 办公三件套：Word、Excel、PPT/index.md",
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 18 章 把投资分析变成你的日常/index.md"
+    ],
+    "images": [
+      "/solve/20261018/12-01.jpg",
+      "/solve/20261018/12-02.png",
+      "/solve/20261018/12-03.png",
+      "/solve/20261018/12-05.png"
+    ],
+    "preparation": "公开财报 PDF、报告期间、汇报目标与页数要求。"
+  },
+  {
+    "id": "three-assistant-workflow",
+    "title": "用三个助手衔接选题、大纲与审校",
+    "categoryIds": [
+      "creation",
+      "agents"
+    ],
+    "pain": "一个人反复切换选题、写作和排版，材料交接不清导致返工。",
+    "outcome": "交付可交接的选题卡、大纲、人工正文与审校清单。",
+    "relatedLessonIds": [
+      "wb-lesson-24",
+      "wb-lesson-26"
+    ],
+    "relatedChapterPaths": [
+      "docs/bluebook/第二篇 案例篇：从一项任务到一支 AI 团队/第 20 章 自媒体不只是靠努力，而是一条增长闭环/index.md",
+      "docs/bluebook/第三篇 进阶篇：把案例变成自己的工作系统/第 24 章 如何进行多 Agent 系统设计/index.md"
+    ],
+    "images": [
+      "/solve/20261018/13-01.png",
+      "/solve/20261018/13-02.png",
+      "/solve/20261018/13-04.png",
+      "/solve/20261018/13-05.png"
+    ],
+    "preparation": "参考文章与素材、目标读者、写作目标、角色交接规则。"
+  }
+]
