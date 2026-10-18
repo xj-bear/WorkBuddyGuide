@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://workbuddy.5678.fun/">
-    <img src="./docs/public/og/workbuddy-guide.png" alt="Homepage screenshot of the WorkBuddy field guide maintained by xj-bear" width="100%">
+    <img src="./assets/xj-bear-workbuddy-homepage.jpg" alt="Screenshot of xj-bear's updated WorkBuddy Bluebook homepage" width="100%">
   </a>
 </p>
 

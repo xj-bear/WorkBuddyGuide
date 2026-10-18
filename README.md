@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://workbuddy.5678.fun/">
-    <img src="./docs/public/og/workbuddy-guide.png" alt="xj-bear 维护的 WorkBuddy 实战蓝皮书网站首页截图" width="100%">
+    <img src="./assets/xj-bear-workbuddy-homepage.jpg" alt="xj-bear 的 WorkBuddy 蓝皮书新版网站首页截图" width="100%">
   </a>
 </p>
 
