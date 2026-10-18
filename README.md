@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://workbuddy.5678.fun/">
-    <img src="./assets/workbuddy-guide-banner.png" alt="WorkBuddy蓝皮书：首页预览" width="100%">
+    <img src="./docs/public/og/workbuddy-guide.png" alt="xj-bear 维护的 WorkBuddy 实战蓝皮书网站首页截图" width="100%">
   </a>
 </p>
 
-<h1 align="center">WorkBuddy 实战蓝皮书</h1>
+<h1 align="center">xj-bear 的 WorkBuddy 实战蓝皮书</h1>
 
-<p align="center"><strong>从第一项任务，到一支 AI 团队</strong></p>
+<p align="center"><strong>从第一项任务开始，把 WorkBuddy 用进真实工作</strong></p>
 
 <p align="center">
   简体中文 · <a href="./README_en.md">English</a> ·
@@ -17,7 +17,7 @@
   <a href="./CONTRIBUTING.md">参与共创</a>
 </p>
 
-> 这不是官方功能说明书的改写，而是一本以真实任务为主线的实战读本。先完成安装和第一项工作，再进入移动办公、知识管理、专业诊断、内容自动化和多 Agent 团队，最后把一次成功变成团队可复用的工作系统。
+> 我是 xj-bear。这里记录我如何把 WorkBuddy 用在真实任务中：从初次上手、日常办公与专业场景，到可复用的 Skill、自动化流程和 Agent 协作。
 
 ## 在线阅读
 
@@ -113,13 +113,7 @@ WorkBuddyGuide
 
 ## 项目维护者
 
-本项目由 **[xj-bear](https://github.com/xj-bear)** 持续维护，围绕 WorkBuddy 的真实任务、可复现案例和团队工作流更新内容。
-
-<p align="center">
-  <img src="./docs/public/og/workbuddy-guide.png" alt="WorkBuddy 蓝皮书网站首页截图" width="100%">
-</p>
-
-感谢甲木未来派、摸鱼小李、袋鼠帝AI客栈、苍何和刘聪NLP等早期作者参与内容创作。项目采用 MIT License，原有版权声明与许可证文本均予以保留。
+本项目由 **[xj-bear](https://github.com/xj-bear)** 维护并持续更新。项目采用上游 MIT License，原始版权声明见 [LICENSE](./LICENSE)。
 
 ## 声明
 

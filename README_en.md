@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://workbuddy.5678.fun/">
-    <img src="./assets/workbuddy-guide-banner.png" alt="WorkBuddy Bluebook homepage preview" width="100%">
+    <img src="./docs/public/og/workbuddy-guide.png" alt="Homepage screenshot of the WorkBuddy field guide maintained by xj-bear" width="100%">
   </a>
 </p>
 
-<h1 align="center">The WorkBuddy Bluebook</h1>
+<h1 align="center">xj-bear's WorkBuddy Field Guide</h1>
 
-<p align="center"><strong>From your first task to an AI team</strong></p>
+<p align="center"><strong>Put WorkBuddy to work on real tasks</strong></p>
 
 <p align="center">
   English · <a href="./README.md">简体中文</a> ·
@@ -15,7 +15,7 @@
   <a href="./CONTRIBUTING_en.md">Contribute</a>
 </p>
 
-> This is a task-driven field guide, not a rewritten feature manual. It starts with installation and a first successful task, then moves into office work, knowledge management, professional workflows, content automation, multi-agent systems, and reusable team practices.
+> I'm xj-bear. This guide documents how I use WorkBuddy for real tasks—from getting started and everyday work to reusable Skills, automation, and agent collaboration.
 
 ## Read Online
 
@@ -74,13 +74,7 @@ The site uses **VitePress + Cloudflare Pages + GitHub**. Cloudflare Pages builds
 
 ## Project Maintainer
 
-This project is maintained by **[xj-bear](https://github.com/xj-bear)**, with a focus on practical WorkBuddy tasks, reproducible cases, and team workflows.
-
-<p align="center">
-  <img src="./docs/public/og/workbuddy-guide.png" alt="Screenshot of the WorkBuddy Bluebook website homepage" width="100%">
-</p>
-
-Thanks to the early contributors, including 甲木未来派, 摸鱼小李, 袋鼠帝AI客栈, 苍何, and 刘聪NLP. The project uses the MIT License and retains the original copyright notices and license text.
+This project is maintained and updated by **[xj-bear](https://github.com/xj-bear)**. It uses the upstream MIT License; original copyright notices are preserved in [LICENSE](./LICENSE).
 
 ## Disclaimer
 
