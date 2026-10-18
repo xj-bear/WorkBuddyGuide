@@ -72,23 +72,15 @@ Read the [Contribution Guide](./CONTRIBUTING_en.md) or open an [Issue](https://g
 
 The site uses **VitePress + Cloudflare Pages + GitHub**. Cloudflare Pages builds and deploys the `main` branch automatically. See [DEPLOYMENT.md](./DEPLOYMENT.md) for the exact settings.
 
-## Authors
+## Project Maintainer
 
-Thanks to the authors who create and maintain The WorkBuddy Bluebook. Click a card to view the full-size image and scan its QR code.
-
-<p align="center">
-  <a href="./assets/authors/jia-mu-wei-lai-pai.png"><img src="./assets/authors/jia-mu-wei-lai-pai.png" alt="甲木未来派" width="48%"></a>
-  <a href="./assets/authors/mo-yu-xiao-li.png"><img src="./assets/authors/mo-yu-xiao-li.png" alt="摸鱼小李" width="48%"></a>
-</p>
+This project is maintained by **[xj-bear](https://github.com/xj-bear)**, with a focus on practical WorkBuddy tasks, reproducible cases, and team workflows.
 
 <p align="center">
-  <a href="./assets/authors/dai-shu-di-ai-ke-zhan.png"><img src="./assets/authors/dai-shu-di-ai-ke-zhan.png" alt="袋鼠帝AI客栈" width="48%"></a>
-  <a href="./assets/authors/liu-cong-nlp.png"><img src="./assets/authors/liu-cong-nlp.png" alt="刘聪NLP" width="48%"></a>
+  <img src="./docs/public/og/workbuddy-guide.png" alt="Screenshot of the WorkBuddy Bluebook website homepage" width="100%">
 </p>
 
-<p align="center">
-  <a href="./assets/authors/cang-he.png"><img src="./assets/authors/cang-he.png" alt="苍何" width="48%"></a>
-</p>
+Thanks to the early contributors, including 甲木未来派, 摸鱼小李, 袋鼠帝AI客栈, 苍何, and 刘聪NLP. The project uses the MIT License and retains the original copyright notices and license text.
 
 ## Disclaimer
 

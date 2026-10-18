@@ -111,23 +111,15 @@ WorkBuddyGuide
 
 本站使用 **VitePress + Cloudflare Pages + GitHub**。Cloudflare Pages 连接本仓库的 `main` 分支后，每次推送都会自动构建部署。配置见 [DEPLOYMENT.md](./DEPLOYMENT.md)。
 
-## 作者们
+## 项目维护者
 
-感谢以下作者共同参与《WorkBuddy 蓝皮书》的创作与维护。点击名片可查看原图并扫描二维码。
-
-<p align="center">
-  <a href="./assets/authors/jia-mu-wei-lai-pai.png"><img src="./assets/authors/jia-mu-wei-lai-pai.png" alt="甲木未来派" width="48%"></a>
-  <a href="./assets/authors/mo-yu-xiao-li.png"><img src="./assets/authors/mo-yu-xiao-li.png" alt="摸鱼小李" width="48%"></a>
-</p>
+本项目由 **[xj-bear](https://github.com/xj-bear)** 持续维护，围绕 WorkBuddy 的真实任务、可复现案例和团队工作流更新内容。
 
 <p align="center">
-  <a href="./assets/authors/dai-shu-di-ai-ke-zhan.png"><img src="./assets/authors/dai-shu-di-ai-ke-zhan.png" alt="袋鼠帝AI客栈" width="48%"></a>
-  <a href="./assets/authors/cang-he.png"><img src="./assets/authors/cang-he.png" alt="苍何" width="48%"></a>
+  <img src="./docs/public/og/workbuddy-guide.png" alt="WorkBuddy 蓝皮书网站首页截图" width="100%">
 </p>
 
-<p align="center">
-  <a href="./assets/authors/liu-cong-nlp.png"><img src="./assets/authors/liu-cong-nlp.png" alt="刘聪NLP" width="48%"></a>
-</p>
+感谢甲木未来派、摸鱼小李、袋鼠帝AI客栈、苍何和刘聪NLP等早期作者参与内容创作。项目采用 MIT License，原有版权声明与许可证文本均予以保留。
 
 ## 声明
 
