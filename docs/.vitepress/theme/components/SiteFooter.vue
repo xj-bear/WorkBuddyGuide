@@ -13,8 +13,8 @@ const contacts = [
 <template>
   <footer ref="footer" class="site-footer" id="contact">
     <div class="site-footer__top">
-      <div class="site-footer__intro"><a class="site-footer__brand" href="/">WorkBuddy 蓝皮书</a><p>从一项任务，到自己的 AI 工作团队。</p><p>大熊的 AI 朋友 · 社区实战读本</p><a v-if="siteAssets.pdf" :href="siteAssets.pdf" download>下载蓝皮书 PDF ↓</a><span v-else class="site-footer__pending">蓝皮书 PDF · 整理中</span></div>
-      <div class="site-footer__contacts"><figure v-for="contact in contacts" :key="contact.title" class="site-footer__contact"><a v-if="contact.path" class="site-footer__code" :href="contact.path" target="_blank" rel="noreferrer" :aria-label="'放大查看' + contact.alt"><img :src="contact.path" :alt="contact.alt" width="104" height="104"></a><div v-else class="site-footer__code site-footer__code--pending" aria-label="二维码待补充">二维码待补充</div><figcaption><b>{{ contact.title }}</b><small>{{ contact.note }}</small></figcaption></figure></div>
+      <div class="site-footer__intro"><a class="site-footer__brand" href="/">WorkBuddy 蓝皮书</a><p>从一项任务，到自己的 AI 工作团队。</p><p>大熊的 AI 朋友 · 社区实战读本</p><a v-if="siteAssets.pdf" :href="siteAssets.pdf" target="_blank" rel="noopener noreferrer">获取蓝皮书 PDF ↗</a><span v-else class="site-footer__pending">蓝皮书 PDF · 整理中</span></div>
+      <div class="site-footer__contacts"><figure v-for="contact in contacts" :key="contact.title" class="site-footer__contact"><div v-if="contact.path" class="site-footer__code"><img :src="contact.path" :alt="contact.alt" width="104" height="104"></div><div v-else class="site-footer__code site-footer__code--pending" aria-label="二维码待补充">二维码待补充</div><figcaption><b>{{ contact.title }}</b><small>{{ contact.note }}</small></figcaption></figure></div>
     </div>
     <nav class="site-footer__links" aria-label="页脚导航"><a href="/learn/">学习路线</a><a href="/solve/">实战场景</a><a href="/cases/">社区案例</a><a href="/reading-guide">阅读指南</a><a href="/help/">帮助与交流</a><a href="/community/case-contributing">参与共创</a><a href="#VPContent">回到顶部 ↑</a></nav>
     <TrafficMetrics v-if="siteAssets.trafficEndpoint" :endpoint="siteAssets.trafficEndpoint" />
